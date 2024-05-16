@@ -2,7 +2,7 @@ package com.easyfest.easyfest;
 
 import javafx.scene.layout.AnchorPane;
 
-public class AddtarjetaController {
+public class MostrarallhistorialController {
     @javafx.fxml.FXML
-    private AnchorPane addtarjetaid;
+    private AnchorPane historialid;
 }

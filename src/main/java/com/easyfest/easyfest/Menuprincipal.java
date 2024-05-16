@@ -2,6 +2,7 @@ package com.easyfest.easyfest;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.AnchorPane;
 
 public class Menuprincipal
 {
@@ -21,6 +22,8 @@ public class Menuprincipal
     private Button pagosId;
     @javafx.fxml.FXML
     private Button sobreNosotrosId;
+    @javafx.fxml.FXML
+    private AnchorPane contenedorId;
 
     @javafx.fxml.FXML
     public void initialize() {

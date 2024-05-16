@@ -1,8 +1,12 @@
 package com.easyfest.easyfest;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class Menuprincipal
 {
@@ -27,5 +31,21 @@ public class Menuprincipal
 
     @javafx.fxml.FXML
     public void initialize() {
+        try {
+            AnchorPane inicio = FXMLLoader.load(getClass().getResource("inicio.fxml"));
+            this.contenedorId.getChildren().setAll(inicio);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-    }}
+    @javafx.fxml.FXML
+    public void ajustesbutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane ajustes = FXMLLoader.load(getClass().getResource("ajustes.fxml"));
+            this.contenedorId.getChildren().setAll(ajustes);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}

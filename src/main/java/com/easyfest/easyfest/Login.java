@@ -38,6 +38,12 @@ public class Login implements Initializable {
 
     @FXML
     public void login(ActionEvent actionEvent) {
+        try {
+            AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
+            this.LoginPageid.getChildren().setAll(login);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML

@@ -24,4 +24,5 @@ public class Menuprincipal
 
     @javafx.fxml.FXML
     public void initialize() {
+        fd
     }}

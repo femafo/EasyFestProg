@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="780.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Menuprincipal">
+   <children>
+      <Pane prefHeight="780.0" prefWidth="157.0" style="-fx-background-color: violet;">
+         <children>
+            <Pane layoutY="88.0" prefHeight="41.0" prefWidth="158.0" style="-fx-background-color: grey;" />
+            <Button layoutX="31.0" layoutY="93.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="Inicio" />
+            <Button layoutX="31.0" layoutY="348.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="Ajustes" />
+            <Button layoutX="31.0" layoutY="291.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="Button" />
+            <Button layoutX="31.0" layoutY="241.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="Button" />
+            <Button layoutX="31.0" layoutY="189.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="Button" />
+            <Button layoutX="31.0" layoutY="141.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="Button" />
+            <Label layoutX="46.0" layoutY="29.0" text="\@EasyFest" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

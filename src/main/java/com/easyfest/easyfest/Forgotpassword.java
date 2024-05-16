@@ -8,8 +8,12 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class Forgotpassword
-{
+/**
+ * Este es un Controlador para la vista de recuperación de contraseña.
+ *
+ * Esta clase sirve para recuperar la contraseña
+ */
+public class Forgotpassword {
     @javafx.fxml.FXML
     private AnchorPane forgotontr;
     @javafx.fxml.FXML
@@ -17,16 +21,26 @@ public class Forgotpassword
     @javafx.fxml.FXML
     private TextField correorecupid;
 
+    /**
+     * Método de inicialización, llamado automáticamente después de que se haya cargado el archivo FXML.
+     */
     @javafx.fxml.FXML
     public void initialize() {
+        // Puedes realizar inicializaciones adicionales aquí si es necesario
     }
 
+    /**
+     * Método para manejar el evento de continuar con la recuperación de contraseña.
+     * @param actionEvent El evento de acción generado por el botón de continuar.
+     */
     @javafx.fxml.FXML
     public void continuarbutton(ActionEvent actionEvent) {
         try {
+            // cambiar la siguiente pantalla para recuperar la  contraseña
             AnchorPane forget2 = FXMLLoader.load(getClass().getResource("forgotpassword2.fxml"));
             this.forgotontr.getChildren().setAll(forget2);
         } catch (IOException e) {
+            // Manejar cualquier excepción de carga de FXML
             throw new RuntimeException(e);
         }
     }

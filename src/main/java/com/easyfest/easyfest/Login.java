@@ -20,7 +20,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * Controlador para la vista de inicio de sesión.
+ * Este es un Controlador para la vista de inicio de sesión.
+ *
+ * Esta sirve para el inicio de sesion que se comprobara con la base de datos si existen datos de X usuario.
+ * si no existen datos este tendra que crear un usuario/registrase.
  */
 public class Login implements Initializable {
 

@@ -23,32 +23,32 @@
                   <Font name="System Bold" size="18.0" />
                </font></Label>
             <Line endX="89.40000915527344" endY="93.19998168945312" layoutX="57.0" layoutY="318.0" startX="-49.0000114440918" startY="93.19998168945312" />
-            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Busqueda">
+            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Busqueda">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Pagos">
+            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Pagos">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="mensajesId" layoutY="375.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Mensajes">
+            <Button fx:id="mensajesId" layoutY="375.0" mnemonicParsing="false" onAction="#mensajesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Mensajes">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajustesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ajustes">
+            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ajustes">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ayuda">
+            <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" onAction="#ayudabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ayuda">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="sobreNosotrosId" layoutX="-2.0" layoutY="693.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Sobre nosotros">
+            <Button fx:id="sobreNosotrosId" layoutX="-2.0" layoutY="693.0" mnemonicParsing="false" onAction="#sobrenosotrosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Sobre nosotros">
                <font>
                   <Font size="14.0" />
                </font>
@@ -66,7 +66,7 @@
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="982.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1116.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/perfil-del-usuario.png" />
+                  <Image url="@../../../img/perfil-del-usuario.png" />
                </image>
             </ImageView>
          </children>

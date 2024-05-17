@@ -40,5 +40,9 @@ public class AjustesController implements Initializable {
         idiomaChoiceBox.setItems(idiomas);
 
         idiomaChoiceBox.setValue("Español");
+
+        radioButtonTextoPequeño.setOnAction(event -> cambiarTamañoLetra(12));
+        radioButtonTextoMediano.setOnAction(event -> cambiarTamañoLetra(18));
+        radioButtonTextoGrande.setOnAction(event -> cambiarTamañoLetra(24));
     }
 }

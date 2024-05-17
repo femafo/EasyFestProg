@@ -34,7 +34,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Label layoutX="33.0" layoutY="45.0" text="\@EasyFest">
+            <Label layoutX="33.0" layoutY="45.0" text="\@EasyFest" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>

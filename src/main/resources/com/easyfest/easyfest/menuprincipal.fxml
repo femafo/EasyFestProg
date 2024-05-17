@@ -30,7 +30,7 @@
       </Pane>
       <Pane prefHeight="782.0" prefWidth="158.0" style="-fx-background-color: violet;">
          <children>
-            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: gray;" text="Inicio">
+            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: pump;" text="Inicio">
                <font>
                   <Font size="14.0" />
                </font></Button>

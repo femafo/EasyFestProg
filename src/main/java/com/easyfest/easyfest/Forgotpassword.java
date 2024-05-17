@@ -30,7 +30,7 @@ public class Forgotpassword {
     }
 
     /**
-     * Método para manejar el evento de continuar con la recuperación de contraseña.
+     * Método para manejar el evento de continuar con la recuperación de contrasena.
      * @param actionEvent El evento de acción generado por el botón de continuar.
      */
     @javafx.fxml.FXML

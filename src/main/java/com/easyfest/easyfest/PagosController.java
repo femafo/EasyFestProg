@@ -58,4 +58,7 @@ public class PagosController {
             this.pagosid.getChildren().setAll(anadirt);
         } catch (IOException e) {
             // Manejar cualquier excepción de entrada/salida
-            throw new RuntimeException
+            throw new RuntimeException(e);
+        }
+    }
+}

@@ -61,17 +61,51 @@ public class Menuprincipal
 
     @javafx.fxml.FXML
     public void ayudabutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane ayuda = FXMLLoader.load(getClass().getResource("ayuda.fxml"));
+            this.contenedorId.getChildren().setAll(ayuda);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void sobrenosotrosbutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane sobrenosotros = FXMLLoader.load(getClass().getResource("sobrenosotros.fxml"));
+            this.contenedorId.getChildren().setAll(sobrenosotros);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void mensajesbutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane mensajes = FXMLLoader.load(getClass().getResource("mensajes.fxml"));
+            this.contenedorId.getChildren().setAll(mensajes);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void busquedabutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane busqueda = FXMLLoader.load(getClass().getResource("busqueda.fxml"));
+            this.contenedorId.getChildren().setAll(busqueda);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void iniciobutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane inicio = FXMLLoader.load(getClass().getResource("inicio.fxml"));
+            this.contenedorId.getChildren().setAll(inicio);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane fx:id="sobrenosotrosid" prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.SobrenosotrosController">
+<AnchorPane fx:id="sobrenosotrosid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: dimgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.SobrenosotrosController">
    <children>
-      <Label layoutX="673.0" layoutY="337.0" text="Esta es la pantalla de sobre nosotros" />
+      <ScrollPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: violet;" />
+    <AnchorPane layoutX="126.0" minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1374.0" style="-fx-background-color: violet;">
+         <children>
+            <ImageView fitHeight="235.0" fitWidth="477.0" layoutX="453.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/fiesta1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="591.0" layoutY="70.0" prefHeight="97.0" prefWidth="228.0" text="EasyFest" textFill="#ffadc4">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Pane layoutX="503.0" layoutY="362.0" prefHeight="180.0" prefWidth="368.0" style="-fx-background-color: pink;">
+               <children>
+                  <Text layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenidos a EasyFest, tu compañero confiable en el mundo de los festivales y eventos emocionantes. En EasyFest, entendemos que los festivales son más que simples eventos; son experiencias que quedan grabadas en la memoria para siempre. Por eso, nos dedicamos apasionadamente a proporcionar a nuestros clientes las mejores experiencias posibles, desde la emoción del festival hasta el confort del alojamiento." textAlignment="CENTER" wrappingWidth="328.13671875" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

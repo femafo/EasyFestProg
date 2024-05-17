@@ -8,6 +8,10 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
+/**
+ * Controller class for the main menu of the EasyFest application.
+ * This class handles the navigation between different views.
+ */
 public class Menuprincipal
 {
     @javafx.fxml.FXML
@@ -29,6 +33,10 @@ public class Menuprincipal
     @javafx.fxml.FXML
     private AnchorPane contenedorId;
 
+    /**
+     * Initializes the controller class.
+     * This method is automatically called after the FXML file has been loaded.
+     */
     @javafx.fxml.FXML
     public void initialize() {
         try {
@@ -39,6 +47,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Ajustes" button.
+     * Loads the "ajustes.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void ajustesbutton(ActionEvent actionEvent) {
         try {
@@ -49,6 +63,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Pagos" button.
+     * Loads the "pagos.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void pagosbutton(ActionEvent actionEvent) {
         try {
@@ -59,6 +79,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Ayuda" button.
+     * Loads the "ayuda.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void ayudabutton(ActionEvent actionEvent) {
         try {
@@ -69,6 +95,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Sobre Nosotros" button.
+     * Loads the "sobrenosotros.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void sobrenosotrosbutton(ActionEvent actionEvent) {
         try {
@@ -79,6 +111,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Mensajes" button.
+     * Loads the "mensajes.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void mensajesbutton(ActionEvent actionEvent) {
         try {
@@ -89,6 +127,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Busqueda" button.
+     * Loads the "busqueda.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void busquedabutton(ActionEvent actionEvent) {
         try {
@@ -99,6 +143,12 @@ public class Menuprincipal
         }
     }
 
+    /**
+     * Handles the action event for the "Inicio" button.
+     * Loads the "inicio.fxml" file and sets it to the main container.
+     *
+     * @param actionEvent the action event
+     */
     @javafx.fxml.FXML
     public void iniciobutton(ActionEvent actionEvent) {
         try {

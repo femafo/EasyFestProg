@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AjustesController">
+<AnchorPane fx:id="ajustesid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AjustesController">
    <children>
       <Label layoutX="610.0" layoutY="14.0" text="Ajustes" textAlignment="CENTER" textFill="WHITE">
          <font>

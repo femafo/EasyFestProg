@@ -12,9 +12,25 @@
 
 <AnchorPane prefHeight="780.0" prefWidth="1530.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Menuprincipal">
    <children>
+      <Pane prefHeight="91.0" prefWidth="1532.0" style="-fx-background-color: black;">
+         <children>
+            <ChoiceBox fx:id="chbUsuario" layoutX="1146.0" layoutY="33.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
+            <Label layoutX="1158.0" layoutY="36.0" text="Usuario" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="982.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1116.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/perfil-del-usuario.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
       <Pane prefHeight="782.0" prefWidth="158.0" style="-fx-background-color: violet;">
          <children>
-            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: pump;" text="Inicio">
+            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: pump;" text="Inicio">
                <font>
                   <Font size="14.0" />
                </font></Button>
@@ -38,7 +54,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ajustes">
+            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajustesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ajustes">
                <font>
                   <Font size="14.0" />
                </font>
@@ -53,22 +69,6 @@
                   <Font size="14.0" />
                </font>
             </Button>
-         </children>
-      </Pane>
-      <Pane layoutX="158.0" prefHeight="91.0" prefWidth="1374.0" style="-fx-background-color: black;">
-         <children>
-            <ChoiceBox fx:id="chbUsuario" layoutX="1146.0" layoutY="33.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
-            <Label layoutX="1158.0" layoutY="36.0" text="Usuario" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="982.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1116.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../img/perfil-del-usuario.png" />
-               </image>
-            </ImageView>
          </children>
       </Pane>
       <AnchorPane fx:id="contenedorId" layoutX="158.0" layoutY="91.0" prefHeight="691.0" prefWidth="1374.0" />

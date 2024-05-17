@@ -7,6 +7,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,6 +33,8 @@ public class AjustesController implements Initializable {
     private ImageView imageViewOscuro;
     @javafx.fxml.FXML
     private ImageView imageViewClaro;
+    @javafx.fxml.FXML
+    private AnchorPane ajustesid;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

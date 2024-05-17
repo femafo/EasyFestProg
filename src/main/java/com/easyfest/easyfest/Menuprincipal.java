@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
 
 import java.io.IOException;
 
@@ -55,6 +56,13 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void ajustesbutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: violet;");
+        busquedaId.setStyle("-fx-background-color: violet;");
+        pagosId.setStyle("-fx-background-color: violet;");
+        mensajesId.setStyle("-fx-background-color: violet;");
+        ajustesId.setStyle("-fx-background-color: gray;");
+        ayudaId.setStyle("-fx-background-color: violet;");
+        sobreNosotrosId.setStyle("-fx-background-color: violet;");
         try {
             AnchorPane ajustes = FXMLLoader.load(getClass().getResource("ajustes.fxml"));
             this.contenedorId.getChildren().setAll(ajustes);
@@ -71,6 +79,14 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void pagosbutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: violet;");
+        busquedaId.setStyle("-fx-background-color: violet;");
+        pagosId.setStyle("-fx-background-color: gray;");
+        mensajesId.setStyle("-fx-background-color: violet;");
+        ajustesId.setStyle("-fx-background-color: violet;");
+        ayudaId.setStyle("-fx-background-color: violet;");
+        sobreNosotrosId.setStyle("-fx-background-color: violet;");
+
         try {
             AnchorPane pagos = FXMLLoader.load(getClass().getResource("pagos.fxml"));
             this.contenedorId.getChildren().setAll(pagos);
@@ -87,6 +103,14 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void ayudabutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: violet;");
+        busquedaId.setStyle("-fx-background-color: violet;");
+        pagosId.setStyle("-fx-background-color: violet;");
+        mensajesId.setStyle("-fx-background-color: violet;");
+        ajustesId.setStyle("-fx-background-color: violet;");
+        ayudaId.setStyle("-fx-background-color: gray;");
+        sobreNosotrosId.setStyle("-fx-background-color: violet;");
+
         try {
             AnchorPane ayuda = FXMLLoader.load(getClass().getResource("ayuda.fxml"));
             this.contenedorId.getChildren().setAll(ayuda);
@@ -103,6 +127,14 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void sobrenosotrosbutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: violet;");
+        busquedaId.setStyle("-fx-background-color: violet;");
+        pagosId.setStyle("-fx-background-color: violet;");
+        mensajesId.setStyle("-fx-background-color: violet;");
+        ajustesId.setStyle("-fx-background-color: violet;");
+        ayudaId.setStyle("-fx-background-color: violet;");
+        sobreNosotrosId.setStyle("-fx-background-color: gray;");
+
         try {
             AnchorPane sobrenosotros = FXMLLoader.load(getClass().getResource("sobrenosotros.fxml"));
             this.contenedorId.getChildren().setAll(sobrenosotros);
@@ -119,6 +151,14 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void mensajesbutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: violet;");
+        busquedaId.setStyle("-fx-background-color: violet;");
+        pagosId.setStyle("-fx-background-color: violet;");
+        mensajesId.setStyle("-fx-background-color: gray;");
+        ajustesId.setStyle("-fx-background-color: violet;");
+        ayudaId.setStyle("-fx-background-color: violet;");
+        sobreNosotrosId.setStyle("-fx-background-color: violet;");
+
         try {
             AnchorPane mensajes = FXMLLoader.load(getClass().getResource("mensajes.fxml"));
             this.contenedorId.getChildren().setAll(mensajes);
@@ -135,6 +175,14 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void busquedabutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: violet;");
+        busquedaId.setStyle("-fx-background-color: gray;");
+        pagosId.setStyle("-fx-background-color: violet;");
+        mensajesId.setStyle("-fx-background-color: violet;");
+        ajustesId.setStyle("-fx-background-color: violet;");
+        ayudaId.setStyle("-fx-background-color: violet;");
+        sobreNosotrosId.setStyle("-fx-background-color: violet;");
+
         try {
             AnchorPane busqueda = FXMLLoader.load(getClass().getResource("busqueda.fxml"));
             this.contenedorId.getChildren().setAll(busqueda);
@@ -151,9 +199,17 @@ public class Menuprincipal
      */
     @javafx.fxml.FXML
     public void iniciobutton(ActionEvent actionEvent) {
+        inicioId.setStyle("-fx-background-color: gray;");
+        busquedaId.setStyle("-fx-background-color: violet;");
+        pagosId.setStyle("-fx-background-color: violet;");
+        mensajesId.setStyle("-fx-background-color: violet;");
+        ajustesId.setStyle("-fx-background-color: violet;");
+        ayudaId.setStyle("-fx-background-color: violet;");
+        sobreNosotrosId.setStyle("-fx-background-color: violet;");
+
         try {
-            AnchorPane inicio = FXMLLoader.load(getClass().getResource("inicio.fxml"));
-            this.contenedorId.getChildren().setAll(inicio);
+            AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("inicio.fxml"));
+            this.contenedorId.getChildren().setAll(inicio2);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

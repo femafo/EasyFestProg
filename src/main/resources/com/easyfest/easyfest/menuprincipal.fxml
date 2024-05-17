@@ -14,14 +14,14 @@
    <children>
       <Pane prefHeight="91.0" prefWidth="1532.0" style="-fx-background-color: black;">
          <children>
-            <ChoiceBox fx:id="chbUsuario" layoutX="1146.0" layoutY="33.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
-            <Label layoutX="1158.0" layoutY="36.0" text="Usuario" textFill="WHITE">
+            <ChoiceBox fx:id="chbUsuario" layoutX="1324.0" layoutY="33.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
+            <Label layoutX="1338.0" layoutY="36.0" text="Usuario" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="982.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1116.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1294.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/perfil-del-usuario.png" />
                </image>
@@ -34,7 +34,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Label layoutX="33.0" layoutY="45.0" text="\@EasyFest">
+            <Label layoutX="33.0" layoutY="45.0" text="\@EasyFest" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>

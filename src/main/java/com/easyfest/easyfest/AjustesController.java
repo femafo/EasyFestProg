@@ -4,10 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Labeled;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -44,6 +46,16 @@ public class AjustesController implements Initializable {
 
         idiomaChoiceBox.setValue("Español");
 
+        radioButtonTextoPequeño.setOnAction(event -> cambiarTamañoLetra(12));
+        radioButtonTextoMediano.setOnAction(event -> cambiarTamañoLetra(18));
+        radioButtonTextoGrande.setOnAction(event -> cambiarTamañoLetra(24));
 
+        cambiarTamañoLetra(18);
+    }
+
+    private void cambiarTamañoLetra(int tamaño) {
+        ajustesid.getChildren().filtered(node -> node instanceof Labeled).forEach(node -> {
+            ((Labeled) node).setFont(new Font(tamaño));
+        });
     }
 }

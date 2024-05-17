@@ -48,4 +48,30 @@ public class Menuprincipal
             throw new RuntimeException(e);
         }
     }
+
+    @javafx.fxml.FXML
+    public void pagosbutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane pagos = FXMLLoader.load(getClass().getResource("pagos.fxml"));
+            this.contenedorId.getChildren().setAll(pagos);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void ayudabutton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sobrenosotrosbutton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void mensajesbutton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void busquedabutton(ActionEvent actionEvent) {
+    }
 }

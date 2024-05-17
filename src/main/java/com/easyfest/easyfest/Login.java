@@ -19,6 +19,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Este es un Controlador para la vista de inicio de sesión.
+ *
+ * Esta sirve para el inicio de sesion que se comprobara con la base de datos si existen datos de X usuario.
+ * si no existen datos este tendra que crear un usuario/registrase.
+ */
 public class Login implements Initializable {
 
     @FXML
@@ -36,6 +42,10 @@ public class Login implements Initializable {
     @FXML
     private AnchorPane LoginPageid;
 
+    /**
+     * Método para manejar el evento de inicio de sesión.
+     * @param actionEvent El evento de acción generado por el botón de inicio de sesión.
+     */
     @FXML
     public void login(ActionEvent actionEvent) {
         try {
@@ -46,6 +56,10 @@ public class Login implements Initializable {
         }
     }
 
+    /**
+     * Método ir a la pagina de olvidar contraseña.
+     * @param event hace la acción de olvidar contraseña.
+     */
     @FXML
     public void forget(Event event) {
         try {
@@ -56,6 +70,10 @@ public class Login implements Initializable {
         }
     }
 
+    /**
+     * Método para ir a la pantalla de registro.
+     * @param event hace la acción de registro.
+     */
     @FXML
     public void resgistro(Event event) {
         try {
@@ -68,6 +86,7 @@ public class Login implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        // Este método se llama automáticamente después de que se ha cargado el archivo FXML
+        // Aquí puedes realizar inicializaciones adicionales si es necesario
     }
 }

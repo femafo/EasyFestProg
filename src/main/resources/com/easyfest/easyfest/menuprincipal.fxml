@@ -38,7 +38,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajustesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ajustes">
+            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: violet;" text="Ajustes">
                <font>
                   <Font size="14.0" />
                </font>
@@ -66,7 +66,7 @@
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="982.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1116.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/perfil-del-usuario.png" />
+                  <Image url="@../../../img/perfil-del-usuario.png" />
                </image>
             </ImageView>
          </children>

@@ -3,10 +3,7 @@ package com.easyfest.easyfest;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Labeled;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
@@ -54,8 +51,11 @@ public class AjustesController implements Initializable {
     }
 
     private void cambiarTamañoLetra(int tamaño) {
-        ajustesid.getChildren().filtered(node -> node instanceof Labeled).forEach(node -> {
-            ((Labeled) node).setFont(new Font(tamaño));
-        });
+        for (javafx.scene.Node node : ajustesid.getChildren()) {
+            if (node instanceof Label && node.getStyleClass().contains("labelTextoTamaño")) {
+                ((Label) node).setFont(new Font(tamaño));
+            }
+        }
     }
+
 }

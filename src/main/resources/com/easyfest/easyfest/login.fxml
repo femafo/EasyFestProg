@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="LoginPageid" prefHeight="780.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Login">
    <children>
-      <Button fx:id="loginid" layoutX="743.0" layoutY="428.0" mnemonicParsing="false" onAction="#login" text="Iniciar Sesion" />
+      <Button fx:id="loginid" layoutX="743.0" layoutY="428.0" mnemonicParsing="false" onAction="#login" style="-fx-background-radius: 50;" text="Iniciar Sesion" />
       <TextField fx:id="passwordid" layoutX="714.0" layoutY="339.0" promptText="Contraseña" style="-fx-background-radius: 50;" />
       <CheckBox fx:id="recuerdameid" layoutX="714.0" layoutY="383.0" mnemonicParsing="false" text="Recuérdame" />
       <Label layoutX="685.0" layoutY="523.0" text="¿No tienes cuenta?" />

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,6 +28,10 @@ public class AjustesController implements Initializable {
     private RadioButton radioButtonTemaOscuro;
     @javafx.fxml.FXML
     private RadioButton radioButtonTextoGrande;
+    @javafx.fxml.FXML
+    private ImageView imageViewOscuro;
+    @javafx.fxml.FXML
+    private ImageView imageViewClaro;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

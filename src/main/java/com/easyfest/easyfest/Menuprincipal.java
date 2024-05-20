@@ -67,7 +67,7 @@ public class Menuprincipal {
         busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
         pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
         mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ajustesId.setStyle("-fx-background-color:  A8C6FA;");
+        ajustesId.setStyle("-fx-background-color:  gray;");
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
         try {

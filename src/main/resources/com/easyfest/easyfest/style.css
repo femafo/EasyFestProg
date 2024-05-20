@@ -1,0 +1,12 @@
+/*.root{
+    -fx-background-color: red;
+}
+
+#idFondoAjustesGenerales{
+    -fx-background-color: red;
+}*/
+
+#menuPane{
+
+    -fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);
+}

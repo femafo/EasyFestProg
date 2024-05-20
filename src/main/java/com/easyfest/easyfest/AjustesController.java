@@ -11,6 +11,8 @@ import javafx.scene.text.Font;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+
 public class AjustesController implements Initializable {
     @javafx.fxml.FXML
     private ToggleGroup toggleTamañoLetra;
@@ -48,6 +50,9 @@ public class AjustesController implements Initializable {
         radioButtonTextoGrande.setOnAction(event -> cambiarTamañoLetra(24));
 
         cambiarTamañoLetra(18);
+
+        String css = getClass().getResource("style.css").toExternalForm();
+        ajustesid.getStylesheets().add(css);
     }
 
     private void cambiarTamañoLetra(int tamaño) {

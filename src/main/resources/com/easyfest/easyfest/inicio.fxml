@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="iniciopaneid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: dimgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.InicioController">
+<AnchorPane fx:id="iniciopaneid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: linear-gradient(to bottom, #ADD8E6, #FFC0CB, #E6E6FA, #FFFFFF);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.InicioController">
    <children>
       <ImageView fitHeight="225.0" fitWidth="619.0" layoutX="369.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,7 +21,7 @@
          </font>
       </Label>
       <Line endX="646.5999755859375" endY="23.600006103515625" layoutX="687.0" layoutY="278.0" startX="-640.5999755859375" startY="23.600006103515625" stroke="#ffadc4" strokeWidth="2.0" />
-      <Button layoutX="253.0" layoutY="370.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="338.0" style="-fx-background-color: lightblue; -fx-background-radius: 25;" text="Lo mas vendido">
+      <Button layoutX="253.0" layoutY="370.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="338.0" style="-fx-background-color: A8C6FA; -fx-background-radius: 25;" text="Lo mas vendido">
          <font>
             <Font name="Malgun Gothic Bold" size="18.0" />
          </font>
@@ -31,7 +31,7 @@
             <Font name="Malgun Gothic Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="764.0" layoutY="370.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="338.0" style="-fx-background-color: thistle; -fx-background-radius: 25;" text="Lo mas reciente">
+      <Button layoutX="764.0" layoutY="370.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="338.0" style="-fx-background-color: #AE9DE6; -fx-background-radius: 25;" text="Lo mas reciente">
          <font>
             <Font name="Malgun Gothic Bold" size="18.0" />
          </font>

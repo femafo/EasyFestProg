@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="addtarjetaid" prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AddtarjetaController">
+<AnchorPane fx:id="addtarjetaid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AddtarjetaController">
    <children>
-      <Label layoutX="529.0" layoutY="255.0" text="Este es el menu para añadir tarjetas" />
+      <Label layoutX="541.0" layoutY="46.0" text="Añadir una nueva tarjeta">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <Label layoutX="490.0" layoutY="169.0" text="Titular de la tarjeta:" />
+      <Label layoutX="776.0" layoutY="169.0" text="Número de la tarjeta:" />
+      <Label layoutX="529.0" layoutY="312.0" text="CVV:" />
+      <DatePicker fx:id="dateid" layoutX="744.0" layoutY="356.0" />
+      <TextField fx:id="titularid" layoutX="467.0" layoutY="214.0" />
+      <TextField fx:id="cvvid" layoutX="467.0" layoutY="356.0" />
+      <TextField fx:id="numeroid" layoutX="757.0" layoutY="214.0" />
+      <Label layoutX="779.0" layoutY="312.0" text="Fecha de caducidad:" />
+      <Button fx:id="anadirbutton" layoutX="643.0" layoutY="512.0" mnemonicParsing="false" onAction="#onanadirtarjeta" text="Añadir tarjeta" />
+      <Button fx:id="backbutton" layoutX="33.0" layoutY="34.0" mnemonicParsing="false" onAction="#onback" text="&lt;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

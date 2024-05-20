@@ -58,13 +58,13 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void ajustesbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
+        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color:  A8C6FA;");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         try {
             AnchorPane ajustes = FXMLLoader.load(getClass().getResource("ajustes.fxml"));
             this.contenedorId.getChildren().setAll(ajustes);
@@ -81,13 +81,13 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void pagosbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        busquedaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color:  A8C6FA;");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
 
         try {
             AnchorPane pagos = FXMLLoader.load(getClass().getResource("pagos.fxml"));
@@ -105,13 +105,13 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void ayudabutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color:  A8C6FA;");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
 
         try {
             AnchorPane ayuda = FXMLLoader.load(getClass().getResource("ayuda.fxml"));
@@ -129,12 +129,12 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void sobrenosotrosbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  A8C6FA;");
 
         try {
@@ -153,13 +153,13 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void mensajesbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         mensajesId.setStyle("-fx-background-color:  A8C6FA;");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
 
         try {
             AnchorPane mensajes = FXMLLoader.load(getClass().getResource("mensajes.fxml"));
@@ -177,13 +177,13 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void busquedabutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color:  A8C6FA;");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
+        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
 
         try {
             AnchorPane busqueda = FXMLLoader.load(getClass().getResource("busqueda.fxml"));
@@ -202,12 +202,12 @@ public class Menuprincipal {
     @javafx.fxml.FXML
     public void iniciobutton(ActionEvent actionEvent) {
         inicioId.setStyle("-fx-background-color:  A8C6FA;");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to bottom right, #936EF5, #A8C6FA);");
+        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
+        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
 
         try {
             AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("inicio.fxml"));

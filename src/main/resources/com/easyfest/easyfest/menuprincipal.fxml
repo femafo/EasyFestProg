@@ -28,9 +28,9 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane prefHeight="782.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);">
+      <Pane prefHeight="782.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);">
          <children>
-            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: A8C6FA;" text="Inicio">
+            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #A8C6FA;" text="Inicio">
                <font>
                   <Font size="14.0" />
                </font></Button>
@@ -39,32 +39,32 @@
                   <Font name="System Bold" size="18.0" />
                </font></Label>
             <Line endX="89.40000915527344" endY="93.19998168945312" layoutX="57.0" layoutY="318.0" startX="-49.0000114440918" startY="93.19998168945312" />
-            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);" text="Busqueda">
+            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Busqueda">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);" text="Pagos">
+            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Pagos">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="mensajesId" layoutY="375.0" mnemonicParsing="false" onAction="#mensajesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);" text="Mensajes">
+            <Button fx:id="mensajesId" layoutY="375.0" mnemonicParsing="false" onAction="#mensajesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Mensajes">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajustesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);" text="Ajustes">
+            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajustesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Ajustes">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" onAction="#ayudabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);" text="Ayuda">
+            <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" onAction="#ayudabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Ayuda">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="sobreNosotrosId" layoutX="-2.0" layoutY="693.0" mnemonicParsing="false" onAction="#sobrenosotrosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to bottom right, #936EF5, #A8C6FA);" text="Sobre nosotros">
+            <Button fx:id="sobreNosotrosId" layoutX="-2.0" layoutY="693.0" mnemonicParsing="false" onAction="#sobrenosotrosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Sobre nosotros">
                <font>
                   <Font size="14.0" />
                </font>

@@ -50,17 +50,19 @@ public class Login implements Initializable {
         String correo = usermailid.getText();
         String contrasena = passwordid.getText();
         boolean entra = um.loginusuario(correo, contrasena);
+        if (entra == true) {
             try {
                 AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
                 this.LoginPageid.getChildren().setAll(login);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }else {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setHeaderText("Vuelva a intentarlo");
             a.setContentText("El usuario o la contraseña pueden ser incorrectos.");
             a.showAndWait();
-
+        }
     }
 
     /**

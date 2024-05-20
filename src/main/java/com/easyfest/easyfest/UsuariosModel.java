@@ -31,23 +31,18 @@ public class UsuariosModel extends DBUtil{
     }
 
     public boolean loginusuario(String correo, String contrasena){
-        ArrayList<String> login = new ArrayList<String>();
-        try {
-            PreparedStatement ps = this.getConexion().prepareStatement("SELECT correo, contrasenya FROM easyfest.usuarios WHERE correo = ? AND contrasenya = ?");
+        try (PreparedStatement ps = this.getConexion().prepareStatement(
+                "SELECT correo, contrasenya FROM easyfest.usuario WHERE correo = ? AND contrasenya = ?")) {
+
             ps.setString(1, correo);
             ps.setString(2, contrasena);
 
-            ResultSet rs = ps.executeQuery();
-            String correo2 = rs.getString("correo");
-            if (correo.equals(correo2)){
-                Alert a = new Alert(Alert.AlertType.ERROR);
-                a.setHeaderText("Vuelva a intentarlo");
-                a.setContentText("El usuario o la contraseña pueden ser incorrectos.");
-                a.showAndWait();
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return true;
+                }
             }
-
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return false;

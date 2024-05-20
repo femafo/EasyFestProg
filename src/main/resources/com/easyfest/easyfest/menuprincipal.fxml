@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="780.0" prefWidth="1530.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Menuprincipal">
+<AnchorPane fx:id="munuprincipalid" prefHeight="780.0" prefWidth="1530.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Menuprincipal">
    <children>
       <Pane prefHeight="91.0" prefWidth="1532.0" style="-fx-background-color: black;">
          <children>

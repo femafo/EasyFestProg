@@ -34,7 +34,7 @@ public class Menuprincipal {
     @javafx.fxml.FXML
     private AnchorPane contenedorId;
     @javafx.fxml.FXML
-    private Pane menuPane;
+    private AnchorPane munuprincipalid;
 
 
     /**
@@ -48,7 +48,7 @@ public class Menuprincipal {
             this.contenedorId.getChildren().setAll(inicio);
 
             String css = getClass().getResource("style.css").toExternalForm();
-            menuPane.getStylesheets().add(css);
+            munuprincipalid.getStylesheets().add(css);
 
         } catch (IOException e) {
             throw new RuntimeException(e);

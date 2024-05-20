@@ -1,8 +1,10 @@
 package com.easyfest.easyfest;
 
+import java.time.LocalDate;
+
 public class Usuario {
     private int id;
-    private int fecha_nacimiento;
+    private LocalDate fecha_nacimiento;
     private String nombre;
     private String apellidos;
     private String dni;
@@ -17,10 +19,10 @@ public class Usuario {
         this.id = id;
     }
 
-    public int getFecha_nacimiento() {
+    public LocalDate getFecha_nacimiento() {
         return fecha_nacimiento;
     }
-    public void setFecha_nacimiento(int fecha_nacimiento) {
+    public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
     }
 
@@ -66,7 +68,7 @@ public class Usuario {
         this.admin = admin;
     }
 
-    public Usuario(int id, int fecha_nacimiento, String nombre, String apellidos, String dni, String correo, String contrasena, boolean admin) {
+    public Usuario(int id, LocalDate fecha_nacimiento, String nombre, String apellidos, String dni, String correo, String contrasena, boolean admin) {
         this.id = id;
         this.fecha_nacimiento = fecha_nacimiento;
         this.nombre = nombre;

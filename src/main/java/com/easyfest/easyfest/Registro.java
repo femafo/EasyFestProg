@@ -1,10 +1,15 @@
 package com.easyfest.easyfest;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
+import java.time.LocalDate;
 
 /**
  *Este es un  Controlador para la vista de registro.
@@ -30,6 +35,9 @@ public class Registro {
     private TextField dniid;
     @javafx.fxml.FXML
     private Button registrarsebutton;
+    UsuariosModel um = new UsuariosModel();
+    @javafx.fxml.FXML
+    private Button backid;
 
     /**
      * Método de inicialización, llamado automáticamente después de que se haya cargado el archivo FXML.
@@ -46,5 +54,36 @@ public class Registro {
     @javafx.fxml.FXML
     public void resgistrarse(ActionEvent actionEvent) {
         // Aquí puedes escribir la lógica para manejar el evento de registro
+        String nombre = nombreid.getText();
+        String apellidos = apellidoid.getText();
+        String dni = dniid.getText();
+        String correo = emailid.getText();
+        String contrasena = passwordid.getText();
+        String rcontrasena = rpasswordid.getText();
+        LocalDate fecha_nacimiento = ndateid.getValue();
+        if (contrasena.equals(rcontrasena)){
+            um.anadirUsurios(nombre, apellidos, dni, correo, contrasena, fecha_nacimiento);
+        }else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setHeaderText("Vuelva a intentarlo");
+            a.setContentText("El usuario o la contraseña pueden ser incorrectos.");
+            a.showAndWait();
+        }
+        try {
+            AnchorPane login = FXMLLoader.load(getClass().getResource("login.fxml"));
+            this.paneregistro.getChildren().setAll(login);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void onbackbutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane back = FXMLLoader.load(getClass().getResource("login.fxml"));
+            this.paneregistro.getChildren().setAll(back);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="paneregistro" prefHeight="780.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Registro">
    <children>
@@ -17,5 +18,10 @@
       <TextField fx:id="apellidoid" layoutX="690.0" layoutY="304.0" promptText="Apellidos" />
       <Label layoutX="737.0" layoutY="224.0" text="Regístrate" />
       <Button fx:id="registrarsebutton" layoutX="726.0" layoutY="531.0" mnemonicParsing="false" onAction="#resgistrarse" text="Registrarse" />
+      <Button fx:id="backid" layoutX="97.0" layoutY="69.0" mnemonicParsing="false" onAction="#onbackbutton" text="&lt;">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

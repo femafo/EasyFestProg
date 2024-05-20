@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
    <children>
-      <Label layoutX="529.0" layoutY="300.0" text="Pagina busqueda" />
+      <ScrollPane prefHeight="691.0" prefWidth="1374.0">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1034.0" prefWidth="1374.0">
+               <children>
+                  <Label layoutX="660.0" layoutY="934.0" text="Pagina busqueda" />
+                  <Label layoutX="614.0" layoutY="716.0" text="Pagina busqueda" />
+                  <Label layoutX="641.0" layoutY="544.0" text="Pagina busqueda" />
+                  <Label layoutX="641.0" layoutY="182.0" text="Pagina busqueda" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

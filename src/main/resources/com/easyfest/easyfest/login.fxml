@@ -17,6 +17,6 @@
       <Label layoutX="755.0" layoutY="206.0" prefHeight="26.0" prefWidth="66.0" text="¡Bienvenido" />
       <Label layoutX="783.0" layoutY="232.0" text="a" />
       <Label layoutX="762.0" layoutY="257.0" text="EasyFest!" />
-      <TextField fx:id="usermailid" layoutX="715.0" layoutY="292.0" promptText="Usuario/Email" style="-fx-background-radius: 50;" />
+      <TextField fx:id="usermailid" layoutX="715.0" layoutY="292.0" promptText="Email" style="-fx-background-radius: 50;" />
    </children>
 </AnchorPane>

@@ -7,16 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -41,6 +39,7 @@ public class Login implements Initializable {
     private Label forgotid;
     @FXML
     private AnchorPane LoginPageid;
+    UsuariosModel um = new UsuariosModel();
 
     /**
      * Método para manejar el evento de inicio de sesión.
@@ -48,11 +47,21 @@ public class Login implements Initializable {
      */
     @FXML
     public void login(ActionEvent actionEvent) {
-        try {
-            AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
-            this.LoginPageid.getChildren().setAll(login);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        String correo = usermailid.getText();
+        String contrasena = passwordid.getText();
+        boolean entra = um.loginusuario(correo, contrasena);
+        if (entra == true) {
+            try {
+                AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
+                this.LoginPageid.getChildren().setAll(login);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setHeaderText("Vuelva a intentarlo");
+            a.setContentText("El usuario o la contraseña pueden ser incorrectos.");
+            a.showAndWait();
         }
     }
 

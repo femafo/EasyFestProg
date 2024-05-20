@@ -30,7 +30,7 @@
             <ToggleGroup fx:id="toggleTamañoLetra" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radioButtonTextoMediano" layoutX="286.0" layoutY="603.0" mnemonicParsing="false" text="Aaa" textFill="WHITE" toggleGroup="$toggleTamañoLetra">
+      <RadioButton fx:id="radioButtonTextoMediano" layoutX="286.0" layoutY="603.0" mnemonicParsing="false" selected="true" text="Aaa" textFill="WHITE" toggleGroup="$toggleTamañoLetra">
          <font>
             <Font size="18.0" />
          </font>
@@ -53,7 +53,7 @@
       <ChoiceBox fx:id="idiomaChoiceBox" layoutX="955.0" layoutY="596.0" prefWidth="150.0" />
       <Pane layoutY="87.0" prefHeight="59.0" prefWidth="1374.0" style="-fx-background-color: gray;" />
       <Pane layoutY="386.0" prefHeight="59.0" prefWidth="1374.0" style="-fx-background-color: gray;" />
-      <RadioButton fx:id="radioButtonTemaOscuro" layoutX="302.0" layoutY="338.0" mnemonicParsing="false" text="Tema Oscuro" textFill="#fffefe">
+      <RadioButton fx:id="radioButtonTemaOscuro" layoutX="302.0" layoutY="338.0" mnemonicParsing="false" selected="true" text="Tema Oscuro" textFill="#fffefe">
          <toggleGroup>
             <ToggleGroup fx:id="toggleTema" />
          </toggleGroup>

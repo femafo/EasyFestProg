@@ -22,6 +22,8 @@ public class Forgotpassword2 {
     private TextField newcontr1;
     @javafx.fxml.FXML
     private AnchorPane forgotpassword2;
+    @javafx.fxml.FXML
+    private Button backid;
 
     /**
      * Método de inicialización, llamado automáticamente después de que se haya cargado el archivo FXML.
@@ -43,6 +45,16 @@ public class Forgotpassword2 {
             this.forgotpassword2.getChildren().setAll(login);
         } catch (IOException e) {
             // Manejar cualquier excepción de carga de FXML
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void onbackbutton(ActionEvent actionEvent) {
+        try {
+            AnchorPane back = FXMLLoader.load(getClass().getResource("forgotpassword.fxml"));
+            this.forgotpassword2.getChildren().setAll(back);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

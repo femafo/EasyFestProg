@@ -49,14 +49,16 @@ public class Login implements Initializable {
     public void login(ActionEvent actionEvent) {
         String correo = usermailid.getText();
         String contrasena = passwordid.getText();
-        boolean entra = um.loginusuario(correo, contrasena);
+
         try {
             AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
             this.LoginPageid.getChildren().setAll(login);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        /*if (entra == true) {
+        /*
+        boolean entra = um.loginusuario(correo, contrasena);
+        if (entra == true) {
             try {
                 AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
                 this.LoginPageid.getChildren().setAll(login);

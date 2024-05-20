@@ -33,8 +33,6 @@ public class Menuprincipal {
     private Button sobreNosotrosId;
     @javafx.fxml.FXML
     private AnchorPane contenedorId;
-    @javafx.fxml.FXML
-    private AnchorPane munuprincipalid;
 
 
     /**
@@ -46,9 +44,6 @@ public class Menuprincipal {
         try {
             AnchorPane inicio = FXMLLoader.load(getClass().getResource("inicio.fxml"));
             this.contenedorId.getChildren().setAll(inicio);
-
-            String css = getClass().getResource("style.css").toExternalForm();
-            munuprincipalid.getStylesheets().add(css);
 
         } catch (IOException e) {
             throw new RuntimeException(e);

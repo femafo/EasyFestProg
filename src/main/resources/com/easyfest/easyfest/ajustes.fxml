@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ajustesid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AjustesController">
+<AnchorPane fx:id="ajustesid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: #444444;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AjustesController">
    <children>
       <Label layoutX="610.0" layoutY="14.0" styleClass="labelTextoTamaño" text="Ajustes" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold" size="36.0" />
          </font></Label>
       <Label id="idFondoAjustesGenerales" layoutX="558.0" layoutY="480.0" styleClass="labelTextoTamaño" text="Ajustes Generales" textFill="WHITE">
          <font>
-            <Font size="28.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <Label layoutX="627.0" layoutY="168.0" styleClass="labelTextoTamaño" text="Temas" textFill="WHITE">
          <font>
-            <Font size="28.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <RadioButton fx:id="radioButtonTextoPequeño" layoutX="213.0" layoutY="608.0" mnemonicParsing="false" text="Aaa" textFill="WHITE">
@@ -42,17 +42,17 @@
       </RadioButton>
       <Label layoutX="242.0" layoutY="557.0" styleClass="labelTextoTamaño" text="Tamaño de la Letra" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
       <Label layoutX="955.0" layoutY="557.0" styleClass="labelTextoTamaño" text="Idioma" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
       <ChoiceBox fx:id="idiomaChoiceBox" layoutX="955.0" layoutY="596.0" prefWidth="150.0" />
-      <Pane layoutY="87.0" prefHeight="59.0" prefWidth="1374.0" style="-fx-background-color: gray;" />
-      <Pane layoutY="386.0" prefHeight="59.0" prefWidth="1374.0" style="-fx-background-color: gray;" />
+      <Pane layoutY="87.0" prefHeight="59.0" prefWidth="1374.0" style="-fx-background-color: black;" />
+      <Pane layoutY="386.0" prefHeight="59.0" prefWidth="1374.0" style="-fx-background-color: black;" />
       <RadioButton fx:id="radioButtonTemaOscuro" layoutX="302.0" layoutY="338.0" mnemonicParsing="false" selected="true" text="Tema Oscuro" textFill="#fffefe">
          <toggleGroup>
             <ToggleGroup fx:id="toggleTema" />

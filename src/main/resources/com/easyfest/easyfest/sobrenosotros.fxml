@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -10,9 +12,14 @@
 <AnchorPane fx:id="sobrenosotrosid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: dimgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.SobrenosotrosController">
    <children>
       <ScrollPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: violet;" />
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1374.0" style="-fx-background-color: dimgray;">
+    <AnchorPane layoutX="126.0" minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1374.0" style="-fx-background-color: violet;">
          <children>
-            <Label layoutX="492.0" layoutY="36.0" prefHeight="98.0" prefWidth="390.0" text="¿Quienes somos?" textFill="#ffadc4">
+            <ImageView fitHeight="235.0" fitWidth="477.0" layoutX="453.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/fiesta1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="591.0" layoutY="70.0" prefHeight="97.0" prefWidth="228.0" text="EasyFest" textFill="#ffadc4">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>

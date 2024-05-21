@@ -13,17 +13,12 @@
 
 <AnchorPane fx:id="paneregistro" prefHeight="780.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Registro">
    <children>
-      <ImageView fitHeight="872.0" fitWidth="1562.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="872.0" fitWidth="1584.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/Image Pasted 2024-26-04 at 09.36.27.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="backid" layoutX="97.0" layoutY="69.0" mnemonicParsing="false" onAction="#onbackbutton" text="&lt;">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Button>
-      <Pane layoutX="650.0" layoutY="132.0" prefHeight="581.0" prefWidth="497.0" style="-fx-background-color: rgba(0, 0, 0, 0.6); -fx-background-radius: 50;">
+      <Pane layoutX="521.0" layoutY="145.0" prefHeight="581.0" prefWidth="497.0" style="-fx-background-color: rgba(0, 0, 0, 0.6); -fx-background-radius: 50;">
          <children>
             <Label layoutX="201.0" layoutY="50.0" text="Regístrate" textFill="#a8c6fa">
                <font>
@@ -60,6 +55,11 @@
             </Button>
             <Line endX="198.4000244140625" layoutX="248.0" layoutY="92.0" startX="-188.79998779296875" stroke="#a8c6fa" strokeWidth="2.0" />
             <Line endX="198.4000244140625" layoutX="243.0" layoutY="537.0" startX="-188.79998779296875" stroke="#a8c6fa" strokeWidth="2.0" />
+            <Button fx:id="backid" layoutX="58.0" layoutY="33.0" mnemonicParsing="false" onAction="#onbackbutton" prefHeight="35.0" prefWidth="40.0" style="-fx-background-radius: 100; -fx-font-weight: bold; -fx-background-color: #AA8EF5;" text="&lt;" textFill="#fffcfc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

@@ -56,5 +56,6 @@
             <Image url="@../../../img/concierto.png" />
          </image>
       </ImageView>
+      <Label layoutX="673.0" layoutY="463.0" text="Label" />
    </children>
 </AnchorPane>

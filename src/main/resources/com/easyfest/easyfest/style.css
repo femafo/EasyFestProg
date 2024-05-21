@@ -17,3 +17,9 @@
 
   -fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
 }
+
+#paneLogIn{
+-fx-background-color: rgba(0, 0, 0, 0.5);
+
+}
+

@@ -4,19 +4,73 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LoginPageid" prefHeight="780.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Login">
+<AnchorPane fx:id="LoginPageid" prefHeight="780.0" prefWidth="1530.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Login">
    <children>
-      <Button fx:id="loginid" layoutX="743.0" layoutY="428.0" mnemonicParsing="false" onAction="#login" style="-fx-background-radius: 50;" text="Iniciar Sesion" />
-      <TextField fx:id="passwordid" layoutX="714.0" layoutY="339.0" promptText="Contraseña" style="-fx-background-radius: 50;" />
-      <CheckBox fx:id="recuerdameid" layoutX="714.0" layoutY="383.0" mnemonicParsing="false" text="Recuérdame" />
-      <Label layoutX="685.0" layoutY="523.0" text="¿No tienes cuenta?" />
-      <Label fx:id="regisid" layoutX="799.0" layoutY="523.0" onMouseClicked="#resgistro" text="Regístrate" underline="true" />
-      <Label fx:id="forgotid" layoutX="708.0" layoutY="576.0" onMouseClicked="#forget" text="¿Has olvidado tu contraseña?" underline="true" />
-      <Label layoutX="755.0" layoutY="206.0" prefHeight="26.0" prefWidth="66.0" text="¡Bienvenido" />
-      <Label layoutX="783.0" layoutY="232.0" text="a" />
-      <Label layoutX="762.0" layoutY="257.0" text="EasyFest!" />
-      <TextField fx:id="usermailid" layoutX="715.0" layoutY="292.0" promptText="Email" style="-fx-background-radius: 50;" />
+      <Pane prefHeight="844.0" prefWidth="1797.0">
+         <children>
+            <ImageView fitHeight="1012.0" fitWidth="1798.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Image Pasted 2024-26-04 at 09.36.27.jpg" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneLogIn" layoutX="650.0" layoutY="132.0" prefHeight="581.0" prefWidth="497.0" style="-fx-background-color: red; -fx-background-color: rgba(0, 0, 0, 0.6); -fx-background-radius: 50;">
+               <children>
+                  <Label layoutX="195.0" layoutY="42.0" prefHeight="35.0" prefWidth="115.0" text="Bienvenido" textFill="#a8c6fa">
+                     <font>
+                        <Font name="Franklin Gothic Medium" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="246.0" layoutY="77.0" style="-fx-font-family: Franklin Gothic Medium;" text="a" textFill="#a8c6fa">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="169.0" layoutY="112.0" style="-fx-font-family: Franklin Gothic Medium;" text="¡EasyFest!" textFill="#936ef5">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usermailid" layoutX="127.0" layoutY="204.0" prefHeight="35.0" prefWidth="251.0" promptText="Email" style="-fx-background-radius: 50;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="passwordid" layoutX="127.0" layoutY="290.0" prefHeight="35.0" prefWidth="251.0" promptText="Contraseña" style="-fx-background-radius: 50;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <CheckBox fx:id="recuerdameid" layoutX="140.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Recuérdame" textFill="#a8c6fa">
+                     <font>
+                        <Font size="13.0" />
+                     </font></CheckBox>
+                  <Button fx:id="loginid" layoutX="199.0" layoutY="383.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="117.0" style="-fx-background-radius: 50; -fx-background-color: #AA8EF5; -fx-font-weight: bold;" text="Iniciar Sesion" textFill="WHITE" />
+                  <Label fx:id="regisid" layoutX="297.0" layoutY="472.0" onMouseClicked="#resgistro" style="-fx-font-weight: bold;" stylesheets="@style.css" text="Regístrate" textFill="#aa8ef5" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="149.0" layoutY="472.0" style="-fx-font-family: Franklin Gothic Medium;" text="¿No tienes cuenta?" textFill="#a8c6fa">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="forgotid" layoutX="162.0" layoutY="515.0" onMouseClicked="#forget" style="-fx-font-weight: bold;" text="¿Has olvidado tu contraseña?" textFill="#a8c6fa" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="201.199951171875" layoutX="253.0" layoutY="448.0" startX="-192.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

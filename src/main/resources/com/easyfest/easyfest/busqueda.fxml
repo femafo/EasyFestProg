@@ -3,8 +3,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
+<AnchorPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: dimgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
    <children>
       <ScrollPane prefHeight="691.0" prefWidth="1374.0">
          <content>

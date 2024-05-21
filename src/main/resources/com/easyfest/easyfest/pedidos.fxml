@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="pedidosid" prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Pedidos">
+   <children>
+      <Label layoutX="673.0" layoutY="286.0" text="Esta es la pagina de mis pedidos" />
+   </children>
+</AnchorPane>

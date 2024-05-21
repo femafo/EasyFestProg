@@ -51,7 +51,10 @@
                      <font>
                         <Font size="13.0" />
                      </font></CheckBox>
-                  <Button fx:id="loginid" layoutX="199.0" layoutY="383.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="117.0" style="-fx-background-radius: 50; -fx-background-color: #AA8EF5; -fx-font-weight: bold;" text="Iniciar Sesion" textFill="WHITE" />
+                  <Button fx:id="loginid" layoutX="199.0" layoutY="383.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="117.0" style="-fx-background-radius: 50; -fx-background-color: #AA8EF5; -fx-font-weight: bold;" text="Iniciar Sesion" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
                   <Label fx:id="regisid" layoutX="297.0" layoutY="472.0" onMouseClicked="#resgistro" style="-fx-font-weight: bold;" stylesheets="@style.css" text="Regístrate" textFill="#aa8ef5" underline="true">
                      <font>
                         <Font size="14.0" />
@@ -67,7 +70,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Line endX="201.199951171875" layoutX="253.0" layoutY="448.0" startX="-192.0" />
+                  <Line endX="201.199951171875" layoutX="253.0" layoutY="448.0" startX="-192.0" stroke="#fff8f8" strokeWidth="2.0" />
                </children>
             </Pane>
          </children>

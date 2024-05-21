@@ -51,11 +51,9 @@ public class AjustesController implements Initializable {
     }
 
     private void cambiarTamañoLetra(int tamaño) {
-        for (javafx.scene.Node node : ajustesid.getChildren()) {
-            if (node instanceof Label && node.getStyleClass().contains("labelTextoTamaño")) {
-                ((Label) node).setFont(new Font(tamaño));
-            }
-        }
+
     }
+
+
 
 }

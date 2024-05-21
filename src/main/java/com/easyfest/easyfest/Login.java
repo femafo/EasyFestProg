@@ -9,8 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -42,8 +40,6 @@ public class Login implements Initializable {
     @FXML
     private AnchorPane LoginPageid;
     UsuariosModel um = new UsuariosModel();
-    @FXML
-    private Pane paneLogIn;
 
     /**
      * Método para manejar el evento de inicio de sesión.
@@ -111,6 +107,5 @@ public class Login implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Este método se llama automáticamente después de que se ha cargado el archivo FXML
         // Aquí puedes realizar inicializaciones adicionales si es necesario
-
     }
 }

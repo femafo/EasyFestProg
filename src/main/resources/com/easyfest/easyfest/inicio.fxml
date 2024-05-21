@@ -10,23 +10,23 @@
 
 <AnchorPane fx:id="iniciopaneid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: #444444;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.InicioController">
    <children>
-      <ImageView fitHeight="225.0" fitWidth="619.0" layoutX="371.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="225.0" fitWidth="619.0" layoutX="369.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/imageRedondeada.png" />
          </image>
       </ImageView>
-      <Label layoutX="595.0" layoutY="66.0" text="EasyFest" textFill="#ffadc4">
+      <Label layoutX="592.0" layoutY="110.0" text="EasyFest" textFill="#ffadc4">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Line endX="646.5999755859375" endY="23.600006103515625" layoutX="686.0" layoutY="270.0" startX="-640.5999755859375" startY="23.600006103515625" stroke="#a8c6fa" strokeWidth="3.0" />
+      <Line endX="646.5999755859375" endY="23.600006103515625" layoutX="687.0" layoutY="278.0" startX="-640.5999755859375" startY="23.600006103515625" stroke="#a8c6fa" strokeWidth="2.0" />
       <Button layoutX="253.0" layoutY="370.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="338.0" style="-fx-background-color: A8C6FA; -fx-background-radius: 25;" text="Lo mas vendido">
          <font>
             <Font name="Malgun Gothic Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="97.0" layoutY="251.0" prefHeight="33.0" prefWidth="1185.0" text="¡DESCUBRE LA MANERA MÁS FÁCIL Y EMOCIONANTE DE PLANEAR TUS VIAJES Y ASISITIR A LOS  MEJORES FESTIVALES CON EASYFEST!" textFill="#fafafa">
+      <Label layoutX="94.0" layoutY="267.0" prefHeight="33.0" prefWidth="1185.0" text="¡DESCUBRE LA MANERA MÁS FÁCIL Y EMOCIONANTE DE PLANEAR TUS VIAJES Y ASISITIR A LOS  MEJORES FESTIVALES CON EASYFEST!" textFill="#fafafa">
          <font>
             <Font name="Malgun Gothic Bold" size="18.0" />
          </font>
@@ -56,6 +56,5 @@
             <Image url="@../../../img/concierto.png" />
          </image>
       </ImageView>
-      <Label layoutX="673.0" layoutY="463.0" text="Label" />
    </children>
 </AnchorPane>

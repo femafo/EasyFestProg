@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="780.0" prefWidth="1530.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Menuprincipal">
+<AnchorPane fx:id="menuprincipalid" prefHeight="780.0" prefWidth="1530.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Menuprincipal">
    <children>
       <Pane prefHeight="91.0" prefWidth="1532.0" style="-fx-background-color: black;">
          <children>
@@ -20,7 +20,6 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="982.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1294.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/perfil-del-usuario.png" />

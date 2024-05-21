@@ -10,6 +10,8 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Es la Clase controladora para el menú principal de la aplicación EasyFest.
@@ -23,7 +25,7 @@ public class Menuprincipal {
     @javafx.fxml.FXML
     private Button ajustesId;
     @javafx.fxml.FXML
-    private ChoiceBox chbUsuario;
+    private ChoiceBox <String> chbUsuario;
     @javafx.fxml.FXML
     private Button busquedaId;
     @javafx.fxml.FXML
@@ -34,6 +36,9 @@ public class Menuprincipal {
     private Button sobreNosotrosId;
     @javafx.fxml.FXML
     private AnchorPane contenedorId;
+    private String [] opcusuario = {"Perfil", "Carrito", "Mis pedidos", "Cerrar Sesión" };
+    @javafx.fxml.FXML
+    private AnchorPane menuprincipalid;
 
 
     /**
@@ -49,6 +54,67 @@ public class Menuprincipal {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        chbUsuario.getItems().addAll(opcusuario);
+        chbUsuario.setOnAction(this::opcionuser);
+
+    }
+
+    public void opcionuser(ActionEvent event) {
+        String selectedOption = chbUsuario.getValue();
+        if ("Perfil".equals(selectedOption)) {
+            inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
+            busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            try {
+                AnchorPane perfil = FXMLLoader.load(getClass().getResource("perfil.fxml"));
+                this.contenedorId.getChildren().setAll(perfil);
+            } catch (IOException e) {
+                Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        if ("Carrito".equals(selectedOption)) {
+            inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
+            busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            try {
+                AnchorPane carro = FXMLLoader.load(getClass().getResource("carro.fxml"));
+                this.contenedorId.getChildren().setAll(carro);
+            } catch (IOException e) {
+                Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        if ("Mis pedidos".equals(selectedOption)) {
+            inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
+            busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+            try {
+                AnchorPane pedidos = FXMLLoader.load(getClass().getResource("pedidos.fxml"));
+                this.contenedorId.getChildren().setAll(pedidos);
+            } catch (IOException e) {
+                Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        if ("Cerrar Sesión".equals(selectedOption)) {
+            try {
+                AnchorPane login = FXMLLoader.load(getClass().getResource("login.fxml"));
+                this.menuprincipalid.getChildren().setAll(login);
+            } catch (IOException e) {
+                Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        chbUsuario.setValue(null);
     }
 
     /**

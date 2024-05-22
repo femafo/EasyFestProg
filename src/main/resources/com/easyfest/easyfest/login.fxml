@@ -13,14 +13,14 @@
 
 <AnchorPane fx:id="LoginPageid" prefHeight="780.0" prefWidth="1530.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Login">
    <children>
-      <Pane layoutY="-9.0" prefHeight="853.0" prefWidth="1798.0">
+      <Pane prefHeight="780.0" prefWidth="1530.0">
          <children>
-            <ImageView fitHeight="1012.0" fitWidth="1821.0" layoutX="-1.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="875.0" fitWidth="1541.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../img/Image Pasted 2024-26-04 at 09.36.27.jpg" />
+                  <Image url="@../../../img/Image%20Pasted%202024-26-04%20at%2009.36.27.jpg" />
                </image>
             </ImageView>
-            <Pane fx:id="paneLogIn" layoutX="650.0" layoutY="132.0" prefHeight="581.0" prefWidth="497.0" style="-fx-background-color: rgba(0, 0, 0, 0.6); -fx-background-radius: 50;">
+            <Pane fx:id="paneLogIn" layoutX="522.0" layoutY="100.0" prefHeight="581.0" prefWidth="497.0" style="-fx-background-color: rgba(0, 0, 0, 0.6); -fx-background-radius: 50;">
                <children>
                   <Label layoutX="195.0" layoutY="42.0" prefHeight="35.0" prefWidth="115.0" text="Bienvenido" textFill="#a8c6fa">
                      <font>
@@ -50,11 +50,13 @@
                   <CheckBox fx:id="recuerdameid" layoutX="140.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Recuérdame" textFill="#a8c6fa">
                      <font>
                         <Font size="13.0" />
-                     </font></CheckBox>
+                     </font>
+                  </CheckBox>
                   <Button fx:id="loginid" layoutX="199.0" layoutY="383.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="117.0" style="-fx-background-radius: 50; -fx-background-color: #AA8EF5; -fx-font-weight: bold;" text="Iniciar Sesion" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <Label fx:id="regisid" layoutX="297.0" layoutY="472.0" onMouseClicked="#resgistro" style="-fx-font-weight: bold;" stylesheets="@style.css" text="Regístrate" textFill="#aa8ef5" underline="true">
                      <font>
                         <Font size="14.0" />

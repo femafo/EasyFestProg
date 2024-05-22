@@ -12,12 +12,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.util.function.Predicate;
 
 public class BusquedaController {
+    @javafx.fxml.FXML
     public TableView<Customer> tblCustomer;
+    @javafx.fxml.FXML
     public TableColumn colCustID;
+    @javafx.fxml.FXML
     public TableColumn colDOB;
+    @javafx.fxml.FXML
     public TableColumn colAddress;
+    @javafx.fxml.FXML
     public TableColumn colCity;
+    @javafx.fxml.FXML
     public TableColumn colCustName;
+    @javafx.fxml.FXML
     public TextField txtSearchBar;
     //now we should create observerable array list
     final ObservableList<Customer> custList= FXCollections.observableArrayList();

@@ -11,10 +11,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="498.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
+<AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
     <children>
-        <TableView fx:id="tblCustomer" layoutX="17.0" layoutY="125.0" prefHeight="351.0" prefWidth="728.0">
+        <TableView fx:id="tblCustomer" layoutX="189.0" layoutY="150.0" prefHeight="462.0" prefWidth="995.0">
             <columns>
                 <TableColumn fx:id="colCustID" prefWidth="98.0" text="Customer ID" />
                 <TableColumn fx:id="colCustName" prefWidth="180.0" text="Customer Name" />
@@ -23,13 +22,13 @@
                 <TableColumn fx:id="colCity" prefWidth="105.0" text="City" />
             </columns>
         </TableView>
-        <TextField fx:id="txtSearchBar" layoutX="54.0" layoutY="92.0" prefHeight="25.0" prefWidth="340.0" promptText="Search Here.." />
-        <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="18.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+        <TextField fx:id="txtSearchBar" layoutX="517.0" layoutY="101.0" prefHeight="25.0" prefWidth="340.0" promptText="Search Here.." />
+        <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="481.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../img/search.png" />
             </image>
         </ImageView>
-        <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="58.0" prefWidth="761.0" text="Customer Form">
+        <Label alignment="CENTER" layoutX="306.0" layoutY="30.0" prefHeight="58.0" prefWidth="761.0" text="Buscar">
             <font>
                 <Font name="System Bold" size="40.0" />
             </font>

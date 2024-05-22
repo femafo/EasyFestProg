@@ -28,12 +28,10 @@ public class AyudaController {
     private Button buttonInfTransporte;
 
     private void mostrarPane(String texto) {
-        // Crear el Pane
         Pane pane = new Pane();
-        pane.setStyle("-fx-background-color: lightgray;");
-        pane.setPrefSize(600, 400);
+        pane.setStyle("-fx-background-color: lightgray; -fx-background-radius: 10;");
+        pane.setPrefSize(300, 200);
 
-        // Agregar el texto
         Label label = new Label(texto);
         label.setWrapText(true);
         label.setTextAlignment(TextAlignment.CENTER);
@@ -42,20 +40,17 @@ public class AyudaController {
         label.setLayoutY(50);
         pane.getChildren().add(label);
 
-        // Agregar el botón de cierre
         Button closeButton = new Button("Cerrar");
         closeButton.setOnAction(e -> ((Pane)pane.getParent()).getChildren().remove(pane));
         closeButton.setLayoutX(10);
         closeButton.setLayoutY(10);
         pane.getChildren().add(closeButton);
 
-        // Centrar el Pane en la pantalla
         double centerX = (ayudaid.getWidth() - pane.getPrefWidth()) / 2;
         double centerY = (ayudaid.getHeight() - pane.getPrefHeight()) / 2;
         pane.setLayoutX(centerX);
         pane.setLayoutY(centerY);
 
-        // Agregar el Pane al AnchorPane principal
         ayudaid.getChildren().add(pane);
     }
 

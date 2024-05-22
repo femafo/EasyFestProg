@@ -2,10 +2,16 @@ package com.easyfest.easyfest;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.ResourceBundle;
 
 /**
  * Controlador para la vista de pagos de la aplicación EasyFest.
@@ -13,7 +19,7 @@ import java.io.IOException;
  *
  * @autor TuNombre
  */
-public class PagosController {
+public class PagosController implements Initializable {
 
     @javafx.fxml.FXML
     private AnchorPane pagosid;  // Panel principal de pagos
@@ -23,6 +29,15 @@ public class PagosController {
 
     @javafx.fxml.FXML
     private Button vermasid;  // Botón para ver más detalles de los pagos
+    TarjetasModel tm = new TarjetasModel();
+    @javafx.fxml.FXML
+    private Label cvvlabelid;
+    @javafx.fxml.FXML
+    private Label titularlabelid;
+    @javafx.fxml.FXML
+    private Label fechacadlabelid;
+    @javafx.fxml.FXML
+    private Label numtlabelid;
 
     /**
      * Maneja el evento de clic del botón "Ver más".
@@ -61,4 +76,10 @@ public class PagosController {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+    }
+
+
 }

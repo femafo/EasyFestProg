@@ -19,8 +19,6 @@ import java.util.logging.Logger;
  */
 public class Menuprincipal {
     @javafx.fxml.FXML
-    private Button mensajesId;
-    @javafx.fxml.FXML
     private Button ayudaId;
     @javafx.fxml.FXML
     private Button ajustesId;
@@ -65,7 +63,6 @@ public class Menuprincipal {
             inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
             busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -80,7 +77,6 @@ public class Menuprincipal {
             inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
             busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -95,7 +91,6 @@ public class Menuprincipal {
             inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
             busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
             sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -128,7 +123,6 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color:  A8C6FA;");
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -151,7 +145,6 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color:  A8C6FA;");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -175,7 +168,6 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color:  A8C6FA;");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -199,7 +191,6 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  A8C6FA;");
@@ -207,30 +198,6 @@ public class Menuprincipal {
         try {
             AnchorPane sobrenosotros = FXMLLoader.load(getClass().getResource("sobrenosotros.fxml"));
             this.contenedorId.getChildren().setAll(sobrenosotros);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * Maneja el evento de acción para el botón "Mensajes".
-     * Carga el archivo "mensajes.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
-    public void mensajesbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        mensajesId.setStyle("-fx-background-color:  A8C6FA;");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-        try {
-            AnchorPane mensajes = FXMLLoader.load(getClass().getResource("mensajes.fxml"));
-            this.contenedorId.getChildren().setAll(mensajes);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -247,7 +214,6 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color:  A8C6FA;");
         pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -271,7 +237,6 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color:  A8C6FA;");
         busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        mensajesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");

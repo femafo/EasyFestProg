@@ -52,7 +52,7 @@
                   </ImageView>
                   <Pane layoutX="679.0" layoutY="16.0" prefHeight="51.0" prefWidth="74.0" styleClass="panePrecios">
                      <children>
-                        <Label layoutX="16.0" layoutY="12.0" text="200€" textFill="#00157b">
+                        <Label layoutX="11.0" layoutY="12.0" text="1500€" textFill="#00157b">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>

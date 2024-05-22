@@ -36,41 +36,16 @@
 -fx-background-radius: 30px;
 }
 
+.botonesAyuda{
+-fx-background-radius: 30px;
+ -fx-background-color: linear-gradient(to right,  #B8E7EE,  #FF72F9);
+}
+.botonesAyudatoLeft{
+-fx-background-radius: 30px;
+-fx-background-color: linear-gradient(to left,  #B8E7EE,  #FF72F9);
+}
 
-/*
-Coachella Valley Music and Arts Festival (California, EE. UU.)
 
-Paquete: Vuelo + Alojamiento en hoteles cercanos + Transporte al festival.
-Incluye: Vuelos de ida y vuelta a Los Ángeles o Palm Springs, estadía en hoteles de 3 a 5 estrellas, y transporte diario al festival.
-Tomorrowland (Boom, Bélgica)
-
-Paquete: Vuelo + Alojamiento en DreamVille (camping oficial) o hoteles cercanos.
-Incluye: Vuelos de ida y vuelta a Bruselas, opciones de alojamiento que van desde tiendas de campaña hasta cabañas de lujo, y transporte al festival.
-Glastonbury Festival (Pilton, Inglaterra)
-
-Paquete: Vuelo + Alojamiento en Glamping o en hoteles.
-Incluye: Vuelos de ida y vuelta a Londres o Bristol, opciones de glamping (camping de lujo) con todas las comodidades, y transporte al festival.
-Rock in Rio (Río de Janeiro, Brasil)
-
-Paquete: Vuelo + Alojamiento en hoteles en Copacabana o Ipanema.
-Incluye: Vuelos de ida y vuelta a Río de Janeiro, estadía en hoteles de 3 a 5 estrellas en zonas populares como Copacabana o Ipanema, y transporte al festival.
-Primavera Sound (Barcelona, España)
-
-Paquete: Vuelo + Alojamiento en hoteles céntricos.
-Incluye: Vuelos de ida y vuelta a Barcelona, estadía en hoteles céntricos, y transporte al festival (en algunos casos, puede estar incluido o se puede gestionar fácilmente por la ubicación céntrica).
-Sziget Festival (Budapest, Hungría)
-
-Paquete: Vuelo + Alojamiento en la isla del festival o en hoteles en la ciudad.
-Incluye: Vuelos de ida y vuelta a Budapest, opciones de alojamiento en el camping oficial del festival o en hoteles en el centro de Budapest, y transporte al festival.
-Ultra Music Festival (Miami, EE. UU.)
-
-Paquete: Vuelo + Alojamiento en hoteles en el centro de Miami.
-Incluye: Vuelos de ida y vuelta a Miami, estadía en hoteles cercanos al Bayfront Park, y transporte al festival (en muchos casos, los hoteles están a una corta distancia a pie).
-Fuji Rock Festival (Naeba, Japón)
-
-Paquete: Vuelo + Alojamiento en hoteles o alojamientos en la estación de esquí de Naeba.
-Incluye: Vuelos de ida y vuelta a Tokio o Niigata, estadía en hoteles en la estación de esquí de Naeba o en las cercanías, y transporte al festival.
-*/
 
 
 

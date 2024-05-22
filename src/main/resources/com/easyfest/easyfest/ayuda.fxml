@@ -12,17 +12,17 @@
    <children>
       <Pane layoutY="-6.0" prefHeight="148.0" prefWidth="1374.0" style="-fx-background-color: black;">
          <children>
-            <Label layoutX="331.0" layoutY="43.0" prefHeight="78.0" prefWidth="712.0" text="Hola. ¿En qué podemos ayudarte?" textFill="WHITE">
+            <Label layoutX="331.0" layoutY="35.0" prefHeight="78.0" prefWidth="712.0" text="Hola ¿En qué podemos ayudarte?" textFill="WHITE">
                <font>
-                  <Font size="43.0" />
+                  <Font name="System Bold" size="43.0" />
                </font>
             </Label>
          </children>
       </Pane>
       <Pane layoutY="639.0" prefHeight="52.0" prefWidth="1379.0" style="-fx-background-color: black;">
          <children>
-            <Label layoutX="25.0" layoutY="18.0" text="Correo de Contacto: easyfest@contacto.es" textFill="WHITE" />
-            <Label layoutX="577.0" layoutY="18.0" text="Número de contacto: 691 13 28 81" textFill="WHITE" />
+            <Label layoutX="25.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Correo de Contacto: easyfest@contacto.es" textFill="WHITE" />
+            <Label layoutX="577.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Número de contacto: 691 13 28 81" textFill="WHITE" />
             <Label layoutX="1188.0" layoutY="18.0" text="Atención al cliente: de 9h a 21h" textFill="WHITE" />
             <ImageView fitHeight="38.0" fitWidth="51.0" layoutX="255.0" layoutY="8.0">
                <image>
@@ -41,22 +41,22 @@
             </ImageView>
          </children>
       </Pane>
-      <Button fx:id="buttonAyudaPedidos" layoutX="75.0" layoutY="165.0" mnemonicParsing="false" prefHeight="192.0" prefWidth="532.0" style="-fx-background-color: #B8E7EE;" text="Ayuda en los pedidos" textFill="#111111" onAction="#ButtonAyudaPedidos">
+      <Button fx:id="buttonAyudaPedidos" layoutX="75.0" layoutY="165.0" mnemonicParsing="false" onAction="#ButtonAyudaPedidos" prefHeight="192.0" prefWidth="532.0" style="-fx-font-weight: bold;" styleClass="botonesAyuda" stylesheets="@style.css" text="Ayuda en los pedidos" textFill="#092651">
          <font>
             <Font size="28.0" />
          </font>
       </Button>
-      <Button fx:id="buttonInfTransporte" layoutX="75.0" layoutY="407.0" mnemonicParsing="false" prefHeight="198.0" prefWidth="532.0" style="-fx-background-color: #B8E7EE;" text="Información sobre el transporte" onAction="#ButtonInfTransporte">
+      <Button fx:id="buttonInfTransporte" layoutX="75.0" layoutY="407.0" mnemonicParsing="false" onAction="#ButtonInfTransporte" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold;" styleClass="botonesAyuda" stylesheets="@style.css" text="Información sobre el transporte" textFill="#092651">
          <font>
             <Font size="28.0" />
          </font>
       </Button>
-      <Button fx:id="buttonDevoluciones" layoutX="775.0" layoutY="162.0" mnemonicParsing="false" prefHeight="198.0" prefWidth="532.0" style="-fx-background-color: #B8E7EE;" text="Devoluciones" onAction="#ButtonDevoluciones">
+      <Button fx:id="buttonDevoluciones" layoutX="775.0" layoutY="162.0" mnemonicParsing="false" onAction="#ButtonDevoluciones" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold;" styleClass="botonesAyudatoLeft" stylesheets="@style.css" text="Devoluciones" textFill="#092651">
          <font>
             <Font size="28.0" />
          </font>
       </Button>
-      <Button fx:id="buttonRedactarProblema" layoutX="775.0" layoutY="407.0" mnemonicParsing="false" prefHeight="198.0" prefWidth="532.0" style="-fx-background-color: #B8E7EE;" text="Redacta tu problema" onAction="#ButtonRedactarProblema">
+      <Button fx:id="buttonRedactarProblema" layoutX="775.0" layoutY="407.0" mnemonicParsing="false" onAction="#ButtonRedactarProblema" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold;" styleClass="botonesAyudatoLeft" stylesheets="@style.css" text="Redacta tu problema" textFill="#092651">
          <font>
             <Font size="28.0" />
          </font>

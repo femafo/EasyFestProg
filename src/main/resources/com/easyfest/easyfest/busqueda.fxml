@@ -15,11 +15,11 @@
     <children>
         <TableView fx:id="tblCustomer" layoutX="189.0" layoutY="150.0" prefHeight="462.0" prefWidth="995.0">
             <columns>
-                <TableColumn fx:id="colCustID" prefWidth="98.0" text="Customer ID" />
-                <TableColumn fx:id="colCustName" prefWidth="180.0" text="Customer Name" />
-                <TableColumn fx:id="colDOB" prefWidth="130.0" text="DOB" />
-                <TableColumn fx:id="colAddress" prefWidth="213.0" text="Address" />
-                <TableColumn fx:id="colCity" prefWidth="105.0" text="City" />
+                <TableColumn fx:id="colCustID" prefWidth="135.99998474121094" text="Customer ID" />
+                <TableColumn fx:id="colCustName" prefWidth="176.0" text="Customer Name" />
+                <TableColumn fx:id="colDOB" prefWidth="227.99993896484375" text="DOB" />
+                <TableColumn fx:id="colAddress" prefWidth="214.40008544921875" text="Address" />
+                <TableColumn fx:id="colCity" prefWidth="241.59991455078125" text="City" />
             </columns>
         </TableView>
         <TextField fx:id="txtSearchBar" layoutX="517.0" layoutY="101.0" prefHeight="25.0" prefWidth="340.0" promptText="Search Here.." />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -24,6 +25,16 @@
                         <Font name="Malgun Gothic Bold" size="20.0" />
                      </font>
                   </Button>
+                  <Pane layoutX="511.0" layoutY="14.0" prefHeight="187.0" prefWidth="357.0" style="-fx-background-color: white;" />
+                  <Pane layoutX="79.0" layoutY="14.0" prefHeight="187.0" prefWidth="357.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label fx:id="numtlabelid" layoutX="14.0" layoutY="94.0" text="Label" />
+                        <Label fx:id="fechacadlabelid" layoutX="14.0" layoutY="124.0" text="Label" />
+                        <Label fx:id="titularlabelid" layoutX="14.0" layoutY="49.0" text="Label" />
+                        <Label fx:id="cvvlabelid" layoutX="282.0" layoutY="94.0" text="Label" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="937.0" layoutY="14.0" prefHeight="187.0" prefWidth="357.0" style="-fx-background-color: white;" />
                </children></Pane>
          </children>
       </Pane>

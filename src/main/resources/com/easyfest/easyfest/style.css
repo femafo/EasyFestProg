@@ -36,6 +36,15 @@
 -fx-background-radius: 30px;
 }
 
+.botonesAyuda{
+-fx-background-radius: 30px;
+ -fx-background-color: linear-gradient(to right,  #B8E7EE,  #FF72F9);
+}
+.botonesAyudatoLeft{
+-fx-background-radius: 30px;
+-fx-background-color: linear-gradient(to left,  #B8E7EE,  #FF72F9);
+}
+
 
 
 

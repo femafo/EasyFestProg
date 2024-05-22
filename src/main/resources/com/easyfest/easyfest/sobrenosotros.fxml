@@ -46,7 +46,7 @@
                   </ImageView>
                   <Pane layoutX="85.0" layoutY="632.0" prefHeight="180.0" prefWidth="368.0">
                      <children>
-                        <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En EasyFest, nos especializamos en la organización y reserva de alojamiento para festivales. Nuestro objetivo es asegurarnos de que nuestros clientes puedan disfrutar al máximo de cada momento, sin tener que preocuparse por la logística. Nos esforzamos por encontrar los mejores precios en hoteles y alojamientos cercanos a los festivales, garantizando así una estancia cómoda y conveniente para nuestros clientes." textAlignment="CENTER" wrappingWidth="328.13671875">
+                        <Text fill="#5db7e9" layoutX="20.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En EasyFest, nos especializamos en la organización y reserva de alojamiento para festivales. Nuestro objetivo es asegurarnos de que nuestros clientes puedan disfrutar al máximo de cada momento, sin tener que preocuparse por la logística. Nos esforzamos por encontrar los mejores precios en hoteles y alojamientos cercanos a los festivales, garantizando así una estancia cómoda y conveniente para nuestros clientes." textAlignment="CENTER" wrappingWidth="328.13671875">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

@@ -1,10 +1,11 @@
 package com.easyfest.easyfest;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Tarjetas {
     private int id_tarjeta;
-    private LocalDate fecha_caducidad;
+    private Date fecha_caducidad;
     private int cvv;
     private String num_tarjeta;
     private String titular;
@@ -16,10 +17,10 @@ public class Tarjetas {
         this.id_tarjeta = id_tarjeta;
     }
 
-    public LocalDate getFecha_caducidad() {
+    public Date getFecha_caducidad() {
         return fecha_caducidad;
     }
-    public void setFecha_caducidad(LocalDate fecha_caducidad) {
+    public void setFecha_caducidad(Date fecha_caducidad) {
         this.fecha_caducidad = fecha_caducidad;
     }
 
@@ -44,7 +45,7 @@ public class Tarjetas {
         this.titular = titular;
     }
 
-    public Tarjetas(int id_tarjeta, LocalDate fecha_caducidad, int cvv, String titular, String num_tarjeta) {
+    public Tarjetas(int id_tarjeta, Date fecha_caducidad, int cvv, String titular, String num_tarjeta) {
         this.id_tarjeta = id_tarjeta;
         this.fecha_caducidad = fecha_caducidad;
         this.cvv = cvv;

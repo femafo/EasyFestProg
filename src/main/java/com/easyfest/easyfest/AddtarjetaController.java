@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class AddtarjetaController {
     @javafx.fxml.FXML
@@ -24,6 +25,7 @@ public class AddtarjetaController {
     private TextField numeroid;
     @javafx.fxml.FXML
     private Button anadirbutton;
+    TarjetasModel tm = new TarjetasModel();
 
     @javafx.fxml.FXML
     public void onback(ActionEvent actionEvent) {
@@ -37,5 +39,11 @@ public class AddtarjetaController {
 
     @javafx.fxml.FXML
     public void onanadirtarjeta(ActionEvent actionEvent) {
+        LocalDate fecha_nacimiento = dateid.getValue();
+        Integer cvv = Integer.valueOf(cvvid.getText());
+        String num_tarjeta = numeroid.getText();
+        String titular = titularid.getText();
+
+        tm.anadirTarjeta(fecha_nacimiento, cvv, num_tarjeta, titular);
     }
 }

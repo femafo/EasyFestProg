@@ -46,7 +46,7 @@ public class Menuprincipal {
     @javafx.fxml.FXML
     public void initialize() {
         try {
-            AnchorPane inicio = FXMLLoader.load(getClass().getResource("inicio.fxml"));
+            AnchorPane inicio = FXMLLoader.load(getClass().getResource("menuproductos.fxml"));
             this.contenedorId.getChildren().setAll(inicio);
 
         } catch (IOException e) {
@@ -242,7 +242,7 @@ public class Menuprincipal {
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
 
         try {
-            AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("inicio.fxml"));
+            AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("menuproductos.fxml"));
             this.contenedorId.getChildren().setAll(inicio2);
         } catch (IOException e) {
             throw new RuntimeException(e);

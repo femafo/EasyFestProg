@@ -30,7 +30,7 @@ public class AyudaController {
     private void mostrarPane(String texto) {
         Pane pane = new Pane();
         pane.setStyle("-fx-background-color: lightgray; -fx-background-radius: 10;");
-        pane.setPrefSize(300, 200);
+        pane.setPrefSize(600, 400);
 
         Label label = new Label(texto);
         label.setWrapText(true);

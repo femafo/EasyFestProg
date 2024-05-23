@@ -1,26 +1,14 @@
-/*.root{
-    -fx-background-color: red;
-}
-
-#idFondoAjustesGenerales{
-    -fx-background-color: red;
-}*/
 
 #menuPane{
-
     -fx-background-color: #936EF5 ;
-   /* linear-gradient(to bottom right, #936EF5, #A8C6FA)*/
-
 }
 
 #iniciopaneid{
-
   -fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
 }
 
 #paneLogIn{
 -fx-background-color: rgba(0, 0, 0, 0.5);
-
 }
 
 .paneProductosElegidos{
@@ -43,6 +31,37 @@
 .botonesAyudatoLeft{
 -fx-background-radius: 30px;
 -fx-background-color: linear-gradient(to left,  #B8E7EE,  #FF72F9);
+}
+
+.table-view {
+    -fx-background-color: lightgray;
+}
+
+.column-header {
+    -fx-background-color: #a8c6fa;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: lightblue;
+}
+#tblCustomer {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+
+}
+#selectbuttonid{
+-fx-background-color: #FF72F9;
+-fx-background-radius: 30px;
 }
 
 

@@ -19,7 +19,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutY="639.0" prefHeight="52.0" prefWidth="1379.0" style="-fx-background-color: black;">
+      <Pane layoutY="639.0" prefHeight="52.0" prefWidth="1374.0" style="-fx-background-color: black;">
          <children>
             <Label layoutX="25.0" layoutY="18.0" text="Correo de Contacto: easyfest@contacto.es" textFill="WHITE" />
             <Label layoutX="577.0" layoutY="18.0" text="Número de contacto: 691 13 28 81" textFill="WHITE" />

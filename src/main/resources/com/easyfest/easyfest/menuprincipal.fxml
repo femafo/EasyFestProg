@@ -43,7 +43,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Pagos">
+            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Mis pagos / Historial">
                <font>
                   <Font size="14.0" />
                </font>
@@ -63,8 +63,13 @@
                   <Font size="14.0" />
                </font>
             </Button>
+            <Button fx:id="carritoId" layoutX="-2.0" layoutY="232.0" mnemonicParsing="false" onAction="#carritobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Carrito">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
-      <AnchorPane fx:id="contenedorId" layoutX="158.0" layoutY="91.0" prefHeight="691.0" prefWidth="1374.0" />
+      <AnchorPane fx:id="contenedorId" layoutX="158.0" layoutY="90.0" prefHeight="691.0" prefWidth="1374.0" />
    </children>
 </AnchorPane>

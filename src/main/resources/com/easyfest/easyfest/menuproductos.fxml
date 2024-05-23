@@ -59,6 +59,7 @@
                         </Label>
                      </children>
                   </Pane>
+                  <Button fx:id="buttonid" mnemonicParsing="false" onAction="#onButton" text="Button" />
                </children>
             </HBox>
          </top>

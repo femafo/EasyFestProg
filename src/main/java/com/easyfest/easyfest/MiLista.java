@@ -1,7 +1,7 @@
 package com.easyfest.easyfest;
 
 public interface MiLista {
-    public void onClickLista(Customer customer);
+    public void onClickLista(Productos productos);
 
 
 }

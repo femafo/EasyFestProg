@@ -19,13 +19,13 @@ public class ItemsController {
         miLista.onClickLista(c);
     }
 
-    private Customer c;
+    private Productos c;
     private MiLista miLista;
 
-    public void setData (Customer customer, MiLista miLista){
-        this.c = customer;
+    public void setData (Productos productos, MiLista miLista){
+        this.c = productos;
         this.miLista = miLista;
-        nombreid.setText(c.getName());
-        precioid.setText(c.getId() + "€");
+        nombreid.setText(c.getNombre());
+        precioid.setText(c.getPrecio() + "€");
     }
 }

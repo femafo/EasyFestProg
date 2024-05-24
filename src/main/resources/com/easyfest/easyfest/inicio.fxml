@@ -33,7 +33,6 @@
                         <Font name="Malgun Gothic Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Pane layoutX="358.0" layoutY="364.0" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
          </content></ScrollPane>
@@ -41,46 +40,34 @@
          <children>
             <Pane layoutX="120.0" layoutY="11.0" prefHeight="81.0" prefWidth="1017.0" styleClass="paneProductosElegidos" stylesheets="@style.css">
                <children>
-                  <Pane fx:id="paneInfor" layoutX="42.0" layoutY="10.0" prefHeight="62.0" prefWidth="827.0">
+                  <Label layoutX="153.0" layoutY="28.0" text="Coachella Valley Music and Arts Festival (California, EE. UU.)" textFill="#00157b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="81.0" fitWidth="74.0" layoutX="46.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/rueda-del-cielo.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="679.0" layoutY="16.0" prefHeight="51.0" prefWidth="74.0" styleClass="panePrecios">
                      <children>
-                        <ImageView fx:id="iconProd" fitHeight="81.0" fitWidth="74.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../img/rueda-del-cielo.png" />
-                           </image>
-                        </ImageView>
-                        <Pane fx:id="panePrecioo" layoutX="635.0" layoutY="5.0" prefHeight="51.0" prefWidth="74.0" styleClass="panePrecios" stylesheets="@style.css">
-                           <children>
-                              <Label layoutX="11.0" layoutY="12.0" text="1500€" textFill="#00157b">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                        <Pane layoutX="74.0" layoutY="1.0" prefHeight="62.0" prefWidth="558.0">
-                           <children>
-                              <Label fx:id="paneNombre" layoutX="25.0" layoutY="17.0" text="Coachella Valley Music and Arts Festival (California, EE. UU.)" textFill="#00157b">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                        <Pane layoutX="718.0" layoutY="10.0" prefHeight="42.0" prefWidth="111.0">
-                           <children>
-                              <Label fx:id="paneCantidad" layoutX="15.0" layoutY="8.0" text="Cantidad:" textFill="#00157b">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
+                        <Label layoutX="11.0" layoutY="12.0" text="1500€" textFill="#00157b">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
-                  <Spinner layoutX="890.0" layoutY="24.0" prefHeight="35.0" prefWidth="74.0" />
+                  <Spinner layoutX="871.0" layoutY="22.0" prefHeight="35.0" prefWidth="74.0" />
+                  <Label layoutX="774.0" layoutY="28.0" text="Cantidad:" textFill="#00157b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
-            <Button fx:id="btnAnyadirProd" layoutX="1172.0" layoutY="28.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="96.0" style="-fx-background-color: #FF72F9; -fx-background-radius: 30;" styleClass="paneBotonAñadirProducto" stylesheets="@style.css" text="Añadir" textFill="#f7f7f7">
+            <Button layoutX="1172.0" layoutY="28.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="96.0" style="-fx-background-color: #FF72F9; -fx-background-radius: 30;" styleClass="paneBotonAñadirProducto" stylesheets="@style.css" text="Añadir" textFill="#f7f7f7">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

@@ -3,9 +3,11 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Spinner?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -13,7 +15,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.MenuproductosController">
    <children>
@@ -45,21 +46,41 @@
          <top>
             <HBox alignment="CENTER" prefHeight="170.0" prefWidth="1374.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="170.0" prefWidth="492.0">
+                  <Pane prefHeight="170.0" prefWidth="281.0">
                      <children>
-                        <ImageView fitHeight="243.0" fitWidth="492.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../img/imageRedondeada.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="151.0" layoutY="15.0" text="EasyFest" textFill="#ffadc4">
-                           <font>
-                              <Font name="System Bold" size="48.0" />
-                           </font>
-                        </Label>
+                        <Spinner fx:id="preciominid" layoutX="66.0" layoutY="48.0" />
+                        <Spinner fx:id="preciomaxid" layoutX="66.0" layoutY="98.0" />
+                        <Button fx:id="buttonpriceid" layoutX="215.0" layoutY="73.0" mnemonicParsing="false" onAction="#onPrice" text="Aplicar" />
+                        <Label layoutX="-2.0" layoutY="52.0" text="Precio min:" />
+                        <Label layoutX="-3.0" layoutY="102.0" text="Precio max:" />
+                        <Label layoutX="95.0" layoutY="21.0" text="Filtrar por precio:" />
                      </children>
                   </Pane>
-                  <Button fx:id="buttonid" mnemonicParsing="false" onAction="#onButton" text="Button" />
+                  <Pane prefHeight="170.0" prefWidth="265.0">
+                     <children>
+                        <TextField fx:id="textsearchid" layoutX="37.0" layoutY="74.0" />
+                        <Button fx:id="buttontextid" layoutX="186.0" layoutY="74.0" mnemonicParsing="false" onAction="#ontext" text="Aplicar" />
+                        <Label layoutX="90.0" layoutY="24.0" text="Filtrar por texto:" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="ascid" layoutX="26.0" layoutY="55.0" mnemonicParsing="false" text="Ascendente">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="fecha" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="descid" layoutX="26.0" layoutY="98.0" mnemonicParsing="false" text="Descendente" toggleGroup="$fecha" />
+                        <Button fx:id="buttondateid" layoutX="117.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDate" text="Aplicar" />
+                        <Label layoutX="57.0" layoutY="23.0" text="Filtrar por fecha:" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="reinbuttonid" layoutX="70.0" layoutY="73.0" mnemonicParsing="false" onAction="#onReiniciar" text="Reiniciar" />
+                        <Label layoutX="60.0" layoutY="26.0" text="Reiniciar filtros:" />
+                     </children>
+                  </Pane>
                </children>
             </HBox>
          </top>

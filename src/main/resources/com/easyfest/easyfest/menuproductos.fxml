@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -16,6 +17,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<?import org.controlsfx.control.RangeSlider?>
 <AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.MenuproductosController">
    <children>
       <BorderPane prefHeight="691.0" prefWidth="1380.0">
@@ -48,37 +50,37 @@
                <children>
                   <Pane prefHeight="170.0" prefWidth="281.0">
                      <children>
-                        <Spinner fx:id="preciominid" layoutX="66.0" layoutY="48.0" />
-                        <Spinner fx:id="preciomaxid" layoutX="66.0" layoutY="98.0" />
-                        <Button fx:id="buttonpriceid" layoutX="215.0" layoutY="73.0" mnemonicParsing="false" onAction="#onPrice" text="Aplicar" />
-                        <Label layoutX="-2.0" layoutY="52.0" text="Precio min:" />
-                        <Label layoutX="-3.0" layoutY="102.0" text="Precio max:" />
+                        <Spinner fx:id="preciominid" layoutX="101.0" layoutY="48.0" />
+                        <Spinner fx:id="preciomaxid" layoutX="101.0" layoutY="98.0" />
+                        <Label layoutX="33.0" layoutY="52.0" text="Precio min:" />
+                        <Label layoutX="32.0" layoutY="102.0" text="Precio max:" />
                         <Label layoutX="95.0" layoutY="21.0" text="Filtrar por precio:" />
+                        <Slider layoutX="70.0" layoutY="132.0" />
                      </children>
                   </Pane>
                   <Pane prefHeight="170.0" prefWidth="265.0">
                      <children>
-                        <TextField fx:id="textsearchid" layoutX="37.0" layoutY="74.0" />
-                        <Button fx:id="buttontextid" layoutX="186.0" layoutY="74.0" mnemonicParsing="false" onAction="#ontext" text="Aplicar" />
+                        <TextField fx:id="textsearchid" layoutX="58.0" layoutY="73.0" />
                         <Label layoutX="90.0" layoutY="24.0" text="Filtrar por texto:" />
                      </children>
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <RadioButton fx:id="ascid" layoutX="26.0" layoutY="55.0" mnemonicParsing="false" text="Ascendente">
+                        <RadioButton fx:id="ascid" layoutX="55.0" layoutY="55.0" mnemonicParsing="false" text="Ascendente">
                            <toggleGroup>
                               <ToggleGroup fx:id="fecha" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton fx:id="descid" layoutX="26.0" layoutY="98.0" mnemonicParsing="false" text="Descendente" toggleGroup="$fecha" />
-                        <Button fx:id="buttondateid" layoutX="117.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDate" text="Aplicar" />
+                        <RadioButton fx:id="descid" layoutX="55.0" layoutY="98.0" mnemonicParsing="false" text="Descendente" toggleGroup="$fecha" />
                         <Label layoutX="57.0" layoutY="23.0" text="Filtrar por fecha:" />
                      </children>
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="reinbuttonid" layoutX="70.0" layoutY="73.0" mnemonicParsing="false" onAction="#onReiniciar" text="Reiniciar" />
+                        <Button fx:id="reinbuttonid" layoutX="70.0" layoutY="48.0" mnemonicParsing="false" onAction="#onReiniciar" text="Reiniciar" />
                         <Label layoutX="60.0" layoutY="26.0" text="Reiniciar filtros:" />
+                        <Button fx:id="aplbuttonid" layoutX="69.0" layoutY="122.0" mnemonicParsing="false" onAction="#onApply" text="APLICAR" />
+                        <Label layoutX="63.0" layoutY="94.0" text="Aplicar flitros:" />
                      </children>
                   </Pane>
                </children>

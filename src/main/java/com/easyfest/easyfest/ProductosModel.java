@@ -107,6 +107,36 @@ public class ProductosModel extends DBUtil{
         }
         return listap;
     }
+    public ArrayList<Productos> getProductosFiltro (String busqueda, int min, int max, boolean fecha){
+        ArrayList<Productos> listap = new ArrayList<Productos>();
+        String sql = "SELECT * FROM easyfest.producto WHERE 1=1";
+        if (busqueda.length() > 0){
+            sql = sql + " AND nombre LIKE \"" + busqueda + "%\"";
+        }
+        if (min > 0 && max > 0){
+            sql = sql + " AND precio > " + min + " AND precio < " + max;
+        }
+        if (fecha == true){
+            sql = sql + " ORDER BY fecha_inicio ASC";
+        }else{
+            sql = sql + " ORDER BY fecha_inicio DESC";
+        }
+        try (Connection conn = this.getConexion();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Productos p = new Productos (rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("descripcion"),rs.getDouble("precio"), rs.getDate("fecha_inicio").toLocalDate(), rs.getDate("fecha_fin").toLocalDate());
+                listap.add(p);
+            }
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return listap;
+    }
 
     public ProductosModel() {
     }

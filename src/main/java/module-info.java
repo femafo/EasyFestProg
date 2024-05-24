@@ -4,6 +4,7 @@ module com.easyfest.easyfest {
     requires java.desktop;
     requires java.sql;
     requires mysql.connector.j;
+    requires org.controlsfx.controls;
 
 
     opens com.easyfest.easyfest to javafx.fxml;

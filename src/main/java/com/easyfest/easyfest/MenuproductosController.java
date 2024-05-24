@@ -14,10 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
+import javafx.scene.layout.*;
 import org.controlsfx.control.RangeSlider;
 
 import java.awt.*;
@@ -63,6 +60,10 @@ public class MenuproductosController implements Initializable {
     private Button reinbuttonid;
     @javafx.fxml.FXML
     private Button aplbuttonid;
+    @javafx.fxml.FXML
+    private Pane paneid;
+    @javafx.fxml.FXML
+    private VBox vboxid;
 
 
     private void setProductoelegido (Productos productos){
@@ -81,6 +82,19 @@ public class MenuproductosController implements Initializable {
         SpinnerValueFactory<Integer> maximo =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10000, 0, 100);
         preciomaxid.setValueFactory(maximo);
+        /*
+        RangeSlider slider = new RangeSlider(0, 100, 10, 90);
+        slider.setShowTickLabels(true);
+        slider.setShowTickMarks(true);
+        slider.setMajorTickUnit(25);
+        slider.setBlockIncrement(10);
+        vboxid.setPadding(new Insets(75));
+        vboxid.setSpacing(150);
+        vboxid.getChildren().addAll(slider);
+
+         */
+
+
     }
 
     public void mostrar (int opc){
@@ -131,7 +145,7 @@ public class MenuproductosController implements Initializable {
                     throw new RuntimeException(e);
                 }
                 break;
-            case 1:
+            case 5:
                 grid.getChildren().clear();
                 String busqueda1 = textsearchid.getText();
                 int minimo1 = (int) preciominid.getValue();
@@ -199,7 +213,7 @@ public class MenuproductosController implements Initializable {
 
     @javafx.fxml.FXML
     public void onApply(ActionEvent actionEvent) {
-        opc = 1;
+        opc = 5;
         mostrar(opc);
     }
 }

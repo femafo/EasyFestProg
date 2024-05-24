@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -7,13 +9,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
+<AnchorPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: #444444;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.BusquedaController">
     <children>
-        <TableView fx:id="tblCustomer" layoutX="189.0" layoutY="150.0" prefHeight="462.0" prefWidth="995.0">
+        <TableView fx:id="tblCustomer" layoutX="189.0" layoutY="122.0" prefHeight="484.0" prefWidth="995.0" stylesheets="@style.css">
             <columns>
                 <TableColumn fx:id="colCustID" prefWidth="135.99998474121094" text="Customer ID" />
                 <TableColumn fx:id="colCustName" prefWidth="176.0" text="Customer Name" />
@@ -21,25 +24,39 @@
                 <TableColumn fx:id="colAddress" prefWidth="214.40008544921875" text="Address" />
                 <TableColumn fx:id="colCity" prefWidth="241.59991455078125" text="City" />
             </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
         </TableView>
-        <TextField fx:id="txtSearchBar" layoutX="517.0" layoutY="101.0" prefHeight="25.0" prefWidth="340.0" promptText="Search Here.." />
-        <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="481.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+        <TextField fx:id="txtSearchBar" layoutX="517.0" layoutY="86.0" prefHeight="25.0" prefWidth="340.0" promptText="Buscar" />
+        <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="481.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../img/search.png" />
             </image>
         </ImageView>
-        <Label alignment="CENTER" layoutX="306.0" layoutY="30.0" prefHeight="58.0" prefWidth="761.0" text="Buscar">
+        <Label alignment="CENTER" layoutX="306.0" layoutY="25.0" prefHeight="58.0" prefWidth="761.0" text="Buscar">
             <font>
                 <Font name="System Bold" size="40.0" />
             </font>
             <textFill>
-                <LinearGradient endX="1.0" endY="1.0">
-                    <stops>
-                        <Stop color="BLACK" />
-                        <Stop color="#c91b1b" offset="1.0" />
-                    </stops>
-                </LinearGradient>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5764706134796143" green="0.4313725531101227" blue="0.9607843160629272" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.658823549747467" green="0.7764706015586853" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
             </textFill>
         </Label>
+      <Button fx:id="selectbuttonid" layoutX="636.0" layoutY="630.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="102.0" style="-fx-font-weight: Bold;" stylesheets="@style.css" text="Seleccionar" textFill="WHITE" />
     </children>
 </AnchorPane>

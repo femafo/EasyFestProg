@@ -4,6 +4,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -28,6 +30,9 @@ public class BusquedaController {
     public TextField txtSearchBar;
     //now we should create observerable array list
     final ObservableList<Customer> custList= FXCollections.observableArrayList();
+    @javafx.fxml.FXML
+    private Button selectbuttonid;
+
     public  void initialize(){
         //Initialize column like this
         setCustomer();
@@ -107,5 +112,10 @@ public class BusquedaController {
     }
 
 
+    @javafx.fxml.FXML
+    public void onselectbutton(ActionEvent actionEvent) {
+        String hola = tblCustomer.getSelectionModel().toString();
+        System.out.println(hola);
 
+    }
 }

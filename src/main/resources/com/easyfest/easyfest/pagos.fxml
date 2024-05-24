@@ -8,9 +8,9 @@
 
 <AnchorPane fx:id="pagosid" prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.PagosController">
    <children>
-      <Pane prefHeight="691.0" prefWidth="1378.0" style="-fx-background-color: grey;">
+      <Pane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: grey;">
          <children>
-            <Pane layoutY="390.0" prefHeight="227.0" prefWidth="1378.0" style="-fx-background-color: black;">
+            <Pane layoutY="390.0" prefHeight="227.0" prefWidth="1374.0" style="-fx-background-color: black;">
                <children>
                   <Button fx:id="vermasid" layoutX="604.0" layoutY="203.0" mnemonicParsing="false" onAction="#vermasbutton" prefHeight="40.0" prefWidth="178.0" style="-fx-background-radius: 50; -fx-background-color: mediumpurple;" text="Ver mas">
                      <font>
@@ -18,7 +18,7 @@
                      </font>
                   </Button>
                </children></Pane>
-            <Pane layoutY="95.0" prefHeight="227.0" prefWidth="1378.0" style="-fx-background-color: black;">
+            <Pane layoutY="95.0" prefHeight="227.0" prefWidth="1374.0" style="-fx-background-color: black;">
                <children>
                   <Button fx:id="addtarjetaid" layoutX="600.0" layoutY="206.0" mnemonicParsing="false" onAction="#anadirbutton" prefHeight="40.0" prefWidth="178.0" style="-fx-background-radius: 50; -fx-background-color: mediumpurple;" text="Añadir tarjeta">
                      <font>

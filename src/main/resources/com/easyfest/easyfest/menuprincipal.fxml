@@ -29,7 +29,7 @@
       </Pane>
       <Pane prefHeight="782.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);">
          <children>
-            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #A8C6FA;" text="Inicio">
+            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #A8C6FA;" text="Comprar">
                <font>
                   <Font size="14.0" />
                </font></Button>
@@ -38,12 +38,12 @@
                   <Font name="System Bold" size="18.0" />
                </font></Label>
             <Line endX="89.40000915527344" endY="93.19998168945312" layoutX="57.0" layoutY="318.0" startX="-49.0000114440918" startY="93.19998168945312" />
-            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" styleClass="botonmenu" text="Busqueda">
+            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" styleClass="botonmenu" text="Consultar Productos">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Pagos">
+            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Mis pagos / Historial">
                <font>
                   <Font size="14.0" />
                </font>
@@ -63,8 +63,13 @@
                   <Font size="14.0" />
                </font>
             </Button>
+            <Button fx:id="carritoId" layoutX="-2.0" layoutY="232.0" mnemonicParsing="false" onAction="#carritobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Carrito">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
-      <AnchorPane fx:id="contenedorId" layoutX="158.0" layoutY="91.0" prefHeight="691.0" prefWidth="1374.0" />
+      <AnchorPane fx:id="contenedorId" layoutX="158.0" layoutY="90.0" prefHeight="691.0" prefWidth="1374.0" />
    </children>
 </AnchorPane>

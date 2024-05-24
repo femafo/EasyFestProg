@@ -11,118 +11,120 @@
 
 <AnchorPane fx:id="sobrenosotrosid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: dimgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.SobrenosotrosController">
    <children>
-      <ScrollPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: violet;" />
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1374.0" style="-fx-background-color: #444444;">
-         <children>
-            <ImageView fitHeight="235.0" fitWidth="477.0" layoutX="453.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/img/fiesta1.jpg" />
-               </image>
-            </ImageView>
-            <Label layoutX="591.0" layoutY="70.0" prefHeight="97.0" prefWidth="228.0" text="EasyFest" textFill="#a18ef5">
-               <font>
-                  <Font name="System Bold" size="48.0" />
-               </font>
-            </Label>
-            <Pane layoutX="503.0" layoutY="362.0" prefHeight="180.0" prefWidth="368.0">
+      <ScrollPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: violet;">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1374.0" style="-fx-background-color: #444444;">
                <children>
-                  <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenidos a EasyFest, tu compañero confiable en el mundo de los festivales y eventos emocionantes. En EasyFest, entendemos que los festivales son más que simples eventos; son experiencias que quedan grabadas en la memoria para siempre. Por eso, nos dedicamos apasionadamente a proporcionar a nuestros clientes las mejores experiencias posibles, desde la emoción del festival hasta el confort del alojamiento." textAlignment="CENTER" wrappingWidth="328.13671875">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="144.0" layoutY="342.0">
-               <image>
-                  <Image url="@/img/billete-de-avion.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1014.0" layoutY="632.0">
-               <image>
-                  <Image url="@/img/concierto.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="85.0" layoutY="632.0" prefHeight="180.0" prefWidth="368.0">
-               <children>
-                  <Text fill="#5db7e9" layoutX="20.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En EasyFest, nos especializamos en la organización y reserva de alojamiento para festivales. Nuestro objetivo es asegurarnos de que nuestros clientes puedan disfrutar al máximo de cada momento, sin tener que preocuparse por la logística. Nos esforzamos por encontrar los mejores precios en hoteles y alojamientos cercanos a los festivales, garantizando así una estancia cómoda y conveniente para nuestros clientes." textAlignment="CENTER" wrappingWidth="328.13671875">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1033.0" layoutY="342.0">
-               <image>
-                  <Image url="@/img/avion1.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="930.0" layoutY="910.0" prefHeight="180.0" prefWidth="368.0">
-               <children>
-                  <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Además de proporcionar alojamiento, en EasyFest también nos preocupamos por la seguridad y felicidad de nuestros clientes. Trabajamos arduamente para garantizar que todas las reservas se realicen de manera segura y que nuestros clientes se sientan tranquilos y protegidos en cada etapa de su viaje. Nuestro equipo está siempre disponible para brindar apoyo y asistencia, asegurando que cada cliente tenga una experiencia libre de estrés y llena de diversión." textAlignment="CENTER" wrappingWidth="328.13671875">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="169.0" layoutY="890.0">
-               <image>
-                  <Image url="@/img/mundo.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="487.0" layoutY="1777.0" prefHeight="180.0" prefWidth="368.0">
-               <children>
-                  <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En EasyFest, creemos en la magia de los festivales y estamos comprometidos a hacer que cada experiencia sea inolvidable. Únete a nosotros en nuestra misión de crear recuerdos duraderos y momentos de alegría para todos nuestros clientes. ¡Bienvenidos a EasyFest, donde la diversión nunca termina!" textAlignment="CENTER" wrappingWidth="328.13671875">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <Pane layoutX="560.0" layoutY="1123.0" prefHeight="72.0" prefWidth="265.0">
-               <children>
-                  <Text fill="#a18ef5" layoutX="13.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testimonios" textAlignment="CENTER" wrappingWidth="238.13671875">
-                     <font>
-                        <Font name="System Bold" size="35.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <ImageView fitHeight="133.0" fitWidth="711.0" layoutX="337.0" layoutY="1224.0">
-               <image>
-                  <Image url="@/img/review1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="711.0" layoutX="337.0" layoutY="1421.0">
-               <image>
-                  <Image url="@/img/review2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="711.0" layoutX="337.0" layoutY="1606.0">
-               <image>
-                  <Image url="@/img/review3.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="565.0" layoutY="910.0" prefHeight="161.0" prefWidth="249.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ADD8E6, #FFFFFF);">
-               <children>
-                  <ImageView fitHeight="128.0" fitWidth="207.0" layoutX="23.0" layoutY="18.0">
+                  <ImageView fitHeight="235.0" fitWidth="477.0" layoutX="453.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/img/fiesta4.jpg" />
+                        <Image url="@../../../img/fiesta1.jpg" />
                      </image>
                   </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="565.0" layoutY="642.0" prefHeight="161.0" prefWidth="249.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ADD8E6, #FFFFFF);">
-               <children>
-                  <ImageView fitHeight="133.0" fitWidth="216.0" layoutX="16.0" layoutY="14.0">
+                  <Label layoutX="591.0" layoutY="70.0" prefHeight="97.0" prefWidth="228.0" text="EasyFest" textFill="#a18ef5">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="503.0" layoutY="362.0" prefHeight="180.0" prefWidth="368.0">
+                     <children>
+                        <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenidos a EasyFest, tu compañero confiable en el mundo de los festivales y eventos emocionantes. En EasyFest, entendemos que los festivales son más que simples eventos; son experiencias que quedan grabadas en la memoria para siempre. Por eso, nos dedicamos apasionadamente a proporcionar a nuestros clientes las mejores experiencias posibles, desde la emoción del festival hasta el confort del alojamiento." textAlignment="CENTER" wrappingWidth="328.13671875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="144.0" layoutY="342.0">
                      <image>
-                        <Image url="@/img/fiesta3.jpg" />
+                        <Image url="@../../../img/billete-de-avion.png" />
                      </image>
                   </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1014.0" layoutY="632.0">
+                     <image>
+                        <Image url="@../../../img/concierto.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="85.0" layoutY="632.0" prefHeight="180.0" prefWidth="368.0">
+                     <children>
+                        <Text fill="#5db7e9" layoutX="20.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En EasyFest, nos especializamos en la organización y reserva de alojamiento para festivales. Nuestro objetivo es asegurarnos de que nuestros clientes puedan disfrutar al máximo de cada momento, sin tener que preocuparse por la logística. Nos esforzamos por encontrar los mejores precios en hoteles y alojamientos cercanos a los festivales, garantizando así una estancia cómoda y conveniente para nuestros clientes." textAlignment="CENTER" wrappingWidth="328.13671875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1033.0" layoutY="342.0">
+                     <image>
+                        <Image url="@../../../img/avion1.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="930.0" layoutY="910.0" prefHeight="180.0" prefWidth="368.0">
+                     <children>
+                        <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Además de proporcionar alojamiento, en EasyFest también nos preocupamos por la seguridad y felicidad de nuestros clientes. Trabajamos arduamente para garantizar que todas las reservas se realicen de manera segura y que nuestros clientes se sientan tranquilos y protegidos en cada etapa de su viaje. Nuestro equipo está siempre disponible para brindar apoyo y asistencia, asegurando que cada cliente tenga una experiencia libre de estrés y llena de diversión." textAlignment="CENTER" wrappingWidth="328.13671875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="169.0" layoutY="890.0">
+                     <image>
+                        <Image url="@../../../img/mundo.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="487.0" layoutY="1777.0" prefHeight="180.0" prefWidth="368.0">
+                     <children>
+                        <Text fill="#5db7e9" layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En EasyFest, creemos en la magia de los festivales y estamos comprometidos a hacer que cada experiencia sea inolvidable. Únete a nosotros en nuestra misión de crear recuerdos duraderos y momentos de alegría para todos nuestros clientes. ¡Bienvenidos a EasyFest, donde la diversión nunca termina!" textAlignment="CENTER" wrappingWidth="328.13671875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="560.0" layoutY="1123.0" prefHeight="72.0" prefWidth="265.0">
+                     <children>
+                        <Text fill="#a18ef5" layoutX="13.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testimonios" textAlignment="CENTER" wrappingWidth="238.13671875">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="133.0" fitWidth="711.0" layoutX="337.0" layoutY="1224.0">
+                     <image>
+                        <Image url="@../../../img/review1.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="133.0" fitWidth="711.0" layoutX="337.0" layoutY="1421.0">
+                     <image>
+                        <Image url="@../../../img/review2.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="133.0" fitWidth="711.0" layoutX="337.0" layoutY="1606.0">
+                     <image>
+                        <Image url="@../../../img/review3.PNG" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="565.0" layoutY="910.0" prefHeight="161.0" prefWidth="249.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ADD8E6, #FFFFFF);">
+                     <children>
+                        <ImageView fitHeight="128.0" fitWidth="207.0" layoutX="23.0" layoutY="18.0">
+                           <image>
+                              <Image url="@../../../img/fiesta4.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="565.0" layoutY="642.0" prefHeight="161.0" prefWidth="249.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ADD8E6, #FFFFFF);">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="216.0" layoutX="16.0" layoutY="14.0">
+                           <image>
+                              <Image url="@../../../img/fiesta3.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
                </children>
-            </Pane>
-         </children>
-      </AnchorPane>
+            </AnchorPane>
+         </content></ScrollPane>
    </children>
 </AnchorPane>

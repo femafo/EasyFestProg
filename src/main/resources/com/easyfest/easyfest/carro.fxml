@@ -76,7 +76,7 @@
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
          </right>
       </BorderPane>
-      <Pane fx:id="compraid" layoutX="199.0" layoutY="57.0" prefHeight="575.0" prefWidth="980.0" style="-fx-background-color: purple;">
+      <Pane fx:id="compraid" layoutX="199.0" layoutY="57.0" prefHeight="575.0" prefWidth="980.0" style="-fx-background-color: purple;" visible="false">
          <children>
             <ChoiceBox fx:id="tarjetauser" layoutX="415.0" layoutY="124.0" prefWidth="150.0" />
             <Label layoutX="451.0" layoutY="90.0" text="Elige la tarjeta:" />

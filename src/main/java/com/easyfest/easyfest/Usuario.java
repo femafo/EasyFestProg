@@ -1,6 +1,9 @@
 package com.easyfest.easyfest;
 
+import java.awt.*;
 import java.time.LocalDate;
+import java.util.Date;
+import  javafx.scene.image.Image;
 
 public class Usuario {
     private int id;
@@ -11,6 +14,19 @@ public class Usuario {
     private String correo;
     private String contrasena;
     private boolean admin;
+    private Image imagen;
+
+    public Usuario(int id, LocalDate fecha_nacimiento, String nombre, String apellidos, String dni, String correo, String contrasena, boolean admin, Image imagen) {
+        this.id = id;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.dni = dni;
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.admin = admin;
+        this.imagen = imagen;
+    }
 
     public int getId() {
         return id;
@@ -68,6 +84,14 @@ public class Usuario {
         this.admin = admin;
     }
 
+    public Image getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Image imagen) {
+        this.imagen = imagen;
+    }
+
     public Usuario(int id, LocalDate fecha_nacimiento, String nombre, String apellidos, String dni, String correo, String contrasena, boolean admin) {
         this.id = id;
         this.fecha_nacimiento = fecha_nacimiento;
@@ -78,4 +102,7 @@ public class Usuario {
         this.contrasena = contrasena;
         this.admin = admin;
     }
+    public Usuario(){}
+
+
 }

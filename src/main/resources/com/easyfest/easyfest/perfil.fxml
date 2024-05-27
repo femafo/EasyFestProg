@@ -4,6 +4,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -32,7 +33,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="27.0" layoutY="163.0" text="Nombre de usuario:" textFill="WHITE">
+            <Label layoutX="27.0" layoutY="163.0" text="Apellidos" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -52,7 +53,10 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="706.0" layoutY="151.0" prefHeight="270.0" prefWidth="333.0" style="-fx-background-color: lightgrey;" styleClass="paneFotoPerfil" />
+      <Pane layoutX="706.0" layoutY="151.0" prefHeight="270.0" prefWidth="333.0" style="-fx-background-color: lightgrey;" styleClass="paneFotoPerfil">
+         <children>
+            <ImageView fx:id="imageViewFoto" fitHeight="230.0" fitWidth="290.0" layoutX="22.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
       <Button fx:id="buttonVolver" layoutX="42.0" layoutY="40.0" mnemonicParsing="false" onAction="#onVolver" text="Volver " textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -63,7 +67,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onCambiarFoto" text="Cambiar Foto" textFill="WHITE">
+      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" text="Subir Imagen" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

@@ -47,6 +47,7 @@ public class Login implements Initializable {
      */
     @FXML
     public void login(ActionEvent actionEvent) {
+        /*
         String correo = usermailid.getText();
         String contrasena = passwordid.getText();
 
@@ -56,7 +57,7 @@ public class Login implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        /*
+
         boolean entra = um.loginusuario(correo, contrasena);
         if (entra == true) {
             try {
@@ -72,7 +73,46 @@ public class Login implements Initializable {
             a.showAndWait();
         }
 
-         */
+        //llamar funcion buscar usuario pasandole el correo para que se guarde los datos
+
+        UsuariosModel us = new UsuariosModel();
+        Usuario u = us.buscarUsuario(correo);
+
+        UsuarioHolder uh = new UsuarioHolder();
+        uh.setUsuario(u); //guardar usuario buscado en UsuarioHolder
+
+        //no se logea porque no tiene una foto guardada en la base de datos
+*/
+
+        String correo = usermailid.getText();
+        String contrasena = passwordid.getText();
+
+        // Verificar credenciales
+        UsuariosModel um = new UsuariosModel();
+        boolean entra = um.loginusuario(correo, contrasena);
+
+        if (entra) {
+            // Cargar usuario
+            Usuario u = um.buscarUsuario(correo);
+
+            // Guardar usuario en UsuarioHolder
+            UsuarioHolder uh = UsuarioHolder.getInstance();
+            uh.setUsuario(u);
+
+            try {
+                // Redirigir a la página principal
+                AnchorPane mainMenu = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
+                this.LoginPageid.getChildren().setAll(mainMenu);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            // Mostrar mensaje de error
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setHeaderText("Vuelva a intentarlo");
+            a.setContentText("El usuario o la contraseña pueden ser incorrectos.");
+            a.showAndWait();
+        }
     }
 
     /**
@@ -107,5 +147,6 @@ public class Login implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Este método se llama automáticamente después de que se ha cargado el archivo FXML
         // Aquí puedes realizar inicializaciones adicionales si es necesario
+
     }
 }

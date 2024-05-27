@@ -33,7 +33,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="27.0" layoutY="163.0" text="Nombre de usuario:" textFill="WHITE">
+            <Label layoutX="27.0" layoutY="163.0" text="Apellidos" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -67,7 +67,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onCambiarFoto" text="Cambiar Foto" textFill="WHITE">
+      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" text="Subir Imagen" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

@@ -1,5 +1,6 @@
 package com.easyfest.easyfest;
 
+import com.sun.javafx.css.StyleManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -40,18 +43,37 @@ public class Perfil implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        loadUsuarioData();
+        anyadirDatos();
     }
 
-    private void loadUsuarioData() {
-        UserHolder usuarioHolder = UserHolder.getInstance();
-        Usuario usuario = usuarioHolder.getUser();
-        if (usuario != null) {
-            textFieldNombreUser.setText(usuario.getNombre());
-            textFieldNomUser.setText(usuario.getNombre());
-            textFieldCorreoUser.setText(usuario.getCorreo());
-            dateFechaUsuario.setValue(usuario.getFecha_nacimiento());
+    @javafx.fxml.FXML
+    private void onSubirImagenbutton(ActionEvent actionEvent) {
+
+        // Subir la imagen
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Seleccionar Imagen de Perfil");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Archivos de Imagen", "*.png", "*.jpg", "*.jpeg")
+        );
+
+        Stage stage = (Stage) imageViewFoto.getScene().getWindow();
+        File file = fileChooser.showOpenDialog(stage);
+
+        if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            imageViewFoto.setImage(image);
+
+            // Añadir imagen seleccionada a la base de datos
+            UsuarioHolder holder = UsuarioHolder.getInstance();
+            Usuario u = holder.getUsuario();
+
+            String correo = u.getCorreo();
+
+            UsuariosModel us = new UsuariosModel();
+            us.anyadirImagen(correo, file);
+            System.out.println("Imagen actualizada en la base de datos.");
         }
+
     }
 
     @javafx.fxml.FXML
@@ -64,25 +86,57 @@ public class Perfil implements Initializable {
         }
     }
 
-    @javafx.fxml.FXML
-    public void onCambiarFoto(ActionEvent actionEvent) {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Seleccionar Imagen de Perfil");
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Archivos de Imagen", "*.png", "*.jpg", "*.jpeg")
-        );
+    public void anyadirDatos() {
+        UsuarioHolder holder = UsuarioHolder.getInstance();
+        Usuario u = holder.getUsuario();
 
-        Stage stage = (Stage) contenedorId.getScene().getWindow();
-        File file = fileChooser.showOpenDialog(stage);
-
-        if (file != null) {
-            Image image = new Image(file.toURI().toString());
-            imageViewFoto.setImage(image);
+        if (u != null) {
+            textFieldNombreUser.setText(u.getNombre());
+            textFieldNomUser.setText(u.getApellidos());
+            textFieldCorreoUser.setText(u.getCorreo());
+            dateFechaUsuario.setValue(u.getFecha_nacimiento());
+            imageViewFoto.setImage(u.getImagen());
+        } else {
+            System.out.println("Usuario no encontrado en el UsuarioHolder");
+            // Puedes agregar manejo de errores o redireccionamiento aquí
         }
     }
 
+
     @javafx.fxml.FXML
-    public void onActualizarCambios(ActionEvent actionEvent) {
-        // Actualizar la información del usuario aquí
+    public void onActualizarCambios(ActionEvent actionEvent) throws SQLException {
+        PerfilModel pm = new PerfilModel();
+        UsuarioHolder holder = UsuarioHolder.getInstance();
+        Usuario u = holder.getUsuario();
+
+        if (u != null) {
+            // Obtener la imagen seleccionada
+            Image imagenSeleccionada = imageViewFoto.getImage();
+            String imageURL = imagenSeleccionada.getUrl().replace("file:", "");
+            File imagen = new File(imageURL);
+
+            // Obtener los demás datos del formulario
+            String nombre = textFieldNombreUser.getText();
+            String apellidos = textFieldNomUser.getText();
+            String correo = textFieldCorreoUser.getText();
+            LocalDate fechaSeleccionada = dateFechaUsuario.getValue();
+
+            // Llamar al método para actualizar los datos
+            pm.actualizarDatos(nombre, apellidos, correo, fechaSeleccionada, imageURL, u.getId());
+
+            // Actualizar el usuario en el holder
+            u.setNombre(nombre);
+            u.setApellidos(apellidos);
+            u.setCorreo(correo);
+            u.setFecha_nacimiento(fechaSeleccionada);
+            u.setImagen(imagenSeleccionada);
+        } else {
+            System.out.println("Usuario no encontrado en el UsuarioHolder");
+            // Puedes agregar manejo de errores o redireccionamiento aquí
+        }
+
     }
 }
+
+
+

@@ -2,16 +2,19 @@ package com.easyfest.easyfest;
 
 import javafx.scene.control.Alert;
 
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import  javafx.scene.image.Image;
 
-public class UsuariosModel extends DBUtil{
+public class UsuariosModel extends DBUtil {
 
-    public void anadirUsurios(String nombre, String apellidos, String dni, String correo, String contrasena, LocalDate fecha_nacimiento){
+    public void anadirUsurios(String nombre, String apellidos, String dni, String correo, String contrasena, LocalDate fecha_nacimiento) {
         try {
 
             PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.usuario (fecha_nacimiento, nombre, apellidos, dni, correo, contrasenya) VALUES (?, ?, ?, ?, ?, ?)");
@@ -30,7 +33,7 @@ public class UsuariosModel extends DBUtil{
         }
     }
 
-    public boolean loginusuario(String correo, String contrasena){
+    public boolean loginusuario(String correo, String contrasena) {
         try (PreparedStatement ps = this.getConexion().prepareStatement(
                 "SELECT correo, contrasenya FROM easyfest.usuario WHERE correo = ? AND contrasenya = ?")) {
 
@@ -50,4 +53,72 @@ public class UsuariosModel extends DBUtil{
 
     public UsuariosModel() {
     }
+
+    //funcion buscar usuario el cual se llama en el log in para que se guarde un usuario (correo tiene que ser PKey)
+    public Usuario buscarUsuario(String correo) {
+        Usuario u = null;
+        try {
+            String sql = "SELECT * FROM easyfest.usuario WHERE correo = ?";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setString(1, correo);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int idUsuario = rs.getInt("id_usuario");
+                LocalDate fechaNacimiento = rs.getDate("fecha_nacimiento").toLocalDate();
+                String nombre = rs.getString("nombre");
+                String apellidos = rs.getString("apellidos");
+                String dni = rs.getString("dni");
+                String correoUsuario = rs.getString("correo");
+                String contrasenya = rs.getString("contrasenya");
+                boolean esAdmin = rs.getBoolean("esAdmin");
+
+                // Verificar si la columna Blob no está vacía
+                Image img = null;
+                Blob blob = rs.getBlob("imagen");
+                if (blob != null) {
+                    try (InputStream is = blob.getBinaryStream()) {
+                        img = new Image(is);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                u = new Usuario(idUsuario, fechaNacimiento, nombre, apellidos, dni, correoUsuario, contrasenya, esAdmin, img);
+            }
+            rs.close();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return u;
+    }
+
+    public void anyadirImagen(String correo, File imagen) {
+
+        String sql = "UPDATE usuario SET imagen = ? WHERE correo = ?";
+
+        try (PreparedStatement ps = this.getConexion().prepareStatement(sql);
+             FileInputStream fis = new FileInputStream(imagen)) {
+
+            // Establecer el archivo de imagen en el campo BLOB
+            ps.setBinaryStream(1, fis, (int) imagen.length());
+
+            // Establecer el correo
+            ps.setString(2, correo);
+
+            // Ejecutar la actualización
+            int filasActualizadas = ps.executeUpdate();
+            if (filasActualizadas > 0) {
+                System.out.println("La imagen ha sido actualizada correctamente para el usuario con correo: " + correo);
+            }
+        } catch (SQLException | IOException e) {
+            e.printStackTrace();
+
+        }
+    }
 }
+
+
+

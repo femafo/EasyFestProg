@@ -32,7 +32,7 @@ public class TarjetasModel extends DBUtil{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Tarjetas t = new Tarjetas(rs.getInt("id_tarjeta"), rs.getDate("fecha_caducidad"), rs.getInt("cvv"), rs.getString("num_tarjeta"), rs.getString("titular"));
+                Tarjetas t = new Tarjetas(rs.getInt("id_tarjeta"), rs.getDate("fecha_caducidad"), rs.getInt("cvv"), rs.getString("titular"), rs.getString("num_tarjeta"));
                 listat.add(t);
             }
         } catch (SQLException e) {

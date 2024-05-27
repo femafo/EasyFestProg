@@ -30,7 +30,7 @@ public class AddtarjetaController {
     @javafx.fxml.FXML
     public void onback(ActionEvent actionEvent) {
         try {
-            AnchorPane pagos = FXMLLoader.load(getClass().getResource("pagos.fxml"));
+            AnchorPane pagos = FXMLLoader.load(getClass().getResource("carro.fxml"));
             this.addtarjetaid.getChildren().setAll(pagos);
         } catch (IOException e) {
             throw new RuntimeException(e);

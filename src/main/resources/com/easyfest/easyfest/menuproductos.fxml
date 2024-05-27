@@ -15,7 +15,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.MenuproductosController">
    <children>
@@ -25,16 +24,17 @@
                <children>
                   <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0">
                      <children>
+                        <Label fx:id="idpid" text="id" visible="false" />
                         <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" text="Medusa" />
                         <Label fx:id="preciopid" alignment="TOP_LEFT" text="200€" />
                         <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
                            <children>
                               <Label prefHeight="18.0" prefWidth="105.0" text="Cantidad" />
-                              <Spinner prefHeight="26.0" prefWidth="73.0" />
+                              <Spinner fx:id="cantidadid" prefHeight="26.0" prefWidth="73.0" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" text="Añadir" />
+                                    <Button fx:id="addbuttonid" mnemonicParsing="false" onAction="#onaddButton" text="Añadir" />
                                  </children>
                               </HBox>
                            </children>
@@ -47,7 +47,6 @@
          <top>
             <HBox alignment="CENTER" prefHeight="170.0" prefWidth="1374.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox fx:id="vboxid" prefHeight="170.0" prefWidth="198.0" />
                   <Pane fx:id="paneid" prefHeight="170.0" prefWidth="281.0">
                      <children>
                         <Spinner fx:id="preciominid" layoutX="101.0" layoutY="48.0" />

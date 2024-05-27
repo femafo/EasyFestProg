@@ -6,6 +6,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,19 +27,12 @@ public class PagosController implements Initializable {
     private AnchorPane pagosid;  // Panel principal de pagos
 
     @javafx.fxml.FXML
-    private Button addtarjetaid;  // Botón para añadir una nueva tarjeta
-
-    @javafx.fxml.FXML
     private Button vermasid;  // Botón para ver más detalles de los pagos
     TarjetasModel tm = new TarjetasModel();
     @javafx.fxml.FXML
-    private Label cvvlabelid;
+    private GridPane grid;
     @javafx.fxml.FXML
-    private Label titularlabelid;
-    @javafx.fxml.FXML
-    private Label fechacadlabelid;
-    @javafx.fxml.FXML
-    private Label numtlabelid;
+    private Pane pane;
 
     /**
      * Maneja el evento de clic del botón "Ver más".
@@ -64,7 +59,7 @@ public class PagosController implements Initializable {
      *
      * @param actionEvent El evento de acción que dispara este método.
      */
-    @javafx.fxml.FXML
+    @Deprecated
     public void anadirbutton(ActionEvent actionEvent) {
         try {
             // Cargar la vista de "addtarjeta.fxml"

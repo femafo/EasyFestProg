@@ -34,11 +34,12 @@ public class Menuprincipal {
     private Button sobreNosotrosId;
     @javafx.fxml.FXML
     private AnchorPane contenedorId;
-    private String [] opcusuario = {"Perfil", "Carrito", "Mis pedidos", "Cerrar Sesión" };
+    private String [] opcusuario = {"Perfil", "Cerrar Sesión" };
     @javafx.fxml.FXML
     private AnchorPane menuprincipalid;
     @javafx.fxml.FXML
     private Button carritoId;
+    MenuproductosController mp = new MenuproductosController();
 
 
     /**
@@ -73,38 +74,6 @@ public class Menuprincipal {
             try {
                 AnchorPane perfil = FXMLLoader.load(getClass().getResource("perfil.fxml"));
                 this.contenedorId.getChildren().setAll(perfil);
-            } catch (IOException e) {
-                Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
-            }
-        }
-        if ("Carrito".equals(selectedOption)) {
-            inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
-            busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-            try {
-                AnchorPane carro = FXMLLoader.load(getClass().getResource("carro.fxml"));
-                this.contenedorId.getChildren().setAll(carro);
-            } catch (IOException e) {
-                Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
-            }
-        }
-        if ("Mis pedidos".equals(selectedOption)) {
-            inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
-            busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-            try {
-                AnchorPane pedidos = FXMLLoader.load(getClass().getResource("pedidos.fxml"));
-                this.contenedorId.getChildren().setAll(pedidos);
             } catch (IOException e) {
                 Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
             }
@@ -277,7 +246,6 @@ public class Menuprincipal {
         ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
         carritoId.setStyle("-fx-background-color:  A8C6FA;");
-
         try {
             AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("carro.fxml"));
             this.contenedorId.getChildren().setAll(inicio2);

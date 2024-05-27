@@ -66,4 +66,7 @@ public class Productos {
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
     }
+
+    public Productos() {
+    }
 }

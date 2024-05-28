@@ -40,6 +40,8 @@ public class Menuprincipal {
     @javafx.fxml.FXML
     private Button carritoId;
     MenuproductosController mp = new MenuproductosController();
+    public static int admin;
+    Login lg = new Login();
 
 
     /**
@@ -48,6 +50,11 @@ public class Menuprincipal {
      */
     @javafx.fxml.FXML
     public void initialize() {
+        admin = lg.getAdmin();
+        System.out.println(admin);
+        if (admin == 1){
+            busquedaId.setVisible(true);
+        }
         try {
             AnchorPane inicio = FXMLLoader.load(getClass().getResource("menuproductos.fxml"));
             this.contenedorId.getChildren().setAll(inicio);
@@ -57,7 +64,6 @@ public class Menuprincipal {
         }
         chbUsuario.getItems().addAll(opcusuario);
         chbUsuario.setOnAction(this::opcionuser);
-
     }
 
     public void opcionuser(ActionEvent event) {

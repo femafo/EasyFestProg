@@ -71,8 +71,6 @@ public class MenuproductosController implements Initializable {
     private VBox vboxid;
     @javafx.fxml.FXML
     private Spinner cantidadid;
-    @javafx.fxml.FXML
-    private Button addbuttonid;
 
 
     private void setProductoelegido (Productos productos){

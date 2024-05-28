@@ -38,12 +38,12 @@
                   <Font name="System Bold" size="18.0" />
                </font></Label>
             <Line endX="89.40000915527344" endY="93.19998168945312" layoutX="57.0" layoutY="318.0" startX="-49.0000114440918" startY="93.19998168945312" />
-            <Button fx:id="busquedaId" layoutX="-2.0" layoutY="148.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" styleClass="botonmenu" text="Consultar Productos">
+            <Button fx:id="busquedaId" layoutY="361.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" styleClass="botonmenu" text="Agr/Elm Productos" visible="false">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="pagosId" layoutX="-2.0" layoutY="190.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Mis pagos / Historial">
+            <Button fx:id="pagosId" layoutX="-2.0" layoutY="149.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Mis pagos / Historial">
                <font>
                   <Font size="14.0" />
                </font>
@@ -63,7 +63,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="carritoId" layoutX="-2.0" layoutY="232.0" mnemonicParsing="false" onAction="#carritobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Carrito">
+            <Button fx:id="carritoId" layoutY="185.0" mnemonicParsing="false" onAction="#carritobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Carrito">
                <font>
                   <Font size="14.0" />
                </font>

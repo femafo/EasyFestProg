@@ -41,6 +41,7 @@ public class Login implements Initializable {
     private AnchorPane LoginPageid;
     UsuariosModel um = new UsuariosModel();
     public static String correom;
+    public static int admin;
 
     /**
      * Método para manejar el evento de inicio de sesión.
@@ -63,6 +64,8 @@ public class Login implements Initializable {
 
         boolean entra = um.loginusuario(correo, contrasena);
         if (entra == true) {
+
+            this.admin = um.usuarioadmin(correo,contrasena);
             try {
                 AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
                 this.LoginPageid.getChildren().setAll(login);
@@ -157,6 +160,10 @@ public class Login implements Initializable {
 
     public static String getCorreom (){
         return correom;
+    }
+
+    public static int getAdmin (){
+        return admin;
     }
 
     public Login() {

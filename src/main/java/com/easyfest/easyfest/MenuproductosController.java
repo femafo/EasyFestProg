@@ -20,6 +20,7 @@ import org.controlsfx.control.RangeSlider;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -63,12 +64,20 @@ public class MenuproductosController implements Initializable {
     @javafx.fxml.FXML
     private Pane paneid;
     @javafx.fxml.FXML
-    private VBox vboxid;
+    private Button addbuttonid;
+    @javafx.fxml.FXML
+    private Spinner cantidadid;
+    @javafx.fxml.FXML
+    private Label idpid;
+
+    public static ArrayList<Productos> productoscarroid = new ArrayList<Productos>();
+
 
 
     private void setProductoelegido (Productos productos){
         nombrepid.setText(productos.getNombre());
         preciopid.setText(productos.getPrecio() + "€");
+        idpid.setText(String.valueOf(productos.getId()));
 
     }
 
@@ -82,6 +91,9 @@ public class MenuproductosController implements Initializable {
         SpinnerValueFactory<Integer> maximo =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10000, 0, 100);
         preciomaxid.setValueFactory(maximo);
+        SpinnerValueFactory<Integer> cantidad =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 50, 1, 1);
+        cantidadid.setValueFactory(cantidad);
         /*
         RangeSlider slider = new RangeSlider(0, 100, 10, 90);
         slider.setShowTickLabels(true);
@@ -215,5 +227,24 @@ public class MenuproductosController implements Initializable {
     public void onApply(ActionEvent actionEvent) {
         opc = 5;
         mostrar(opc);
+    }
+
+    @javafx.fxml.FXML
+    public void onaddButton(ActionEvent actionEvent) {
+
+        for (int i = 1; i <= (int) cantidadid.getValue(); i++){
+            Integer id = Integer.valueOf(idpid.getText());
+            System.out.println(idpid.getText() + " " + nombrepid.getText());
+            Productos p = pm.getProductoscarro(id);
+            this.productoscarroid.add(p);
+            System.out.println(p.getNombre());
+        }
+
+    }
+    public static ArrayList<Productos> getIds(){
+        return productoscarroid;
+    }
+
+    public MenuproductosController() {
     }
 }

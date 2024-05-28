@@ -153,7 +153,9 @@ public class CarroController implements Initializable {
 
     @javafx.fxml.FXML
     public void onComprarbutton(ActionEvent actionEvent) {
-        ArrayList<Tarjetas> tarjetacompra = tm.getTarjetasUser(1);
+        String correouser = lg.getCorreom();
+        int idu = um.getIdUser(correouser);
+        ArrayList<Tarjetas> tarjetacompra = tm.getTarjetasUser(idu);
         ArrayList<String> listatarjetas = new ArrayList<String>();
         compraid.setVisible(true);
         for (Tarjetas t : tarjetacompra){

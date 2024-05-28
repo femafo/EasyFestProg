@@ -99,7 +99,7 @@
 }
 .botonEstaticaMenuProductos{
 -fx-font-weight: bold;
--fx-background-color: #FF72F9;
+ -fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
 -fx-background-radius: 30px;
 -fx-font-size: 14px;
 
@@ -116,7 +116,7 @@
 }
 .botonReiniciarAplicar{
 -fx-font-weight: bold;
--fx-background-color: #FF72F9;
+ -fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
 -fx-background-radius: 30px;
 -fx-font-weight: bold:
 -fx-font-color: white;

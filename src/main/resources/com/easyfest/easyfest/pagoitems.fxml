@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane onMousePressed="#click" prefHeight="80.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.CarroItemsController">
+<AnchorPane onMousePressed="#click" prefHeight="80.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.PagoItemsController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="50.0" prefHeight="200.0" prefWidth="226.0" style="-fx-border-style: static; -fx-border-color: black; -fx-border-width: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>

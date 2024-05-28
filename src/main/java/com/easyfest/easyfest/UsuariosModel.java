@@ -164,6 +164,25 @@ public class UsuariosModel extends DBUtil {
 
         return id;
     }
+    public int usuarioadmin (String correo, String contrasena) {
+        int admin = 0;
+        try (PreparedStatement ps = this.getConexion().prepareStatement(
+                "SELECT esAdmin FROM easyfest.usuario WHERE correo = ? AND contrasenya = ?")) {
+
+            ps.setString(1, correo);
+            ps.setString(2, contrasena);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    admin = rs.getInt("esAdmin");
+                    return admin;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return admin;
+    }
 
 }
 

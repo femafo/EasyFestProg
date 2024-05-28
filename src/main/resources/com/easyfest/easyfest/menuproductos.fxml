@@ -25,13 +25,14 @@
                <children>
                   <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0">
                      <children>
+                        <Label fx:id="idpid" text="1" visible="false" />
                         <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" text="Medusa" />
                         <Label fx:id="preciopid" alignment="TOP_LEFT" text="200€" />
                         <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
                            <children>
                               <Label prefHeight="18.0" prefWidth="105.0" text="Cantidad" />
-                              <Spinner prefHeight="26.0" prefWidth="73.0" />
+                              <Spinner fx:id="cantidadid" prefHeight="26.0" prefWidth="73.0" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
                                     <Button mnemonicParsing="false" text="Añadir" />

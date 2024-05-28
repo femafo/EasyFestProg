@@ -58,8 +58,7 @@ public class UsuariosModel extends DBUtil {
     public Usuario buscarUsuario(String correo) {
         Usuario u = null;
         try {
-            String sql = "SELECT * FROM easyfest.usuario WHERE correo = ?";
-            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            PreparedStatement ps = this.getConexion().prepareStatement("SELECT * FROM easyfest.usuario WHERE correo LIKE ?");
             ps.setString(1, correo);
 
             ResultSet rs = ps.executeQuery();
@@ -118,6 +117,26 @@ public class UsuariosModel extends DBUtil {
 
         }
     }
+
+    public Integer getIdUser(String correo) {
+        Integer id = null;
+        String query = "SELECT id_usuario FROM easyfest.usuario WHERE correo = ?";
+
+        try (PreparedStatement ps = this.getConexion().prepareStatement(query)) {
+            ps.setString(1, correo);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    id = rs.getInt("id_usuario");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return id;
+    }
+
 }
 
 

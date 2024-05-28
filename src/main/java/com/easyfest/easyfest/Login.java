@@ -40,6 +40,7 @@ public class Login implements Initializable {
     @FXML
     private AnchorPane LoginPageid;
     UsuariosModel um = new UsuariosModel();
+    public static String correom;
 
     /**
      * Método para manejar el evento de inicio de sesión.
@@ -91,6 +92,7 @@ public class Login implements Initializable {
         UsuariosModel um = new UsuariosModel();
         boolean entra = um.loginusuario(correo, contrasena);
 
+        this.correom = usermailid.getText();
         if (entra) {
             // Cargar usuario
             Usuario u = um.buscarUsuario(correo);
@@ -148,5 +150,12 @@ public class Login implements Initializable {
         // Este método se llama automáticamente después de que se ha cargado el archivo FXML
         // Aquí puedes realizar inicializaciones adicionales si es necesario
 
+    }
+
+    public static String getCorreom (){
+        return correom;
+    }
+
+    public Login() {
     }
 }

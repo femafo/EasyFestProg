@@ -64,14 +64,13 @@ public class MenuproductosController implements Initializable {
     @javafx.fxml.FXML
     private Pane paneid;
     @javafx.fxml.FXML
-    private Button addbuttonid;
-    @javafx.fxml.FXML
-    private Spinner cantidadid;
-    @javafx.fxml.FXML
     private Label idpid;
 
     public static ArrayList<Productos> productoscarroid = new ArrayList<Productos>();
-
+    @javafx.fxml.FXML
+    private VBox vboxid;
+    @javafx.fxml.FXML
+    private Spinner cantidadid;
 
 
     private void setProductoelegido (Productos productos){
@@ -229,7 +228,7 @@ public class MenuproductosController implements Initializable {
         mostrar(opc);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void onaddButton(ActionEvent actionEvent) {
 
         for (int i = 1; i <= (int) cantidadid.getValue(); i++){

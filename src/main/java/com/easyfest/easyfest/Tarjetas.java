@@ -52,4 +52,7 @@ public class Tarjetas {
         this.titular = titular;
         this.num_tarjeta = num_tarjeta;
     }
+
+    public Tarjetas() {
+    }
 }

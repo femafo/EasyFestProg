@@ -4,7 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
@@ -16,7 +19,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CarroController implements Initializable {
+public class PagoController implements Initializable {
     @javafx.fxml.FXML
     private Label nombrepid;
     @javafx.fxml.FXML
@@ -33,12 +36,12 @@ public class CarroController implements Initializable {
 
     private List<Productos>  listaprueba = new ArrayList<Productos>();
 
-    private MiListaC miLista;
+    private MiListaP miLista;
     public int opc;
     @javafx.fxml.FXML
     private Label idpid;
 
-    public static ArrayList<Productos> productoscarroid = new ArrayList<Productos>();
+    public static ArrayList<Productos> productohistorialid = new ArrayList<Productos>();
     MenuproductosController mp = new MenuproductosController();
     @javafx.fxml.FXML
     private Button delbuttonid;
@@ -76,14 +79,14 @@ public class CarroController implements Initializable {
     }
 
     public void mostrar(){
-        this.productoscarroid = mp.getIds();
+        this.productohistorialid = mp.getIds();
         int column = 0;
         int row = 1;
         grid.getChildren().clear();
-        List<Productos>  listaall = productoscarroid;
+        List<Productos>  listaall = productohistorialid;
         if (listaall.size() >0 ){
             setProductoelegido(listaall.get(0));
-            miLista = new MiListaC() {
+            miLista = new MiListaP() {
                 @Override
                 public void onClickLista(Productos productos) {
                     setProductoelegido(productos);
@@ -93,12 +96,12 @@ public class CarroController implements Initializable {
         try {
             for (int i = 0; i < listaall.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("carroitems.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("pagoitems.fxml"));
 
                 AnchorPane pane = fxmlLoader.load();
 
 
-                CarroItemsController carroItemsController = fxmlLoader.getController();
+                PagoItemsController carroItemsController = fxmlLoader.getController();
                 carroItemsController.setData(listaall.get(i), miLista);
 
                 if (column == 1){
@@ -139,16 +142,16 @@ public class CarroController implements Initializable {
         boolean continua = false;
         int i = 0;
         do {
-            if (productoscarroid.get(i).getId() == id){
-                productoscarroid.remove(i);
+            if (productohistorialid.get(i).getId() == id){
+                productohistorialid.remove(i);
                 continua = true;
             }
             i++;
-        }while (i < productoscarroid.size() && continua == false);
+        }while (i < productohistorialid.size() && continua == false);
         mostrar();
     }
     public static ArrayList<Productos> getfinalProductos(){
-        return productoscarroid;
+        return productohistorialid;
     }
 
     @javafx.fxml.FXML
@@ -162,7 +165,7 @@ public class CarroController implements Initializable {
         tarjetauser.getItems().addAll(listatarjetas);
     }
 
-    public CarroController() {
+    public PagoController() {
     }
 
     @javafx.fxml.FXML
@@ -182,7 +185,7 @@ public class CarroController implements Initializable {
 
     @javafx.fxml.FXML
     public void onPagarbuttonid(ActionEvent actionEvent) {
-        for (Productos p : productoscarroid) {
+        for (Productos p : productohistorialid) {
             String tarjetaselected = String.valueOf(tarjetauser.getValue());
             Tarjetas t = tm.getTarjetaByNum(tarjetaselected);
             String correouser = lg.getCorreom();
@@ -190,5 +193,6 @@ public class CarroController implements Initializable {
             int idu = um.getIdUser(correouser);
             pem.anadirPedido(t.getId_tarjeta(), idu, p.getId());
         }
+
     }
 }

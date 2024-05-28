@@ -41,6 +41,32 @@ public class TarjetasModel extends DBUtil{
         return listat;
     }
 
+    public Tarjetas getTarjetaByNum(String num_tarjeta) {
+        Tarjetas t = null; // Initialize to null to handle the case where no tarjeta is found.
+        String query = "SELECT * FROM easyfest.tarjetas WHERE num_tarjeta = ?";
+
+        try (PreparedStatement ps = this.getConexion().prepareStatement(query)) {
+            ps.setString(1, num_tarjeta);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    t = new Tarjetas(
+                            rs.getInt("id_tarjeta"),
+                            rs.getDate("fecha_caducidad"),
+                            rs.getInt("cvv"),
+                            rs.getString("titular"),
+                            rs.getString("num_tarjeta")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return t;
+    }
+
+
 
 
 

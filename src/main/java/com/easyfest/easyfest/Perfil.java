@@ -1,6 +1,5 @@
 package com.easyfest.easyfest;
 
-import com.sun.javafx.css.StyleManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

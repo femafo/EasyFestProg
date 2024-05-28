@@ -94,6 +94,34 @@ public class UsuariosModel extends DBUtil {
         return u;
     }
 
+    public Usuario buscarUsuariolog(String correo) {
+        Usuario u = null;
+        try {
+            PreparedStatement ps = this.getConexion().prepareStatement("SELECT * FROM easyfest.usuario WHERE correo LIKE ?");
+            ps.setString(1, correo);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int idUsuario = rs.getInt("id_usuario");
+                LocalDate fechaNacimiento = rs.getDate("fecha_nacimiento").toLocalDate();
+                String nombre = rs.getString("nombre");
+                String apellidos = rs.getString("apellidos");
+                String dni = rs.getString("dni");
+                String correoUsuario = rs.getString("correo");
+                String contrasenya = rs.getString("contrasenya");
+                boolean esAdmin = rs.getBoolean("esAdmin");
+
+                u = new Usuario(idUsuario, fechaNacimiento, nombre, apellidos, dni, correoUsuario, contrasenya, esAdmin);
+            }
+            rs.close();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return u;
+    }
+
     public void anyadirImagen(String correo, File imagen) {
 
         String sql = "UPDATE usuario SET imagen = ? WHERE correo = ?";

@@ -71,6 +71,8 @@ public class MenuproductosController implements Initializable {
     private VBox vboxid;
     @javafx.fxml.FXML
     private Spinner cantidadid;
+    @javafx.fxml.FXML
+    private Button addbuttonid;
 
 
     private void setProductoelegido (Productos productos){
@@ -228,7 +230,7 @@ public class MenuproductosController implements Initializable {
         mostrar(opc);
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void onaddButton(ActionEvent actionEvent) {
 
         for (int i = 1; i <= (int) cantidadid.getValue(); i++){

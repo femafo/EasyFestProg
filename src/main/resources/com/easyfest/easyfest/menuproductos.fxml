@@ -35,7 +35,7 @@
                               <Spinner fx:id="cantidadid" prefHeight="26.0" prefWidth="73.0" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" text="Añadir" />
+                                    <Button fx:id="addbuttonid" mnemonicParsing="false" onAction="#onaddButton" text="Añadir" />
                                  </children>
                               </HBox>
                            </children>

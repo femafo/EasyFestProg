@@ -48,16 +48,18 @@ public class Login implements Initializable {
      */
     @FXML
     public void login(ActionEvent actionEvent) {
-        /*
         String correo = usermailid.getText();
         String contrasena = passwordid.getText();
-
+        this.correom = usermailid.getText();
+/*
         try {
             AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
             this.LoginPageid.getChildren().setAll(login);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+ */
 
         boolean entra = um.loginusuario(correo, contrasena);
         if (entra == true) {
@@ -75,7 +77,7 @@ public class Login implements Initializable {
         }
 
         //llamar funcion buscar usuario pasandole el correo para que se guarde los datos
-
+/*
         UsuariosModel us = new UsuariosModel();
         Usuario u = us.buscarUsuario(correo);
 
@@ -83,7 +85,6 @@ public class Login implements Initializable {
         uh.setUsuario(u); //guardar usuario buscado en UsuarioHolder
 
         //no se logea porque no tiene una foto guardada en la base de datos
-*/
 
         String correo = usermailid.getText();
         String contrasena = passwordid.getText();
@@ -115,6 +116,8 @@ public class Login implements Initializable {
             a.setContentText("El usuario o la contraseña pueden ser incorrectos.");
             a.showAndWait();
         }
+
+         */
     }
 
     /**

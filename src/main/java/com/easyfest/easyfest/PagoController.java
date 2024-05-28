@@ -79,7 +79,9 @@ public class PagoController implements Initializable {
     }
 
     public void mostrar(){
-        this.productohistorialid = mp.getIds();
+        String correouser = lg.getCorreom();
+        int idu = um.getIdUser(correouser);
+        this.productohistorialid = pem.getPedidosbyId(idu);
         int column = 0;
         int row = 1;
         grid.getChildren().clear();

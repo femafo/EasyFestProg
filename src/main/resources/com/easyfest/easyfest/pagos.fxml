@@ -17,7 +17,7 @@
    <children>
       <BorderPane prefHeight="691.0" prefWidth="1380.0">
          <bottom>
-            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <HBox disable="true" prefHeight="100.0" prefWidth="200.0" visible="false" BorderPane.alignment="CENTER">
                <children>
                   <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1180.0" style="-fx-background-color: gray;">
                      <children>

@@ -99,7 +99,7 @@
 }
 .botonEstaticaMenuProductos{
 -fx-font-weight: bold;
- -fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
+-fx-background-color: linear-gradient(to right, #936EF5, #E634AA);
 -fx-background-radius: 30px;
 -fx-font-size: 14px;
 
@@ -111,12 +111,11 @@
 }
 .labelFiltro{
 -fx-font-weight: bold;
--fx-font-color: #ff72f9;
 -fx-font-size: 18px;
 }
 .botonReiniciarAplicar{
 -fx-font-weight: bold;
- -fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
+ -fx-background-color: linear-gradient(to right, #936EF5, #E634AA);
 -fx-background-radius: 30px;
 -fx-font-weight: bold:
 -fx-font-color: white;
@@ -124,6 +123,14 @@
 }
 .ascDesc{
 -fx-font-size: 14px;
+}
+.labelsBlancos{
+-fx-font-weight: bold;
+-fx-font-size: 14px;
+}
+.labelsBarra{
+-fx-font-weight: bold;
+-fx-font-size: 18px;
 }
 
 

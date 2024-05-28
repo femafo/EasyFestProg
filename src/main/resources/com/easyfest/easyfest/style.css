@@ -94,6 +94,38 @@
 -fx-background-radius: 30px;
 -fx-background-color: linear-gradient(to left, #202A78, #8A2BE2);
 }
+.barraEstaticaMenuProductos{
+-fx-background-color: #A8C6FA;
+}
+.botonEstaticaMenuProductos{
+-fx-font-weight: bold;
+-fx-background-color: #FF72F9;
+-fx-background-radius: 30px;
+-fx-font-size: 14px;
+
+}
+.itemMenuProductos{
+-fx-font-weight: bold;
+-fx-font-color: #FF72F9;
+-fx-font-size: 14px;
+}
+.labelFiltro{
+-fx-font-weight: bold;
+-fx-font-color: #ff72f9;
+-fx-font-size: 18px;
+}
+.botonReiniciarAplicar{
+-fx-font-weight: bold;
+-fx-background-color: #FF72F9;
+-fx-background-radius: 30px;
+-fx-font-weight: bold:
+-fx-font-color: white;
+-fx-font-size: 14px;
+}
+.ascDesc{
+-fx-font-size: 14px;
+}
+
 
 
 

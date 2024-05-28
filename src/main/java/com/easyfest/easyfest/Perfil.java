@@ -40,6 +40,8 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     private ImageView imageViewFoto;
 
+    private File file;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         anyadirDatos();
@@ -56,7 +58,7 @@ public class Perfil implements Initializable {
         );
 
         Stage stage = (Stage) imageViewFoto.getScene().getWindow();
-        File file = fileChooser.showOpenDialog(stage);
+        file = fileChooser.showOpenDialog(stage);
 
         if (file != null) {
             Image image = new Image(file.toURI().toString());
@@ -129,6 +131,10 @@ public class Perfil implements Initializable {
             u.setCorreo(correo);
             u.setFecha_nacimiento(fechaSeleccionada);
             u.setImagen(imagenSeleccionada);
+
+            UsuariosModel um = new UsuariosModel();
+            um.anyadirImagen(u.getCorreo(),file);
+
         } else {
             System.out.println("Usuario no encontrado en el UsuarioHolder");
             // Puedes agregar manejo de errores o redireccionamiento aquí

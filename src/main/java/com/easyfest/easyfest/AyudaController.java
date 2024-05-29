@@ -35,7 +35,7 @@ public class AyudaController {
     private void mostrarPane(String texto, boolean incluirBotonEnviar) {
         // Crear un nuevo Pane con BorderPane para permitir mejor organización
         BorderPane borderPane = new BorderPane();
-        borderPane.setStyle("-fx-background-color: lightgray; -fx-background-radius: 10;");
+        borderPane.setStyle("-fx-background-color:  white; -fx-background-radius: 30px;");
         borderPane.setPrefSize(600, 400);
 
         // Crear una VBox para el texto y centrarlo
@@ -69,11 +69,13 @@ public class AyudaController {
         StackPane topPane = new StackPane(closeButton);
         StackPane.setAlignment(closeButton, Pos.TOP_LEFT);
         borderPane.setTop(topPane);
+        closeButton.setStyle("-fx-background-radius: 30px;");
 
         if (incluirBotonEnviar) {
             // Crear botón de enviar y añadirlo a la parte inferior derecha del BorderPane
             Button sendButton = new Button("Enviar");
             sendButton.setOnAction(e -> enviarProblema());
+            sendButton.setStyle("-fx-background-radius: 30px;");
 
             // Crear un StackPane para alinear el botón en la parte inferior derecha
             StackPane stackPane = new StackPane(sendButton);

@@ -37,14 +37,15 @@ public class Perfil implements Initializable {
     Login lg = new Login();
     UsuariosModel um = new UsuariosModel();
     @javafx.fxml.FXML
-    private Label preapellidosi;
-    @javafx.fxml.FXML
     private Label prefechanazid;
     @javafx.fxml.FXML
     private Label prenombreid;
     @javafx.fxml.FXML
     private Label precorreoid;
     Usuario u = new Usuario();
+    @javafx.fxml.FXML
+    private Label preapellidosid;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         /*
@@ -71,9 +72,9 @@ public class Perfil implements Initializable {
             imageViewFoto.setImage(image);
         }
         u = um.buscarUsuariolog(correouser);
-        this.precorreoid.setText(u.getCorreo());
+        this.precorreoid.setText(correouser);
         this.prenombreid.setText(u.getNombre());
-        this.preapellidosi.setText(u.getApellidos());
+        this.preapellidosid.setText(u.getApellidos());
         this.prefechanazid.setText(String.valueOf(u.getFecha_nacimiento()));
         System.out.println(precorreoid + " " + prenombreid);
 

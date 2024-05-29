@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ayudaid" prefWidth="1374.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AyudaController">
+<AnchorPane fx:id="ayudaid" maxHeight="619.0" maxWidth="1374.0" prefHeight="619.0" prefWidth="1374.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AyudaController">
    <children>
       <Pane layoutY="-6.0" prefHeight="149.0" prefWidth="1379.0" style="-fx-background-color: linear-gradient(to right, #FFB6C1, #FFCC99);">
          <children>

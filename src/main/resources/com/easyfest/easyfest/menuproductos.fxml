@@ -29,15 +29,15 @@
          <bottom>
             <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0" styleClass="barraEstaticaMenuProductos" stylesheets="@style.css">
+                  <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0" style="-fx-background-color: black;" styleClass="barraEstaticaMenuProductos" stylesheets="@style.css">
                      <children>
                         <Label fx:id="idpid" text="1" visible="false" />
-                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" styleClass="labelsBarra" stylesheets="@style.css" text="Medusa" textFill="#444444" />
-                        <Label fx:id="preciopid" alignment="TOP_LEFT" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#444444" />
+                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" styleClass="labelsBarra" stylesheets="@style.css" text="Medusa" textFill="#a8c6fa" />
+                        <Label fx:id="preciopid" alignment="TOP_LEFT" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#a8c6fa" />
                         <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
                            <children>
-                              <Label prefHeight="18.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="Cantidad" textFill="#444444" />
+                              <Label prefHeight="18.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="Cantidad" textFill="#a8c6fa" />
                               <Spinner fx:id="cantidadid" prefHeight="26.0" prefWidth="73.0" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>

@@ -72,7 +72,7 @@
 
 .panePerfilDatos{
 -fx-background-radius: 30px;
--fx-background-color: #a8c6fa;
+-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);
 
 }
 
@@ -126,7 +126,7 @@
 }
 .botonReiniciarAplicar{
 -fx-font-weight: bold;
- -fx-background-color: linear-gradient(to right, #936EF5, #E634AA);
+ -fx-background-color: #A8C6FA;
 -fx-background-radius: 30px;
 -fx-font-weight: bold;
 -fx-font-color: white;
@@ -152,6 +152,32 @@
 -fx-font-size: 28px;
 -fx-font-weight: bold;
 }
+.paneComprar{
+-fx-background-color:#a8c6fa(0, 0%, 0%, 0.8);
+-fx-background-radius: 20px;
+}
+.botonesPaneCompra{
+-fx-font-weight: bold;
+-fx-background-radius: 30px;
+-fx-font-size: 14px;
+-fx-background-color: #936EF5;
+}
+.paneAddTarjeta{
+-fx-background-color: linear-gradient(to right,#EA759C, #936EF5);
+-fx-background-radius: 30px;
+
+}
+.labelAddTarjeta{
+-fx-font-weight: bold;
+-fx-font-size: 26px;
+}
+.botonAddTarjeta{
+-fx-background-color: #936EF5;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+-fx-background-radius: 30px;
+
+}
 
 
 .paneAyuda{
@@ -170,7 +196,7 @@
 }
 
 .fondoConoce{
--fx-background-color: #936EF5;
+-fx-background-color: #A8C6FA;
 -fx-padding: 8px ; /* Ajusta el padding superior e inferior según sea necesario */
     -fx-border-width:  0 0 4 0; /* Grosor de la línea separadora */
     -fx-border-color:  white; /* Color de la línea separadora */
@@ -181,7 +207,7 @@
 }
 
 .fondoConoce1{
--fx-background-color: #936EF5;
+-fx-background-color: #A8C6FA;
 -fx-padding: 8px ; /* Ajusta el padding superior e inferior según sea necesario */
     -fx-border-width:  4 0 0 0; /* Grosor de la línea separadora */
     -fx-border-color:  white; /* Color de la línea separadora */

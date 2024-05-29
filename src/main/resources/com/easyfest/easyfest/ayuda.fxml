@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -22,6 +24,21 @@
             <Label layoutX="25.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Correo de Contacto: easyfest@contacto.es" textFill="WHITE" />
             <Label layoutX="577.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Número de contacto: 691 13 28 81" textFill="WHITE" />
             <Label layoutX="1188.0" layoutY="18.0" text="Atención al cliente: de 9h a 21h" textFill="WHITE" />
+            <ImageView fitHeight="38.0" fitWidth="51.0" layoutX="255.0" layoutY="8.0">
+               <image>
+                  <Image url="@/img/correo1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="778.0" layoutY="11.0">
+               <image>
+                  <Image url="@/img/tlf1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="51.0" layoutX="1131.0" layoutY="4.0">
+               <image>
+                  <Image url="@/img/at1.jpg" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Button fx:id="buttonAyudaPedidos" layoutX="75.0" layoutY="165.0" mnemonicParsing="false" onAction="#ButtonAyudaPedidos" prefHeight="192.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28;" styleClass="botonesAyuda" stylesheets="@style.css" text="Ayuda en los pedidos" textFill="#092651">

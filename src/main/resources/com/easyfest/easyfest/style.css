@@ -133,6 +133,32 @@
 -fx-font-size: 18px;
 }
 
+.paneAyuda{
+-fx-background-radius: 30px;
+}
+
+.sobreNosotros{
+-fx-padding: 8px ; /* Ajusta el padding superior e inferior según sea necesario */
+    -fx-border-width:  3 3 3 3; /* Grosor de la línea separadora */
+    -fx-border-color: white; /* Color de la línea separadora */
+    -fx-effect: dropshadow(three-pass-box, black, 0.3, 0.3, 0, 0); /* Efecto de sombra */
+}
+
+.textoSobrenosotros{
+    -fx-effect: dropshadow(three-pass-box, black, 0.3, 0.3, 0, 0); /* Efecto de sombra */
+}
+
+.fondoConoce{
+-fx-background-color: #936EF5;
+-fx-padding: 8px ; /* Ajusta el padding superior e inferior según sea necesario */
+    -fx-border-width:  0 0 4 0; /* Grosor de la línea separadora */
+    -fx-border-color:  white; /* Color de la línea separadora */
+}
+
+.textoConoce{
+ -fx-effect: dropshadow(three-pass-box, #A36FF3, 1, 1, 3, 3); /* Efecto de sombra */
+}
+
 
 
 

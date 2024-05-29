@@ -2,9 +2,12 @@ package com.easyfest.easyfest;
 
 import javafx.css.StyleClass;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
@@ -42,13 +45,16 @@ public class Menuprincipal {
     MenuproductosController mp = new MenuproductosController();
     public static int admin;
     Login lg = new Login();
+    @javafx.fxml.FXML
+    private ImageView imguserid;
+    UsuariosModel um = new UsuariosModel();
 
 
     /**
      * Inicializa la clase controladora.
      * Este método se llama automáticamente después de que el archivo FXML ha sido cargado.
      */
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
         admin = lg.getAdmin();
         System.out.println(admin);
@@ -64,6 +70,26 @@ public class Menuprincipal {
         }
         chbUsuario.getItems().addAll(opcusuario);
         chbUsuario.setOnAction(this::opcionuser);
+        String correouser = lg.getCorreom();
+        int idu = um.getIdUser(correouser);
+        String imguser = um.getImgUser(idu);
+
+        String imgPath = "/img/" + imguser;
+
+        Image image = null;
+        try {
+            image = new Image(getClass().getResourceAsStream(imgPath));
+            if (image.isError()) {
+                throw new Exception("Error loading image: " + image.getException());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Image not found or failed to load: " + imgPath);
+        }
+
+        if (image != null) {
+            imguserid.setImage(image);
+        }
     }
 
     public void opcionuser(ActionEvent event) {

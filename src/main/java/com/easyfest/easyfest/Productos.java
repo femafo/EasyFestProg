@@ -9,6 +9,7 @@ public class Productos {
     private double precio;
     private LocalDate fecha_inicio;
     private LocalDate fecha_fin;
+    private String img;
 
     public int getId() {
         return id;
@@ -58,13 +59,21 @@ public class Productos {
         this.fecha_fin = fecha_fin;
     }
 
-    public Productos(int id, String nombre, String descripcion, double precio, LocalDate fecha_inicio, LocalDate fecha_fin) {
+    public String getImg() {
+        return img;
+    }
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public Productos(int id, String nombre, String descripcion, double precio, LocalDate fecha_inicio, LocalDate fecha_fin, String img) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
+        this.img = img;
     }
 
     public Productos() {

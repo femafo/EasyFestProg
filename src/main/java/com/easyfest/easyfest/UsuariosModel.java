@@ -184,6 +184,25 @@ public class UsuariosModel extends DBUtil {
         return admin;
     }
 
+    public String getImgUser (int id_usuario){
+        String imagen = null;
+        try (PreparedStatement ps = this.getConexion().prepareStatement(
+                "SELECT imagen FROM easyfest.usuario WHERE id_usuario = ?")) {
+
+            ps.setInt(1, id_usuario);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    imagen = rs.getString("imagen");
+
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return imagen;
+    }
+
 }
 
 

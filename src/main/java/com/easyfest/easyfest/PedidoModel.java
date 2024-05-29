@@ -34,7 +34,7 @@ public class PedidoModel extends DBUtil{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Productos p = new Productos (rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("descripcion"),rs.getDouble("precio"), rs.getDate("fecha_inicio").toLocalDate(), rs.getDate("fecha_fin").toLocalDate());
+                Productos p = new Productos (rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("descripcion"),rs.getDouble("precio"), rs.getDate("fecha_inicio").toLocalDate(), rs.getDate("fecha_fin").toLocalDate(), rs.getString("imgpr"));
                 listap.add(p);
             }
         } catch (SQLException e) {

@@ -27,8 +27,6 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     private Button buttonAcutalizarPerfil;
     @javafx.fxml.FXML
-    private Button buttonCambiarFoto;
-    @javafx.fxml.FXML
     private AnchorPane contenedorId;
     @javafx.fxml.FXML
     private ImageView imageViewFoto;
@@ -80,7 +78,7 @@ public class Perfil implements Initializable {
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     private void onSubirImagenbutton(ActionEvent actionEvent) {
         /*
         // Subir la imagen

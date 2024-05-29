@@ -184,14 +184,26 @@ public class CarroController implements Initializable {
 
     @javafx.fxml.FXML
     public void onPagarbuttonid(ActionEvent actionEvent) {
+        String tarjetaselected = null;
         for (Productos p : productoscarroid) {
-            String tarjetaselected = String.valueOf(tarjetauser.getValue());
+            tarjetaselected = String.valueOf(tarjetauser.getValue());
+            System.out.println("+" + tarjetaselected + "+");
             Tarjetas t = tm.getTarjetaByNum(tarjetaselected);
             String correouser = lg.getCorreom();
             System.out.println(correouser + " " + tarjetaselected);
             int idu = um.getIdUser(correouser);
             pem.anadirPedido(t.getId_tarjeta(), idu, p.getId());
-
+        }
+        if (tarjetaselected == null && tarjetaselected.equals("")) {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setHeaderText("Seleccione una tarjeta");
+            a.setContentText("Seleccione una tarjeta y si no creala");
+            a.showAndWait();
+        }else {
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setHeaderText("Productos comprados");
+            a.setContentText("Productos comprados correctamente");
+            a.showAndWait();
         }
     }
 }

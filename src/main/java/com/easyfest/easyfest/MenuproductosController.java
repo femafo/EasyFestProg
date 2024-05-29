@@ -230,7 +230,6 @@ public class MenuproductosController implements Initializable {
 
     @javafx.fxml.FXML
     public void onaddButton(ActionEvent actionEvent) {
-
         for (int i = 1; i <= (int) cantidadid.getValue(); i++){
             Integer id = Integer.valueOf(idpid.getText());
             System.out.println(idpid.getText() + " " + nombrepid.getText());
@@ -238,7 +237,10 @@ public class MenuproductosController implements Initializable {
             this.productoscarroid.add(p);
             System.out.println(p.getNombre());
         }
-
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setHeaderText("Productos agregados al carrito");
+        a.setContentText("Productos agregados al carrito correctamente");
+        a.showAndWait();
     }
     public static ArrayList<Productos> getIds(){
         return productoscarroid;

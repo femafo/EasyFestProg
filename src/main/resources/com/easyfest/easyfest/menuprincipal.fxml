@@ -15,7 +15,7 @@
       <Pane prefHeight="91.0" prefWidth="1532.0" style="-fx-background-color: black;">
          <children>
             <ChoiceBox fx:id="chbUsuario" layoutX="1324.0" layoutY="33.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
-            <Label layoutX="1338.0" layoutY="36.0" text="Usuario" textFill="WHITE">
+            <Label fx:id="usuarioid" layoutX="1338.0" layoutY="36.0" text="Usuario" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

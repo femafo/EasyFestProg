@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -48,6 +49,8 @@ public class Menuprincipal {
     @javafx.fxml.FXML
     private ImageView imguserid;
     UsuariosModel um = new UsuariosModel();
+    @FXML
+    private Label usuarioid;
 
 
     /**
@@ -90,6 +93,9 @@ public class Menuprincipal {
         if (image != null) {
             imguserid.setImage(image);
         }
+        String nombre = um.getNombreUser(idu);
+        System.out.println(nombre);
+        usuarioid.setText(nombre);
     }
 
     public void opcionuser(ActionEvent event) {

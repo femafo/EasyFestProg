@@ -203,6 +203,43 @@ public class UsuariosModel extends DBUtil {
         return imagen;
     }
 
+    public String getNombreUser(int id) {
+        String nommbre = null;
+        String query = "SELECT nombre FROM easyfest.usuario WHERE id_usuario = ?";
+
+        try (PreparedStatement ps = this.getConexion().prepareStatement(query)) {
+            ps.setInt(1, id);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    nommbre = rs.getString("nombre");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return nommbre;
+    }
+
+    public void actualizarUsuario (int id_usuario, LocalDate fecha_nacimiento, String nombre, String apellidos, String correo){
+        try {
+
+            PreparedStatement ps = this.getConexion().prepareStatement("UPDATE easyfest.usuario SET fecha_nacimiento = ?, nombre = ?, apellidos = ?, correo = ? WHERE id_usuario = ?");
+            ps.setDate(1, Date.valueOf(fecha_nacimiento));
+            ps.setString(2, nombre);
+            ps.setString(3, apellidos);
+            ps.setString(4, correo);
+            ps.setInt(5, id_usuario);
+
+            ps.execute();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
 }
 
 

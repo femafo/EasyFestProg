@@ -78,7 +78,7 @@
 
 .panePerfil{
 -fx-font-weight: bold;
--fx-border-weight: 5px;
+-fx-border-weight: 6px;
 -fx-border-color: #a8c6fa;
 -fx-border-radius: 20px;
 
@@ -149,7 +149,7 @@
 -fx-font-size: 14px;
 }
 .labelHistorial{
--fx-font-size: 20px;
+-fx-font-size: 28px;
 -fx-font-weight: bold;
 }
 

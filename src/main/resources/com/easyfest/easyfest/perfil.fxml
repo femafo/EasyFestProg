@@ -7,28 +7,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="contenedorId" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: grey;" styleClass="paneTodoPerfil" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Perfil">
+<AnchorPane fx:id="contenedorId" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: #444444;" styleClass="paneTodoPerfil" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.Perfil">
    <children>
       <Pane layoutX="223.0" layoutY="151.0" prefHeight="370.0" prefWidth="454.0" styleClass="panePerfilDatos">
          <children>
-            <Label layoutX="107.0" layoutY="22.0" text="Datos Personales" textFill="WHITE">
+            <Label layoutX="109.0" layoutY="14.0" text="Datos Personales" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="131.0" layoutY="101.0" text="Nombre:" textFill="WHITE">
+            <Label layoutX="27.0" layoutY="101.0" text="Nombre:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="145.0" layoutY="220.0" text="Correo:" textFill="WHITE">
+            <Label layoutX="27.0" layoutY="221.0" text="Correo:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="12.0" layoutY="283.0" text="Fecha de Nacimiento:" textFill="WHITE">
+            <Label layoutX="27.0" layoutY="284.0" text="Fecha de Nacimiento:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -38,10 +39,11 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldNombreUser" layoutX="250.0" layoutY="103.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField fx:id="textFieldNomUser" layoutX="250.0" layoutY="165.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField fx:id="textFieldCorreoUser" layoutX="250.0" layoutY="223.0" prefHeight="25.0" prefWidth="174.0" />
-            <DatePicker fx:id="dateFechaUsuario" layoutX="250.0" layoutY="286.0" />
+            <TextField fx:id="textFieldNombreUser" layoutX="250.0" layoutY="103.0" prefHeight="25.0" prefWidth="174.0" style="-fx-border-color: transparent; -fx-border-radius: 30;" />
+            <TextField fx:id="textFieldNomUser" layoutX="250.0" layoutY="165.0" prefHeight="25.0" prefWidth="174.0" style="-fx-border-color: transparent;" />
+            <TextField fx:id="textFieldCorreoUser" layoutX="250.0" layoutY="223.0" prefHeight="25.0" prefWidth="174.0" style="-fx-border-color: transparent;" />
+            <DatePicker fx:id="dateFechaUsuario" layoutX="250.0" layoutY="286.0" style="-fx-border-color: transparent;" />
+            <Line endX="196.4000244140625" layoutX="228.0" layoutY="70.0" startX="-194.8000030517578" stroke="WHITE" strokeWidth="2.0" />
          </children>
       </Pane>
       <Pane layoutX="494.0" layoutY="41.0" prefHeight="61.0" prefWidth="386.0" styleClass="panePerfil">
@@ -53,21 +55,21 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="706.0" layoutY="151.0" prefHeight="270.0" prefWidth="333.0" style="-fx-background-color: lightgrey;" styleClass="paneFotoPerfil">
+      <Pane layoutX="706.0" layoutY="201.0" prefHeight="270.0" prefWidth="333.0" style="-fx-background-color: lightgrey;" styleClass="paneFotoPerfil">
          <children>
             <ImageView fx:id="imageViewFoto" fitHeight="230.0" fitWidth="290.0" layoutX="22.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
          </children></Pane>
-      <Button fx:id="buttonVolver" layoutX="42.0" layoutY="40.0" mnemonicParsing="false" onAction="#onVolver" text="Volver " textFill="WHITE">
+      <Button fx:id="buttonVolver" layoutX="42.0" layoutY="40.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="46.0" prefWidth="49.0" styleClass="buttonVolver" stylesheets="@style.css" text="&lt;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="buttonAcutalizarPerfil" layoutX="628.0" layoutY="641.0" mnemonicParsing="false" onAction="#onActualizarCambios" text="Actualizar Cambios" textFill="WHITE">
+      <Button fx:id="buttonAcutalizarPerfil" layoutX="628.0" layoutY="626.0" mnemonicParsing="false" onAction="#onActualizarCambios" prefHeight="45.0" prefWidth="146.0" styleClass="buttonAcutalizarPerfil" stylesheets="@style.css" text="Actualizar Cambios" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" text="Subir Imagen" textFill="WHITE">
+      <Button fx:id="buttonCambiarFoto" layoutX="819.0" layoutY="482.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" prefHeight="30.0" prefWidth="107.0" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Subir Imagen" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

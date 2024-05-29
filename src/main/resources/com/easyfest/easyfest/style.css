@@ -149,7 +149,7 @@
 }
 
 .fondoConoce{
--fx-background-color: #936EF5;
+-fx-background-color: #936EF;
 -fx-padding: 8px ; /* Ajusta el padding superior e inferior según sea necesario */
     -fx-border-width:  0 0 4 0; /* Grosor de la línea separadora */
     -fx-border-color:  white; /* Color de la línea separadora */

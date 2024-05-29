@@ -20,7 +20,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1294.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imguserid" fitHeight="30.0" fitWidth="36.0" layoutX="1294.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/perfil-del-usuario.png" />
                </image>

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,34 +23,66 @@ import java.util.ResourceBundle;
 
 public class Perfil implements Initializable {
     @javafx.fxml.FXML
-    private DatePicker dateFechaUsuario;
-    @javafx.fxml.FXML
     private Button buttonVolver;
-    @javafx.fxml.FXML
-    private TextField textFieldCorreoUser;
     @javafx.fxml.FXML
     private Button buttonAcutalizarPerfil;
     @javafx.fxml.FXML
     private Button buttonCambiarFoto;
-    @javafx.fxml.FXML
-    private TextField textFieldNombreUser;
-    @javafx.fxml.FXML
-    private TextField textFieldNomUser;
     @javafx.fxml.FXML
     private AnchorPane contenedorId;
     @javafx.fxml.FXML
     private ImageView imageViewFoto;
 
     private File file;
+    Login lg = new Login();
+    UsuariosModel um = new UsuariosModel();
+    @javafx.fxml.FXML
+    private Label prefechanazid;
+    @javafx.fxml.FXML
+    private Label prenombreid;
+    @javafx.fxml.FXML
+    private Label precorreoid;
+    Usuario u = new Usuario();
+    @javafx.fxml.FXML
+    private Label preapellidosid;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        /*
         anyadirDatos();
+         */
+        String correouser = lg.getCorreom();
+        int idu = um.getIdUser(correouser);
+        String imguser = um.getImgUser(idu);
+
+        String imgPath = "/img/" + imguser;
+
+        Image image = null;
+        try {
+            image = new Image(getClass().getResourceAsStream(imgPath));
+            if (image.isError()) {
+                throw new Exception("Error loading image: " + image.getException());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Image not found or failed to load: " + imgPath);
+        }
+
+        if (image != null) {
+            imageViewFoto.setImage(image);
+        }
+        u = um.buscarUsuariolog(correouser);
+        this.precorreoid.setText(correouser);
+        this.prenombreid.setText(u.getNombre());
+        this.preapellidosid.setText(u.getApellidos());
+        this.prefechanazid.setText(String.valueOf(u.getFecha_nacimiento()));
+        System.out.println(precorreoid + " " + prenombreid);
+
     }
 
     @javafx.fxml.FXML
     private void onSubirImagenbutton(ActionEvent actionEvent) {
-
+        /*
         // Subir la imagen
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Seleccionar Imagen de Perfil");
@@ -75,6 +108,8 @@ public class Perfil implements Initializable {
             System.out.println("Imagen actualizada en la base de datos.");
         }
 
+         */
+
     }
 
     @javafx.fxml.FXML
@@ -88,6 +123,7 @@ public class Perfil implements Initializable {
     }
 
     public void anyadirDatos() {
+        /*
         UsuarioHolder holder = UsuarioHolder.getInstance();
         Usuario u = holder.getUsuario();
 
@@ -101,11 +137,19 @@ public class Perfil implements Initializable {
             System.out.println("Usuario no encontrado en el UsuarioHolder");
             // Puedes agregar manejo de errores o redireccionamiento aquí
         }
+         */
     }
 
 
     @javafx.fxml.FXML
     public void onActualizarCambios(ActionEvent actionEvent) throws SQLException {
+        try {
+            AnchorPane perfiledit = FXMLLoader.load(getClass().getResource("perfiledit.fxml"));
+            this.contenedorId.getChildren().setAll(perfiledit);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        /*
         PerfilModel pm = new PerfilModel();
         UsuarioHolder holder = UsuarioHolder.getInstance();
         Usuario u = holder.getUsuario();
@@ -139,6 +183,7 @@ public class Perfil implements Initializable {
             System.out.println("Usuario no encontrado en el UsuarioHolder");
             // Puedes agregar manejo de errores o redireccionamiento aquí
         }
+         */
 
     }
 }

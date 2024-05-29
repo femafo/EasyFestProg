@@ -15,21 +15,21 @@
 
 <AnchorPane fx:id="carroid" prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.CarroController">
    <children>
-      <BorderPane prefHeight="691.0" prefWidth="1380.0">
+      <BorderPane prefHeight="691.0" prefWidth="1380.0" style="-fx-background-color: #444444;" stylesheets="@style.css">
          <bottom>
             <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1180.0" style="-fx-background-color: gray;">
+                  <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1180.0" styleClass="barraEstaticaMenuProductos" stylesheets="@style.css">
                      <children>
                         <Label fx:id="idpid" text="id" visible="false" />
-                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" text="Medusa" />
-                        <Label fx:id="preciopid" alignment="TOP_LEFT" text="200€" />
+                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="519.0" styleClass="labelsBarra" stylesheets="@style.css" text="Medusa" textFill="#444444" />
                         <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
+                        <Label fx:id="preciopid" alignment="TOP_LEFT" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#444444" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0" stylesheets="@style.css">
                            <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="433.0">
                                  <children>
-                                    <Button fx:id="delbuttonid" mnemonicParsing="false" onAction="#ondelButton" text="Eliminar" />
+                                    <Button fx:id="delbuttonid" mnemonicParsing="false" onAction="#ondelButton" prefHeight="36.0" prefWidth="74.0" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Eliminar" textFill="WHITE" />
                                  </children>
                               </HBox>
                            </children>
@@ -38,9 +38,9 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
+                        <Pane prefHeight="144.0" prefWidth="200.0" style="-fx-border-width: 4; -fx-border-color: #A8C6FA;" stylesheets="@style.css">
                            <children>
-                              <Button fx:id="comprarbuttonid" alignment="TOP_CENTER" layoutX="69.0" layoutY="38.0" mnemonicParsing="false" onAction="#onComprarbutton" text="Comprar" />
+                              <Button fx:id="comprarbuttonid" alignment="TOP_CENTER" layoutX="62.0" layoutY="34.0" mnemonicParsing="false" onAction="#onComprarbutton" prefHeight="33.0" prefWidth="77.0" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Comprar" textFill="WHITE" />
                            </children>
                         </Pane>
                      </children>
@@ -54,7 +54,7 @@
          <center>
             <HBox prefHeight="100.0" prefWidth="1387.0" BorderPane.alignment="CENTER">
                <children>
-                  <ScrollPane fx:id="scroll" prefHeight="423.0" prefWidth="1379.0">
+                  <ScrollPane fx:id="scroll" prefHeight="423.0" prefWidth="1127.0">
                      <content>
                         <GridPane fx:id="grid" prefHeight="0.0" prefWidth="37.0">
                            <rowConstraints>

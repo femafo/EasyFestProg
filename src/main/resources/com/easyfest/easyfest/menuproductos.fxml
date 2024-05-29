@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -19,19 +20,24 @@
 
 <AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.MenuproductosController">
    <children>
-      <BorderPane prefHeight="691.0" prefWidth="1380.0" style="-fx-background-color: #444444;" stylesheets="@style.css">
+      <ImageView fitHeight="595.0" fitWidth="1380.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/avionHist.jpeg" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="691.0" prefWidth="1380.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
          <bottom>
             <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
                <children>
                   <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0" styleClass="barraEstaticaMenuProductos" stylesheets="@style.css">
                      <children>
                         <Label fx:id="idpid" text="1" visible="false" />
-                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" styleClass="labelsBarra" stylesheets="@style.css" text="Medusa" />
-                        <Label fx:id="preciopid" alignment="TOP_LEFT" styleClass="labelsBarra" stylesheets="@style.css" text="200€" />
+                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" styleClass="labelsBarra" stylesheets="@style.css" text="Medusa" textFill="#444444" />
+                        <Label fx:id="preciopid" alignment="TOP_LEFT" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#444444" />
                         <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
                            <children>
-                              <Label prefHeight="18.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="Cantidad" />
+                              <Label prefHeight="18.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="Cantidad" textFill="#444444" />
                               <Spinner fx:id="cantidadid" prefHeight="26.0" prefWidth="73.0" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
@@ -46,7 +52,7 @@
             </HBox>
          </bottom>
          <top>
-            <HBox alignment="CENTER" prefHeight="170.0" prefWidth="1374.0" style="-fx-border-width: 3; -fx-border-color: #A8C6FA;" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="170.0" prefWidth="1374.0" BorderPane.alignment="CENTER">
                <children>
                   <VBox fx:id="vboxid" prefHeight="164.0" prefWidth="0.0" />
                   <Pane fx:id="paneid" prefHeight="170.0" prefWidth="281.0">

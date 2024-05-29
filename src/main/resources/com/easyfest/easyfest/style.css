@@ -72,27 +72,38 @@
 
 .panePerfilDatos{
 -fx-background-radius: 30px;
--fx-background-color: linear-gradient(to left,  #B8E7EE,  #FF72F9);
+-fx-background-color: #a8c6fa;
+
 }
 
 .panePerfil{
--fx-background-radius: 30px;
--fx-background-color: linear-gradient(to left,  #B8E7EE,  #FF72F9);
+-fx-font-weight: bold;
+-fx-border-weight: 6px;
+-fx-border-color: #a8c6fa;
+-fx-border-radius: 20px;
+
 }
 
-#buttonAcutalizarPerfil{
+.buttonAcutalizarPerfil{
 -fx-background-radius: 30px;
--fx-background-color: linear-gradient(to left, #202A78, #8A2BE2);
+-fx-font-weight: bold;
+-fx-background-color: linear-gradient(to right, #936EF5, #E634AA);
+-fx-font-size: 14px;
 }
 
-#buttonCambiarFoto{
+.buttonCambiarFoto{
 -fx-background-radius: 30px;
--fx-background-color: linear-gradient(to left, #202A78, #8A2BE2);
+-fx-background-color: linear-gradient(to right, #936EF5, #E634AA);
+-fx-font-size: 14px;
+-fx-font-weight: bold;
 }
 
-#buttonVolver{
+.buttonVolver{
+-fx-font-weight: bold;
+-fx-background-color: linear-gradient(to right, #936EF5, #E634AA);
 -fx-background-radius: 30px;
--fx-background-color: linear-gradient(to left, #202A78, #8A2BE2);
+-fx-font-size: 14px;
+-fx-font-weight:bold;
 }
 .barraEstaticaMenuProductos{
 -fx-background-color: #A8C6FA;
@@ -132,6 +143,16 @@
 -fx-font-weight: bold;
 -fx-font-size: 18px;
 }
+.itemMenuProductosHistorial{
+-fx-font-weight: bold;
+-fx-font-color: #FF72F9;
+-fx-font-size: 14px;
+}
+.labelHistorial{
+-fx-font-size: 28px;
+-fx-font-weight: bold;
+}
+
 
 .paneAyuda{
 -fx-background-radius: 30px;

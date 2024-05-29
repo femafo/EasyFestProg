@@ -12,11 +12,14 @@ public class PagoItemsController {
     private Label precioid;
     @FXML
     private Label nombreid;
+    @FXML
+    private Label fechacompraid;
 
     @FXML
     private void click (MouseEvent mouseEvent){
         miLista.onClickLista(c);
     }
+
 
     private Productos c;
     private MiListaP miLista;

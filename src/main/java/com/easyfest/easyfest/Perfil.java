@@ -143,6 +143,12 @@ public class Perfil implements Initializable {
 
     @javafx.fxml.FXML
     public void onActualizarCambios(ActionEvent actionEvent) throws SQLException {
+        try {
+            AnchorPane perfiledit = FXMLLoader.load(getClass().getResource("perfiledit.fxml"));
+            this.contenedorId.getChildren().setAll(perfiledit);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         /*
         PerfilModel pm = new PerfilModel();
         UsuarioHolder holder = UsuarioHolder.getInstance();

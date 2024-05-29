@@ -102,7 +102,6 @@ public class PagoController implements Initializable {
 
                 AnchorPane pane = fxmlLoader.load();
 
-
                 PagoItemsController carroItemsController = fxmlLoader.getController();
                 carroItemsController.setData(listaall.get(i), miLista);
 

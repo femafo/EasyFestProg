@@ -76,12 +76,12 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="buttonAcutalizarPerfil" layoutX="628.0" layoutY="641.0" mnemonicParsing="false" onAction="#onActualizarCambios" text="Actualizar Cambios" textFill="WHITE">
+      <Button fx:id="buttonAcutalizarPerfil" layoutX="628.0" layoutY="641.0" mnemonicParsing="false" onAction="#onActualizarCambios" text="Realizar Cambios" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" text="Subir Imagen" textFill="WHITE">
+      <Button fx:id="buttonCambiarFoto" layoutX="829.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" text="Cambiar Imagen" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

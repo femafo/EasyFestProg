@@ -11,21 +11,24 @@
    <children>
       <VBox alignment="TOP_CENTER" layoutX="50.0" prefHeight="200.0" prefWidth="226.0" style="-fx-border-style: static; -fx-border-color: #A8C6FA; -fx-border-width: 5;" styleClass="itemMenuProductosHistorial" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="55.0" prefWidth="200.0">
+            <HBox prefHeight="22.0" prefWidth="890.0">
                <children>
-                  <Label fx:id="nombreid" prefHeight="20.0" prefWidth="214.0" text="Medusa">
+                  <Label fx:id="nombreid" prefHeight="102.0" prefWidth="214.0" text="Medusa">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="precioid" prefHeight="20.0" prefWidth="92.0" text="200">
+                  <Label fx:id="precioid" prefHeight="101.0" prefWidth="92.0" text="200">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Label>
+                  <Label prefHeight="102.0" prefWidth="131.0" text="Fecha de compra:" />
+                  <Label fx:id="fechacompraid" alignment="CENTER" prefHeight="102.0" prefWidth="190.0" text="Fecha" />
+                  <Label prefHeight="102.0" prefWidth="101.0" />
+                  <ImageView fx:id="imgid" fitHeight="101.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
-            <ImageView fx:id="imgid" fitHeight="101.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </VBox>
    </children>

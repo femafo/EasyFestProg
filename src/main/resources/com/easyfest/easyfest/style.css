@@ -25,8 +25,8 @@
 }
 
 .botonesAyuda{
--fx-background-radius: 30px;
- -fx-background-color: linear-gradient(to right,  #B8E7EE,  #FF72F9);
+   -fx-background-radius: 30px;
+
 }
 .botonesAyudatoLeft{
 -fx-background-radius: 30px;
@@ -194,4 +194,6 @@
  -fx-effect: dropshadow(three-pass-box, #7A4DF5, 1, 1, 3, 3); /* Efecto de sombra */
  -fx-align-items: center;
 }
+
+
 

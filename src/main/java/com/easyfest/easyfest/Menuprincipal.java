@@ -212,7 +212,7 @@ public class Menuprincipal {
 
 
         try {
-            AnchorPane busqueda = FXMLLoader.load(getClass().getResource("busqueda.fxml"));
+            AnchorPane busqueda = FXMLLoader.load(getClass().getResource("adminmenu.fxml"));
             this.contenedorId.getChildren().setAll(busqueda);
         } catch (IOException e) {
             throw new RuntimeException(e);

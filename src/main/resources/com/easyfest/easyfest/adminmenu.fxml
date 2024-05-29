@@ -10,42 +10,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AdminmenuController">
+<AnchorPane prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: #A8C6FA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AdminmenuController">
    <children>
-      <Pane layoutY="127.0" prefHeight="200.0" prefWidth="1374.0" style="-fx-background-color: black;">
+      <Pane layoutY="127.0" prefHeight="200.0" prefWidth="1382.0" styleClass="paneAdmin" stylesheets="@style.css">
          <children>
-            <Button fx:id="addonebuttonid" layoutX="661.0" layoutY="88.0" mnemonicParsing="false" onAction="#onAddonebutton" text="Añadir" />
+            <Button fx:id="addonebuttonid" layoutX="629.0" layoutY="87.0" mnemonicParsing="false" onAction="#onAddonebutton" prefHeight="66.0" prefWidth="125.0" styleClass="botonesAdmin" stylesheets="@style.css" text="Añadir" textFill="WHITE" />
+            <Label layoutX="587.0" layoutY="14.0" styleClass="labelAddTarjeta" stylesheets="@style.css" text="Añadir Producto:" textFill="WHITE" />
          </children>
       </Pane>
-      <Pane layoutY="433.0" prefHeight="200.0" prefWidth="1374.0" style="-fx-background-color: black;">
+      <Pane layoutY="433.0" prefHeight="200.0" prefWidth="1382.0" styleClass="paneAdmin" stylesheets="@style.css">
          <children>
-            <Button fx:id="delonebuttonid" layoutX="661.0" layoutY="88.0" mnemonicParsing="false" onAction="#onDelonebuttonid" text="Eliminar" />
+            <Button fx:id="delonebuttonid" layoutX="634.0" layoutY="86.0" mnemonicParsing="false" onAction="#onDelonebuttonid" prefHeight="66.0" prefWidth="115.0" styleClass="botonesAdmin" stylesheets="@style.css" text="Eliminar" textFill="WHITE" />
+            <Label layoutX="578.0" layoutY="14.0" styleClass="labelAddTarjeta" stylesheets="@style.css" text="Eliminar Producto:" textFill="WHITE" />
          </children>
       </Pane>
-      <Label layoutX="642.0" layoutY="77.0" text="Añadir Producto:" />
-      <Label layoutX="639.0" layoutY="396.0" text="Eliminar Producto:" />
-      <Pane fx:id="addpaneid" layoutX="414.0" layoutY="127.0" prefHeight="506.0" prefWidth="545.0" style="-fx-background-color: purple;" visible="false">
+      <Pane fx:id="addpaneid" layoutX="414.0" layoutY="92.0" prefHeight="541.0" prefWidth="546.0" style="-fx-background-color: #936EF5; -fx-background-radius: 30;" visible="false">
          <children>
-            <TextField fx:id="nombreid" layoutX="198.0" layoutY="47.0" />
-            <TextArea fx:id="descripcionid" layoutX="172.0" layoutY="116.0" prefHeight="200.0" prefWidth="200.0" />
-            <Spinner fx:id="precioid" layoutX="199.0" layoutY="351.0" />
-            <DatePicker fx:id="fechainid" layoutX="85.0" layoutY="424.0" />
-            <DatePicker fx:id="fechafinid" layoutX="285.0" layoutY="424.0" />
-            <Label layoutX="250.0" layoutY="24.0" text="Nombre:" />
-            <Label layoutX="241.0" layoutY="88.0" text="Descripción:" />
-            <Label layoutX="254.0" layoutY="327.0" text="Precio:" />
-            <Label layoutX="131.0" layoutY="395.0" text="Fecha de inicio." />
-            <Label layoutX="339.0" layoutY="395.0" text="Fecha de fin:" />
-            <Button fx:id="addbuttonid" layoutX="248.0" layoutY="460.0" mnemonicParsing="false" onAction="#onAddbutton" text="Añadir" />
-            <Button fx:id="closebuttonid" layoutX="474.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClosebutton" text="x" />
-         </children>
-      </Pane>
-      <Pane fx:id="delpaneid" layoutX="414.0" layoutY="127.0" prefHeight="506.0" prefWidth="545.0" style="-fx-background-color: purple;" visible="false">
-         <children>
-            <Button fx:id="closedelbuttonid" layoutX="467.0" layoutY="35.0" mnemonicParsing="false" onAction="#onClosedelbutton" text="x" />
-            <ChoiceBox fx:id="productoschiceid" layoutX="198.0" layoutY="228.0" prefWidth="150.0" />
-            <Button fx:id="delbuttonid" layoutX="244.0" layoutY="322.0" mnemonicParsing="false" onAction="#onDelbutton" text="Eliminar" />
+            <TextField fx:id="nombreid" layoutX="198.0" layoutY="53.0" />
+            <TextArea fx:id="descripcionid" layoutX="111.0" layoutY="127.0" prefHeight="200.0" prefWidth="324.0" />
+            <Spinner fx:id="precioid" layoutX="221.0" layoutY="361.0" />
+            <DatePicker fx:id="fechainid" layoutX="84.0" layoutY="437.0" />
+            <DatePicker fx:id="fechafinid" layoutX="285.0" layoutY="437.0" />
+            <Label layoutX="236.0" layoutY="19.0" styleClass="labelsBarra" stylesheets="@style.css" text="Nombre:" />
+            <Label layoutX="221.0" layoutY="89.0" styleClass="labelsBarra" stylesheets="@style.css" text="Descripción:" />
+            <Label layoutX="153.0" layoutY="360.0" styleClass="labelsBarra" stylesheets="@style.css" text="Precio:" />
+            <Label layoutX="103.0" layoutY="407.0" prefHeight="27.0" prefWidth="136.0" styleClass="labelsBarra" stylesheets="@style.css" text="Fecha de inicio:" />
+            <Label layoutX="316.0" layoutY="407.0" styleClass="labelsBarra" stylesheets="@style.css" text="Fecha de fin:" />
+            <Button fx:id="addbuttonid" layoutX="244.0" layoutY="490.0" mnemonicParsing="false" onAction="#onAddbutton" prefHeight="38.0" prefWidth="82.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Añadir" />
+            <Button fx:id="closebuttonid" layoutX="467.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClosebutton" prefHeight="38.0" prefWidth="40.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="x" />
+            <Pane fx:id="delpaneid" layoutX="-1.0" layoutY="89.0" prefHeight="363.0" prefWidth="546.0" style="-fx-background-color: #936EF5; -fx-background-radius: 30;" stylesheets="@style.css" visible="false">
+               <children>
+                  <Button fx:id="closedelbuttonid" layoutX="468.0" layoutY="27.0" mnemonicParsing="false" onAction="#onClosedelbutton" prefHeight="38.0" prefWidth="40.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="x" />
+                  <ChoiceBox fx:id="productoschiceid" layoutX="179.0" layoutY="182.0" prefHeight="25.0" prefWidth="189.0" />
+                  <Button fx:id="delbuttonid" layoutX="233.0" layoutY="257.0" mnemonicParsing="false" onAction="#onDelbutton" prefHeight="38.0" prefWidth="82.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Eliminar" />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>

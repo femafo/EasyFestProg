@@ -5,27 +5,39 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addtarjetaid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AddtarjetaController">
+<AnchorPane fx:id="addtarjetaid" prefHeight="691.0" prefWidth="1374.0" style="-fx-background-color: #444444;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AddtarjetaController">
    <children>
-      <Label layoutX="541.0" layoutY="46.0" text="Añadir una nueva tarjeta">
-         <font>
-            <Font size="27.0" />
-         </font></Label>
-      <Label layoutX="490.0" layoutY="169.0" text="Titular de la tarjeta:" />
-      <Label layoutX="776.0" layoutY="169.0" text="Número de la tarjeta:" />
-      <Label layoutX="529.0" layoutY="312.0" text="CVV:" />
-      <DatePicker fx:id="dateid" layoutX="744.0" layoutY="356.0" />
-      <TextField fx:id="titularid" layoutX="467.0" layoutY="214.0" />
-      <TextField fx:id="cvvid" layoutX="467.0" layoutY="356.0" />
-      <TextField fx:id="numeroid" layoutX="757.0" layoutY="214.0" />
-      <Label layoutX="779.0" layoutY="312.0" text="Fecha de caducidad:" />
-      <Button fx:id="anadirbutton" layoutX="643.0" layoutY="512.0" mnemonicParsing="false" onAction="#onanadirtarjeta" text="Añadir tarjeta" />
-      <Button fx:id="backbutton" layoutX="33.0" layoutY="34.0" mnemonicParsing="false" onAction="#onback" text="&lt;">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
+      <Pane layoutX="369.0" layoutY="94.0" prefHeight="502.0" prefWidth="636.0" styleClass="paneAddTarjeta" stylesheets="@style.css">
+         <children>
+            <TextField fx:id="titularid" layoutX="116.0" layoutY="175.0" prefHeight="32.0" prefWidth="175.0" style="-fx-border-color: transparent;" />
+            <Label layoutX="139.0" layoutY="137.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Titular de la tarjeta:" textFill="WHITE" />
+            <TextField fx:id="cvvid" layoutX="111.0" layoutY="298.0" prefHeight="32.0" prefWidth="175.0" style="-fx-border-color: transparent;" />
+            <DatePicker fx:id="dateid" layoutX="349.0" layoutY="298.0" prefHeight="32.0" prefWidth="175.0" style="-fx-border-color: transparent;" />
+            <Button fx:id="anadirbutton" layoutX="263.0" layoutY="403.0" mnemonicParsing="false" onAction="#onanadirtarjeta" prefHeight="44.0" prefWidth="122.0" styleClass="botonAddTarjeta" stylesheets="@style.css" text="Añadir tarjeta" textFill="WHITE" />
+            <Label layoutX="183.0" layoutY="260.0" styleClass="labelsBlancos" text="CVV:" textFill="WHITE" />
+            <Label layoutX="370.0" layoutY="260.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Fecha de caducidad:" textFill="WHITE" />
+            <TextField fx:id="numeroid" layoutX="349.0" layoutY="175.0" prefHeight="32.0" prefWidth="175.0" style="-fx-border-color: transparent;" />
+            <Label layoutX="366.0" layoutY="137.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Número de la tarjeta:" textFill="WHITE" />
+            <Label layoutX="173.0" layoutY="26.0" styleClass="labelAddTarjeta" stylesheets="@style.css" text="Añadir una nueva tarjeta" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Line endX="204.4000244140625" layoutX="372.0" layoutY="82.0" startX="-331.0" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="82.20001220703125" layoutX="205.0" layoutY="164.0" startX="-86.60000610351562" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="82.20001220703125" layoutX="438.0" layoutY="164.0" startX="-86.60000610351562" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="82.20001220703125" layoutX="200.0" layoutY="290.0" startX="-86.60000610351562" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="82.20001220703125" layoutX="437.0" layoutY="289.0" startX="-86.60000610351562" stroke="WHITE" strokeWidth="2.0" />
+            <Button fx:id="backbutton" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#onback" prefHeight="38.0" prefWidth="39.0" styleClass="botonAddTarjeta" stylesheets="@style.css" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

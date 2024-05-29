@@ -23,9 +23,7 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="102.0" prefWidth="131.0" text="Fecha de compra:" />
-                  <Label fx:id="fechacompraid" alignment="CENTER" prefHeight="102.0" prefWidth="190.0" text="Fecha" />
-                  <Label prefHeight="102.0" prefWidth="101.0" />
+                  <Label prefHeight="102.0" prefWidth="411.0" />
                   <ImageView fx:id="imgid" fitHeight="101.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>

@@ -14,7 +14,7 @@
          <children>
             <HBox prefHeight="18.0" prefWidth="890.0">
                <children>
-                  <Label fx:id="nombreid" prefHeight="103.0" prefWidth="255.0" text="Medusa">
+                  <Label fx:id="nombreid" prefHeight="102.0" prefWidth="332.0" text="Medusa">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -28,7 +28,7 @@
                   <Label fx:id="fechainid" alignment="CENTER" prefHeight="102.0" prefWidth="102.0" text="Fecha ini" />
                   <Label alignment="CENTER" prefHeight="102.0" prefWidth="43.0" text="al" />
                   <Label fx:id="fechafinid" alignment="CENTER" prefHeight="102.0" prefWidth="102.0" text="Fecha fin" />
-                  <Label prefHeight="102.0" prefWidth="135.0" />
+                  <Label prefHeight="102.0" prefWidth="58.0" />
                   <ImageView fx:id="imgid" fitHeight="101.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/rueda-del-cielo.png" />

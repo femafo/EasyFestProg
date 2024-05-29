@@ -1,6 +1,5 @@
 package com.easyfest.easyfest;
 
-import javafx.css.StyleClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -22,46 +20,41 @@ import java.util.logging.Logger;
  * Esta clase te permite ir a otras paginas de la web siendo este el menu principal.
  */
 public class Menuprincipal {
-    @javafx.fxml.FXML
+    @FXML
     private Button ayudaId;
-    @javafx.fxml.FXML
+    @FXML
     private Button ajustesId;
-    @javafx.fxml.FXML
-    private ChoiceBox <String> chbUsuario;
-    @javafx.fxml.FXML
+    @FXML
+    private ChoiceBox<String> chbUsuario;
+    @FXML
     private Button busquedaId;
-    @javafx.fxml.FXML
+    @FXML
     private Button inicioId;
-    @javafx.fxml.FXML
+    @FXML
     private Button pagosId;
-    @javafx.fxml.FXML
+    @FXML
     private Button sobreNosotrosId;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane contenedorId;
-    private String [] opcusuario = {"Perfil", "Cerrar Sesión" };
-    @javafx.fxml.FXML
+    private String[] opcusuario = {"Perfil", "Cerrar Sesión"};
+    @FXML
     private AnchorPane menuprincipalid;
-    @javafx.fxml.FXML
+    @FXML
     private Button carritoId;
-    MenuproductosController mp = new MenuproductosController();
+    private MenuproductosController mp = new MenuproductosController();
     public static int admin;
-    Login lg = new Login();
-    @javafx.fxml.FXML
+    private Login lg = new Login();
+    @FXML
     private ImageView imguserid;
-    UsuariosModel um = new UsuariosModel();
+    private UsuariosModel um = new UsuariosModel();
     @FXML
     private Label usuarioid;
 
-
-    /**
-     * Inicializa la clase controladora.
-     * Este método se llama automáticamente después de que el archivo FXML ha sido cargado.
-     */
     @FXML
     public void initialize() {
         admin = lg.getAdmin();
         System.out.println(admin);
-        if (admin == 1){
+        if (admin == 1) {
             busquedaId.setVisible(true);
         }
         try {
@@ -96,19 +89,13 @@ public class Menuprincipal {
         String nombre = um.getNombreUser(idu);
         System.out.println(nombre);
         usuarioid.setText(nombre);
+        updateUserImage();
     }
 
     public void opcionuser(ActionEvent event) {
         String selectedOption = chbUsuario.getValue();
         if ("Perfil".equals(selectedOption)) {
-            inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
-            busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-            carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
+            applyStyleToButtons();
             try {
                 AnchorPane perfil = FXMLLoader.load(getClass().getResource("perfil.fxml"));
                 this.contenedorId.getChildren().setAll(perfil);
@@ -127,168 +114,99 @@ public class Menuprincipal {
         chbUsuario.setValue(null);
     }
 
-    /**
-     * Maneja el evento de acción para el botón "Ajustes".
-     * Carga el archivo "ajustes.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
-    public void ajustesbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:   linear-gradient(to right, #A8C6FA, #936EF5);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color:  A8C6FA;");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-        try {
-            AnchorPane ajustes = FXMLLoader.load(getClass().getResource("ajustes.fxml"));
-            this.contenedorId.getChildren().setAll(ajustes);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * Maneja el evento de acción para el botón "Pagos".
-     * Carga el archivo "pagos.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
-    public void pagosbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+    private void applyStyleToButtons() {
+        inicioId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  A8C6FA;");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-
-        try {
-            AnchorPane pagos = FXMLLoader.load(getClass().getResource("pagos.fxml"));
-            this.contenedorId.getChildren().setAll(pagos);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        pagosId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
+        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
+        ayudaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
+        sobreNosotrosId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
+        carritoId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
     }
 
-    /**
-     * Maneja el evento de acción para el botón "Ayuda".
-     * Carga el archivo "ayuda.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
+    @FXML
+    public void ajustesbutton(ActionEvent actionEvent) {
+        applyStyleToButtons();
+        ajustesId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("ajustes.fxml");
+    }
+
+    @FXML
+    public void pagosbutton(ActionEvent actionEvent) {
+        applyStyleToButtons();
+        pagosId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("pagos.fxml");
+    }
+
+    @FXML
     public void ayudabutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  A8C6FA;");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-
-        try {
-            AnchorPane ayuda = FXMLLoader.load(getClass().getResource("ayuda.fxml"));
-            this.contenedorId.getChildren().setAll(ayuda);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        applyStyleToButtons();
+        ayudaId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("ayuda.fxml");
     }
 
-    /**
-     * Maneja el evento de acción para el botón "Sobre Nosotros".
-     * Carga el archivo "sobrenosotros.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
+    @FXML
     public void sobrenosotrosbutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  A8C6FA;");
-        carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-
-        try {
-            AnchorPane sobrenosotros = FXMLLoader.load(getClass().getResource("sobrenosotros.fxml"));
-            this.contenedorId.getChildren().setAll(sobrenosotros);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        applyStyleToButtons();
+        sobreNosotrosId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("sobrenosotros.fxml");
     }
 
-    /**
-     * Maneja el evento de acción para el botón "Busqueda".
-     * Carga el archivo "busqueda.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
+    @FXML
     public void busquedabutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        busquedaId.setStyle("-fx-background-color:  A8C6FA;");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-
-
-        try {
-            AnchorPane busqueda = FXMLLoader.load(getClass().getResource("adminmenu.fxml"));
-            this.contenedorId.getChildren().setAll(busqueda);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        applyStyleToButtons();
+        busquedaId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("adminmenu.fxml");
     }
 
-    /**
-     * Maneja el evento de acción para el botón "Inicio".
-     * Carga el archivo "inicio.fxml" y lo establece en el contenedor principal.
-     *
-     * @param actionEvent el evento de acción
-     */
-    @javafx.fxml.FXML
+    @FXML
     public void iniciobutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  A8C6FA;");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        carritoId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
+        applyStyleToButtons();
+        inicioId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("menuproductos.fxml");
+    }
 
+    @FXML
+    public void carritobutton(ActionEvent actionEvent) {
+        applyStyleToButtons();
+        carritoId.setStyle("-fx-background-color: #A8C6FA;");
+        loadFXMLToContainer("carro.fxml");
+    }
+
+    private void loadFXMLToContainer(String fxmlFile) {
         try {
-            AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("menuproductos.fxml"));
-            this.contenedorId.getChildren().setAll(inicio2);
+            AnchorPane pane = FXMLLoader.load(getClass().getResource(fxmlFile));
+            this.contenedorId.getChildren().setAll(pane);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+    public void refrescarmenuprin() {
+        // Refresh logic for the menu principal
+    }
 
-    @javafx.fxml.FXML
-    public void carritobutton(ActionEvent actionEvent) {
-        inicioId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        busquedaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        pagosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-        ayudaId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        sobreNosotrosId.setStyle("-fx-background-color:  linear-gradient(to right, #A8C6FA, #936EF5);");
-        carritoId.setStyle("-fx-background-color:  A8C6FA;");
+    public void updateUserImage() {
+        String correouser = lg.getCorreom();
+        int idu = um.getIdUser(correouser);
+        String imguser = um.getImgUser(idu);
+        String imgPath = "/img/" + imguser;
+
+        Image image = null;
         try {
-            AnchorPane inicio2 = FXMLLoader.load(getClass().getResource("carro.fxml"));
-            this.contenedorId.getChildren().setAll(inicio2);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            image = new Image(getClass().getResourceAsStream(imgPath));
+            if (image.isError()) {
+                throw new Exception("Error loading image: " + image.getException());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Image not found or failed to load: " + imgPath);
         }
+
+        if (image != null) {
+            imguserid.setImage(image);
+        }
+    }
+
+    public Menuprincipal() {
     }
 }

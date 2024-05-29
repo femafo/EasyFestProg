@@ -26,10 +26,11 @@
                   </Label>
                </children>
             </HBox>
-            <ImageView fx:id="imgid" fitHeight="155.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgid" fitHeight="140.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../img/perfil-del-usuario.png" />
-               </image></ImageView>
+                  <Image url="@../../../img/rockrio.png" />
+               </image>
+            </ImageView>
          </children>
       </VBox>
    </children>

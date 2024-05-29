@@ -17,6 +17,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.MenuproductosController">
    <children>
@@ -32,9 +33,13 @@
                   <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0" styleClass="barraEstaticaMenuProductos" stylesheets="@style.css">
                      <children>
                         <Label fx:id="idpid" text="1" visible="false" />
-                        <Label fx:id="nombrepid" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="543.0" styleClass="labelsBarra" stylesheets="@style.css" text="Medusa" textFill="#444444" />
-                        <Label fx:id="preciopid" alignment="TOP_LEFT" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#444444" />
-                        <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="nombrepid" fill="#444444" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelsBarra" text="Text" wrappingWidth="266.0304718017578" />
+                        <Label prefHeight="18.0" prefWidth="69.0" />
+                        <Text fx:id="descripid" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="297.3368134498596" />
+                        <Label fx:id="preciopid" alignment="CENTER" prefHeight="27.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#444444" />
+                        <Label prefHeight="18.0" prefWidth="66.0" />
+                        <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="237.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" />
+                        <Label prefHeight="18.0" prefWidth="66.0" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
                            <children>
                               <Label prefHeight="18.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="Cantidad" textFill="#444444" />

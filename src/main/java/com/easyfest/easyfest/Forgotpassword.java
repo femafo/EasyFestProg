@@ -22,6 +22,7 @@ public class Forgotpassword {
     private TextField correorecupid;
     @javafx.fxml.FXML
     private Button backid;
+    private static String correo;
 
     /**
      * Método de inicialización, llamado automáticamente después de que se haya cargado el archivo FXML.
@@ -37,6 +38,7 @@ public class Forgotpassword {
      */
     @javafx.fxml.FXML
     public void continuarbutton(ActionEvent actionEvent) {
+        this.correo = correorecupid.getText();
         try {
             // cambiar la siguiente pantalla para recuperar la  contraseña
             AnchorPane forget2 = FXMLLoader.load(getClass().getResource("forgotpassword2.fxml"));
@@ -56,5 +58,12 @@ public class Forgotpassword {
             // Manejar cualquier excepción de carga de FXML
             throw new RuntimeException(e);
         }
+    }
+
+    public static String getCorreoRecup (){
+        return correo;
+    }
+
+    public Forgotpassword() {
     }
 }

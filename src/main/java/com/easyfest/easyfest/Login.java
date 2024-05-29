@@ -42,6 +42,9 @@ public class Login implements Initializable {
     UsuariosModel um = new UsuariosModel();
     public static String correom;
     public static int admin;
+    public static String contrasenar = null;
+    public static String correor = null;
+    public static boolean remember = false;
 
     /**
      * Método para manejar el evento de inicio de sesión.
@@ -52,6 +55,15 @@ public class Login implements Initializable {
         String correo = usermailid.getText();
         String contrasena = passwordid.getText();
         this.correom = usermailid.getText();
+        if (recuerdameid.isSelected()){
+            this.correor = usermailid.getText();
+            this.contrasenar = passwordid.getText();
+            this.remember = true;
+        }else {
+            this.correor = null;
+            this.contrasenar = null;
+            this.remember = false;
+        }
 /*
         try {
             AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
@@ -155,6 +167,13 @@ public class Login implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Este método se llama automáticamente después de que se ha cargado el archivo FXML
         // Aquí puedes realizar inicializaciones adicionales si es necesario
+        String correori = getCorreor();
+        String contrasenari = getContrasenar();
+        boolean rememberi = getRemember();
+        if (rememberi == true){
+            this.usermailid.setText(correori);
+            this.passwordid.setText(contrasenari);
+        }
 
     }
 
@@ -164,6 +183,18 @@ public class Login implements Initializable {
 
     public static int getAdmin (){
         return admin;
+    }
+
+    public static String getCorreor(){
+        return correor;
+    }
+
+    public static String getContrasenar(){
+        return contrasenar;
+    }
+
+    public static boolean getRemember(){
+        return remember;
     }
 
     public Login() {

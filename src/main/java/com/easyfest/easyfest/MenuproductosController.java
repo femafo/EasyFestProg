@@ -13,8 +13,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.text.Text;
 import org.controlsfx.control.RangeSlider;
 
 import java.awt.*;
@@ -27,8 +29,6 @@ import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
 public class MenuproductosController implements Initializable {
-    @javafx.fxml.FXML
-    private Label nombrepid;
     @javafx.fxml.FXML
     private HBox productoelegidoid;
     @javafx.fxml.FXML
@@ -71,12 +71,35 @@ public class MenuproductosController implements Initializable {
     private VBox vboxid;
     @javafx.fxml.FXML
     private Spinner cantidadid;
+    @javafx.fxml.FXML
+    private Text descripid;
+    @javafx.fxml.FXML
+    private Text nombrepid;
 
 
     private void setProductoelegido (Productos productos){
         nombrepid.setText(productos.getNombre());
         preciopid.setText(productos.getPrecio() + "€");
         idpid.setText(String.valueOf(productos.getId()));
+        descripid.setText(productos.getDescripcion());
+        String imguser = productos.getImg();
+
+        String imgPath = "/img/" + imguser;
+
+        javafx.scene.image.Image image = null;
+        try {
+            image = new Image(getClass().getResourceAsStream(imgPath));
+            if (image.isError()) {
+                throw new Exception("Error loading image: " + image.getException());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Image not found or failed to load: " + imgPath);
+        }
+
+        if (image != null) {
+            imgpid.setImage(image);
+        }
 
     }
 

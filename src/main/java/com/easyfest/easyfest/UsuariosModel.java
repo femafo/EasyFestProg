@@ -240,6 +240,36 @@ public class UsuariosModel extends DBUtil {
         }
     }
 
+    public void actualizarImgUsuario (int id_usuario, String imagen){
+        try {
+
+            PreparedStatement ps = this.getConexion().prepareStatement("UPDATE easyfest.usuario SET imagen = ? WHERE id_usuario = ?");
+            ps.setString(1, imagen);
+            ps.setInt(2, id_usuario);
+
+            ps.execute();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void actualizarContrUsuario (String correo, String contrasena){
+        try {
+
+            PreparedStatement ps = this.getConexion().prepareStatement("UPDATE easyfest.usuario SET contrasenya = ? WHERE correo = ?");
+            ps.setString(1, contrasena);
+            ps.setString(2, correo);
+
+            ps.execute();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
 }
 
 

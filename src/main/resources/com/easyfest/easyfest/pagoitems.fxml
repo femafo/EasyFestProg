@@ -13,7 +13,7 @@
          <children>
             <HBox prefHeight="22.0" prefWidth="890.0">
                <children>
-                  <Label fx:id="nombreid" prefHeight="102.0" prefWidth="214.0" text="Medusa">
+                  <Label fx:id="nombreid" prefHeight="102.0" prefWidth="642.0" text="Medusa">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -23,7 +23,7 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="102.0" prefWidth="411.0" />
+                  <Label prefHeight="102.0" prefWidth="149.0" />
                   <ImageView fx:id="imgid" fitHeight="101.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>

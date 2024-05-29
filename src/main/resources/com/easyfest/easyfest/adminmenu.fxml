@@ -38,13 +38,13 @@
             <Label layoutX="316.0" layoutY="407.0" styleClass="labelsBarra" stylesheets="@style.css" text="Fecha de fin:" />
             <Button fx:id="addbuttonid" layoutX="244.0" layoutY="490.0" mnemonicParsing="false" onAction="#onAddbutton" prefHeight="38.0" prefWidth="82.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Añadir" />
             <Button fx:id="closebuttonid" layoutX="467.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClosebutton" prefHeight="38.0" prefWidth="40.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="x" />
-            <Pane fx:id="delpaneid" layoutX="-1.0" layoutY="89.0" prefHeight="363.0" prefWidth="546.0" style="-fx-background-color: #936EF5; -fx-background-radius: 30;" stylesheets="@style.css" visible="false">
-               <children>
-                  <Button fx:id="closedelbuttonid" layoutX="468.0" layoutY="27.0" mnemonicParsing="false" onAction="#onClosedelbutton" prefHeight="38.0" prefWidth="40.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="x" />
-                  <ChoiceBox fx:id="productoschiceid" layoutX="179.0" layoutY="182.0" prefHeight="25.0" prefWidth="189.0" />
-                  <Button fx:id="delbuttonid" layoutX="233.0" layoutY="257.0" mnemonicParsing="false" onAction="#onDelbutton" prefHeight="38.0" prefWidth="82.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Eliminar" />
-               </children>
-            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="delpaneid" layoutX="417.0" layoutY="164.0" prefHeight="363.0" prefWidth="546.0" style="-fx-background-color: #936EF5; -fx-background-radius: 30;" stylesheets="@style.css" visible="false">
+         <children>
+            <Button fx:id="closedelbuttonid" layoutX="468.0" layoutY="27.0" mnemonicParsing="false" onAction="#onClosedelbutton" prefHeight="38.0" prefWidth="40.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="x" />
+            <ChoiceBox fx:id="productoschiceid" layoutX="179.0" layoutY="182.0" prefHeight="25.0" prefWidth="189.0" />
+            <Button fx:id="delbuttonid" layoutX="233.0" layoutY="257.0" mnemonicParsing="false" onAction="#onDelbutton" prefHeight="38.0" prefWidth="82.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Eliminar" />
          </children>
       </Pane>
    </children>

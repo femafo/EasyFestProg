@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -39,11 +37,27 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldNombreUser" layoutX="260.0" layoutY="121.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField fx:id="textFieldNomUser" layoutX="260.0" layoutY="191.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField fx:id="textFieldCorreoUser" layoutX="260.0" layoutY="259.0" prefHeight="25.0" prefWidth="174.0" />
-            <DatePicker fx:id="dateFechaUsuario" layoutX="260.0" layoutY="327.0" />
             <Line endX="204.0" layoutX="224.0" layoutY="82.0" startX="-198.3999786376953" stroke="WHITE" strokeWidth="2.0" />
+            <Label fx:id="prefechanazid" layoutX="234.0" layoutY="324.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="precorreoid" layoutX="124.0" layoutY="256.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="preapellidosid" layoutX="124.0" layoutY="188.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="prenombreid" layoutX="124.0" layoutY="119.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane layoutX="494.0" layoutY="41.0" prefHeight="61.0" prefWidth="386.0" styleClass="panePerfil">
@@ -65,11 +79,6 @@
          </font>
       </Button>
       <Button fx:id="buttonAcutalizarPerfil" layoutX="628.0" layoutY="633.0" mnemonicParsing="false" onAction="#onActualizarCambios" prefHeight="38.0" prefWidth="146.0" styleClass="buttonAcutalizarPerfil" stylesheets="@style.css" text="Actualizar Cambios" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button fx:id="buttonCambiarFoto" layoutX="826.0" layoutY="499.0" mnemonicParsing="false" onAction="#onSubirImagenbutton" styleClass="buttonCambiarFoto" stylesheets="@style.css" text="Subir Imagen" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

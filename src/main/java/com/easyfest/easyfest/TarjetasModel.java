@@ -6,14 +6,15 @@ import java.util.ArrayList;
 
 public class TarjetasModel extends DBUtil{
 
-    public void anadirTarjeta(LocalDate fecha_caducidad, int cvv, String num_tarjeta, String titular){
+    public void anadirTarjeta(int id_usuario, LocalDate fecha_caducidad, int cvv, String num_tarjeta, String titular){
         try {
 
-            PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.tarjetas (fecha_caducidad, cvv, num_tarjeta, titular) VALUES (?, ?, ?, ?)");
-            ps.setDate(1, Date.valueOf(fecha_caducidad));
-            ps.setInt(2, cvv);
-            ps.setString(3, num_tarjeta);
-            ps.setString(4, titular);
+            PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.tarjetas (id_usuario, fecha_caducidad, cvv, num_tarjeta, titular) VALUES (?, ?, ?, ?, ?)");
+            ps.setInt(1, id_usuario);
+            ps.setDate(2, Date.valueOf(fecha_caducidad));
+            ps.setInt(3, cvv);
+            ps.setString(4, num_tarjeta);
+            ps.setString(5, titular);
 
             ps.execute();
 

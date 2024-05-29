@@ -26,6 +26,8 @@ public class AddtarjetaController {
     @javafx.fxml.FXML
     private Button anadirbutton;
     TarjetasModel tm = new TarjetasModel();
+    Login lg = new Login();
+    UsuariosModel um = new UsuariosModel();
 
     @javafx.fxml.FXML
     public void onback(ActionEvent actionEvent) {
@@ -39,11 +41,14 @@ public class AddtarjetaController {
 
     @javafx.fxml.FXML
     public void onanadirtarjeta(ActionEvent actionEvent) {
+
         LocalDate fecha_nacimiento = dateid.getValue();
         Integer cvv = Integer.valueOf(cvvid.getText());
         String num_tarjeta = numeroid.getText();
         String titular = titularid.getText();
+        String correouser = lg.getCorreom();
+        int idu = um.getIdUser(correouser);
 
-        tm.anadirTarjeta(fecha_nacimiento, cvv, num_tarjeta, titular);
+        tm.anadirTarjeta(idu, fecha_nacimiento, cvv, num_tarjeta, titular);
     }
 }

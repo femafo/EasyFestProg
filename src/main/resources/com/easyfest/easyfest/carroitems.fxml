@@ -9,11 +9,11 @@
 
 <AnchorPane onMousePressed="#click" prefHeight="80.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.CarroItemsController">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="50.0" prefHeight="200.0" prefWidth="226.0" style="-fx-border-style: static; -fx-border-color: black; -fx-border-width: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" layoutX="50.0" prefHeight="200.0" prefWidth="226.0" style="-fx-border-style: static; -fx-border-color: #A8C6FA; -fx-border-width: 5;" styleClass="itemMenuProductosHistorial" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="55.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="nombreid" prefHeight="38.0" prefWidth="166.0" text="Medusa">
+                  <Label fx:id="nombreid" prefHeight="20.0" prefWidth="255.0" text="Medusa">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>

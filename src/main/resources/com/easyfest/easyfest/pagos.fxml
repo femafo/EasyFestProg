@@ -15,7 +15,7 @@
 
 <AnchorPane fx:id="carroid" prefHeight="691.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.PagoController">
    <children>
-      <BorderPane prefHeight="691.0" prefWidth="1380.0">
+      <BorderPane prefHeight="691.0" prefWidth="1380.0" style="-fx-background-color: #444444;">
          <bottom>
             <HBox disable="true" prefHeight="100.0" prefWidth="200.0" visible="false" BorderPane.alignment="CENTER">
                <children>
@@ -49,7 +49,10 @@
             </HBox>
          </bottom>
          <top>
-            <HBox alignment="CENTER" prefHeight="77.0" prefWidth="1380.0" BorderPane.alignment="CENTER" />
+            <HBox alignment="CENTER" prefHeight="77.0" prefWidth="1380.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="labelHistorial" stylesheets="@style.css" text="Historial" />
+               </children></HBox>
          </top>
          <center>
             <HBox prefHeight="100.0" prefWidth="1387.0" BorderPane.alignment="CENTER">

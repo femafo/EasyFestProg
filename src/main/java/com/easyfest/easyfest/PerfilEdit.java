@@ -128,13 +128,13 @@ public class PerfilEdit implements Initializable {
         }
     }
 
-    private void loadImageToImageView(String imgPath, ImageView imageView) {
+    private void loadImageToImageView(String imgPath, ImageView imageview) {
         try {
             Image image = new Image(getClass().getResourceAsStream(imgPath));
             if (image.isError()) {
                 throw new Exception("Error loading image: " + image.getException());
             }
-            imageView.setImage(image);
+            imageview.setImage(image);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Image not found or failed to load: " + imgPath);

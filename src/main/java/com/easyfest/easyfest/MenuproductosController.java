@@ -364,7 +364,10 @@ public class MenuproductosController implements Initializable {
     public static ArrayList<Productos> getIds(){
         return productoscarroid;
     }
-
+    /**
+     * los productos que hay en el menu.
+     *
+     */
     public MenuproductosController() {
     }
 }

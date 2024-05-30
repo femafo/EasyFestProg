@@ -35,7 +35,7 @@ public class AyudaController {
     private void mostrarPane(String texto, boolean incluirBotonEnviar) {
         // Crear un nuevo Pane con BorderPane para permitir mejor organización
         BorderPane borderPane = new BorderPane();
-        borderPane.setStyle("-fx-background-color:  white; -fx-background-radius: 30px;");
+        borderPane.setStyle("-fx-background-color:   linear-gradient(to right, #FFB6C1, #FFCC99); -fx-background-radius: 30px;");
         borderPane.setPrefSize(600, 400);
 
         // Crear una VBox para el texto y centrarlo
@@ -64,8 +64,8 @@ public class AyudaController {
         // Crear y añadir el botón de cerrar
         Button closeButton = new Button("Cerrar");
         closeButton.setOnAction(e -> ((Pane)borderPane.getParent()).getChildren().remove(borderPane));
-        closeButton.setLayoutX(10);
-        closeButton.setLayoutY(10);
+        closeButton.setLayoutX(5);
+        closeButton.setLayoutY(5);
         StackPane topPane = new StackPane(closeButton);
         StackPane.setAlignment(closeButton, Pos.TOP_LEFT);
         borderPane.setTop(topPane);

@@ -88,9 +88,9 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="reinbuttonid" layoutX="123.0" layoutY="67.0" mnemonicParsing="false" onAction="#onReiniciar" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Reiniciar" textFill="WHITE" />
+                        <Button fx:id="reinbuttonid" layoutX="123.0" layoutY="65.0" mnemonicParsing="false" onAction="#onReiniciar" prefHeight="32.0" prefWidth="78.0" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Reiniciar" textFill="WHITE" />
                         <Label layoutX="6.0" layoutY="72.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Reiniciar filtros:" textFill="WHITE" />
-                        <Button fx:id="aplbuttonid" layoutX="123.0" layoutY="107.0" mnemonicParsing="false" onAction="#onApply" prefHeight="30.0" prefWidth="76.0" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Aplicar" textFill="WHITE" />
+                        <Button fx:id="aplbuttonid" layoutX="124.0" layoutY="108.0" mnemonicParsing="false" onAction="#onApply" prefHeight="30.0" prefWidth="78.0" styleClass="botonReiniciarAplicar" stylesheets="@style.css" text="Aplicar" textFill="WHITE" />
                         <Label layoutX="6.0" layoutY="112.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Aplicar flitros:" textFill="WHITE" />
                      </children>
                   </Pane>

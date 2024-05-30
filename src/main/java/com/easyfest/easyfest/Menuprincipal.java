@@ -118,17 +118,9 @@ public class Menuprincipal {
         inicioId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         pagosId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-        ajustesId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         ayudaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         sobreNosotrosId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         carritoId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
-    }
-
-    @FXML
-    public void ajustesbutton(ActionEvent actionEvent) {
-        applyStyleToButtons();
-        ajustesId.setStyle("-fx-background-color: #A8C6FA;");
-        loadFXMLToContainer("ajustes.fxml");
     }
 
     @FXML

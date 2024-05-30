@@ -10,13 +10,25 @@ import java.io.InputStream;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import  javafx.scene.image.Image;
+import javafx.scene.image.Image;
 
+/**
+ * La clase UsuariosModel proporciona los métodos y las funciones para gestionar los usuarios en la base de datos EasyFest.
+ */
 public class UsuariosModel extends DBUtil {
 
+    /**
+     * Añade un nuevo usuario a la base de datos.
+     *
+     * @param nombre          El nombre del usuario.
+     * @param apellidos       Los apellidos del usuario.
+     * @param dni             El DNI del usuario.
+     * @param correo          El correo del usuario.
+     * @param contrasena      La contraseña del usuario.
+     * @param fecha_nacimiento La fecha de nacimiento del usuario.
+     */
     public void anadirUsurios(String nombre, String apellidos, String dni, String correo, String contrasena, LocalDate fecha_nacimiento) {
         try {
-
             PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.usuario (fecha_nacimiento, nombre, apellidos, dni, correo, contrasenya) VALUES (?, ?, ?, ?, ?, ?)");
             ps.setDate(1, Date.valueOf(fecha_nacimiento));
             ps.setString(2, nombre);
@@ -28,11 +40,17 @@ public class UsuariosModel extends DBUtil {
             ps.execute();
 
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
+    /**
+     * Verifica las credenciales del usuario para iniciar sesión.
+     *
+     * @param correo     El correo del usuario.
+     * @param contrasena La contraseña del usuario.
+     * @return true si las credenciales son correctas, false en caso contrario.
+     */
     public boolean loginusuario(String correo, String contrasena) {
         try (PreparedStatement ps = this.getConexion().prepareStatement(
                 "SELECT correo, contrasenya FROM easyfest.usuario WHERE correo = ? AND contrasenya = ?")) {
@@ -51,10 +69,18 @@ public class UsuariosModel extends DBUtil {
         return false;
     }
 
+    /**
+     * Constructor por defecto de la clase UsuariosModel.
+     */
     public UsuariosModel() {
     }
 
-    //funcion buscar usuario el cual se llama en el log in para que se guarde un usuario (correo tiene que ser PKey)
+    /**
+     * Busca un usuario en la base de datos por su correo.
+     *
+     * @param correo El correo del usuario.
+     * @return El objeto Usuario si se encuentra, null en caso contrario.
+     */
     public Usuario buscarUsuario(String correo) {
         Usuario u = null;
         try {
@@ -94,8 +120,14 @@ public class UsuariosModel extends DBUtil {
         return u;
     }
 
+    /**
+     * Busca un usuario en la base de datos por su correo sin cargar la imagen.
+     *
+     * @param correo El correo del usuario.
+     * @return El objeto Usuario si se encuentra, null en caso contrario.
+     */
     public Usuario buscarUsuariolog(String correo) {
-        Usuario u1 = null;
+        Usuario u2 = null;
         try {
             PreparedStatement ps = this.getConexion().prepareStatement("SELECT * FROM easyfest.usuario WHERE correo LIKE ?");
             ps.setString(1, correo);
@@ -112,18 +144,23 @@ public class UsuariosModel extends DBUtil {
                 String contrasenya = rs.getString("contrasenya");
                 boolean esAdmin = rs.getBoolean("esAdmin");
 
-                u1 = new Usuario(idUsuario, fechaNacimiento, nombre, apellidos, dni, correoUsuario, contrasenya, esAdmin);
+                u2 = new Usuario(idUsuario, fechaNacimiento, nombre, apellidos, dni, correoUsuario, contrasenya, esAdmin);
             }
             rs.close();
             ps.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return u1;
+        return u2;
     }
 
+    /**
+     * Añade una imagen a un usuario en la base de datos.
+     *
+     * @param correo El correo del usuario.
+     * @param imagen El archivo de la imagen a añadir.
+     */
     public void anyadirImagen(String correo, File imagen) {
-
         String sql = "UPDATE usuario SET imagen = ? WHERE correo = ?";
 
         try (PreparedStatement ps = this.getConexion().prepareStatement(sql);
@@ -142,10 +179,15 @@ public class UsuariosModel extends DBUtil {
             }
         } catch (SQLException | IOException e) {
             e.printStackTrace();
-
         }
     }
 
+    /**
+     * Obtiene el ID del usuario basado en su correo.
+     *
+     * @param correo El correo del usuario.
+     * @return El ID del usuario si se encuentra, null en caso contrario.
+     */
     public Integer getIdUser(String correo) {
         Integer id = null;
         String query = "SELECT id_usuario FROM easyfest.usuario WHERE correo = ?";
@@ -164,7 +206,15 @@ public class UsuariosModel extends DBUtil {
 
         return id;
     }
-    public int usuarioadmin (String correo, String contrasena) {
+
+    /**
+     * Verifica si un usuario es administrador.
+     *
+     * @param correo     El correo del usuario.
+     * @param contrasena La contraseña del usuario.
+     * @return 1 si el usuario es administrador, 0 en caso contrario.
+     */
+    public int usuarioadmin(String correo, String contrasena) {
         int admin = 0;
         try (PreparedStatement ps = this.getConexion().prepareStatement(
                 "SELECT esAdmin FROM easyfest.usuario WHERE correo = ? AND contrasenya = ?")) {
@@ -184,7 +234,13 @@ public class UsuariosModel extends DBUtil {
         return admin;
     }
 
-    public String getImgUser (int id_usuario){
+    /**
+     * Obtiene la imagen de un usuario basado en su ID.
+     *
+     * @param id_usuario El ID del usuario.
+     * @return La imagen del usuario en formato String.
+     */
+    public String getImgUser(int id_usuario) {
         String imagen = null;
         try (PreparedStatement ps = this.getConexion().prepareStatement(
                 "SELECT imagen FROM easyfest.usuario WHERE id_usuario = ?")) {
@@ -194,7 +250,6 @@ public class UsuariosModel extends DBUtil {
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
                     imagen = rs.getString("imagen");
-
                 }
             }
         } catch (SQLException e) {
@@ -203,8 +258,14 @@ public class UsuariosModel extends DBUtil {
         return imagen;
     }
 
+    /**
+     * Obtiene el nombre de un usuario basado en su ID.
+     *
+     * @param id El ID del usuario.
+     * @return El nombre del usuario.
+     */
     public String getNombreUser(int id) {
-        String nommbre = null;
+        String nombre = null;
         String query = "SELECT nombre FROM easyfest.usuario WHERE id_usuario = ?";
 
         try (PreparedStatement ps = this.getConexion().prepareStatement(query)) {
@@ -212,19 +273,27 @@ public class UsuariosModel extends DBUtil {
 
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    nommbre = rs.getString("nombre");
+                    nombre = rs.getString("nombre");
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return nommbre;
+        return nombre;
     }
 
-    public void actualizarUsuario (int id_usuario, LocalDate fecha_nacimiento, String nombre, String apellidos, String correo){
+    /**
+     * Actualiza la información de un usuario en la base de datos.
+     *
+     * @param id_usuario       El ID del usuario.
+     * @param fecha_nacimiento La nueva fecha de nacimiento.
+     * @param nombre           El nuevo nombre.
+     * @param apellidos        Los nuevos apellidos.
+     * @param correo           El nuevo correo.
+     */
+    public void actualizarUsuario(int id_usuario, LocalDate fecha_nacimiento, String nombre, String apellidos, String correo) {
         try {
-
             PreparedStatement ps = this.getConexion().prepareStatement("UPDATE easyfest.usuario SET fecha_nacimiento = ?, nombre = ?, apellidos = ?, correo = ? WHERE id_usuario = ?");
             ps.setDate(1, Date.valueOf(fecha_nacimiento));
             ps.setString(2, nombre);
@@ -235,14 +304,18 @@ public class UsuariosModel extends DBUtil {
             ps.execute();
 
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
-    public void actualizarImgUsuario (int id_usuario, String imagen){
+    /**
+     * Actualiza la imagen de un usuario en la base de datos.
+     *
+     * @param id_usuario El ID del usuario.
+     * @param imagen     La nueva imagen en formato String.
+     */
+    public void actualizarImgUsuario(int id_usuario, String imagen) {
         try {
-
             PreparedStatement ps = this.getConexion().prepareStatement("UPDATE easyfest.usuario SET imagen = ? WHERE id_usuario = ?");
             ps.setString(1, imagen);
             ps.setInt(2, id_usuario);
@@ -250,14 +323,18 @@ public class UsuariosModel extends DBUtil {
             ps.execute();
 
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
-    public void actualizarContrUsuario (String correo, String contrasena){
+    /**
+     * Actualiza la contraseña de un usuario en la base de datos.
+     *
+     * @param correo     El correo del usuario.
+     * @param contrasena La nueva contraseña.
+     */
+    public void actualizarContrUsuario(String correo, String contrasena) {
         try {
-
             PreparedStatement ps = this.getConexion().prepareStatement("UPDATE easyfest.usuario SET contrasenya = ? WHERE correo = ?");
             ps.setString(1, contrasena);
             ps.setString(2, correo);
@@ -265,12 +342,7 @@ public class UsuariosModel extends DBUtil {
             ps.execute();
 
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
-
 }
-
-
-

@@ -8,9 +8,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ayudaid" maxHeight="619.0" maxWidth="1374.0" prefHeight="619.0" prefWidth="1374.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AyudaController">
+<AnchorPane fx:id="ayudaid" maxHeight="803.0" maxWidth="1379.0" prefHeight="691.0" prefWidth="1379.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.AyudaController">
    <children>
-      <Pane layoutY="-6.0" prefHeight="149.0" prefWidth="1379.0" style="-fx-background-color: linear-gradient(to right, #FFB6C1, #FFCC99);">
+      <ImageView fitHeight="572.0" fitWidth="1379.0" layoutY="119.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img/avionHist.jpeg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-6.0" prefHeight="125.0" prefWidth="1379.0" style="-fx-background-color: linear-gradient(to right, #FFB6C1, #FFCC99);">
          <children>
             <Label layoutX="331.0" layoutY="35.0" prefHeight="78.0" prefWidth="712.0" text="Hola ¿En qué podemos ayudarte?" textFill="WHITE">
                <font>
@@ -19,50 +24,44 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutY="675.0" prefHeight="52.0" prefWidth="1379.0" style="-fx-background-color: #936EF5;">
+      <Button fx:id="buttonAyudaPedidos" layoutX="75.0" layoutY="166.0" mnemonicParsing="false" onAction="#ButtonAyudaPedidos" prefHeight="192.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Ayuda en los pedidos" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonInfTransporte" layoutX="75.0" layoutY="408.0" mnemonicParsing="false" onAction="#ButtonInfTransporte" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Información sobre el transporte" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDevoluciones" layoutX="775.0" layoutY="163.0" mnemonicParsing="false" onAction="#ButtonDevoluciones" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Devoluciones" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonRedactarProblema" layoutX="775.0" layoutY="408.0" mnemonicParsing="false" onAction="#ButtonRedactarProblema" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Redacta tu problema" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Pane layoutY="634.0" prefHeight="57.0" prefWidth="1379.0">
          <children>
-            <Label layoutX="25.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Correo de Contacto: easyfest@contacto.es" textFill="WHITE" />
-            <Label layoutX="577.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Número de contacto: 691 13 28 81" textFill="WHITE" />
-            <Label layoutX="1188.0" layoutY="18.0" text="Atención al cliente: de 9h a 21h" textFill="WHITE">
+            <Label layoutX="598.0" layoutY="20.0" text="Número de contacto: 691 13 28 81" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Label>
-            <ImageView fitHeight="38.0" fitWidth="51.0" layoutX="255.0" layoutY="8.0">
-               <image>
-                  <Image url="@/img/correo1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="778.0" layoutY="11.0">
-               <image>
-                  <Image url="@/img/tlf1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="51.0" layoutX="1131.0" layoutY="4.0">
-               <image>
-                  <Image url="@/img/at1.jpg" />
-               </image>
-            </ImageView>
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="20.0" text="Correo de Contacto: easyfest@contacto.es" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1188.0" layoutY="20.0" text="Atención al cliente: de 9h a 21h" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Button fx:id="buttonAyudaPedidos" layoutX="75.0" layoutY="192.0" mnemonicParsing="false" onAction="#ButtonAyudaPedidos" prefHeight="192.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Ayuda en los pedidos" textFill="WHITE">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Button>
-      <Button fx:id="buttonInfTransporte" layoutX="75.0" layoutY="434.0" mnemonicParsing="false" onAction="#ButtonInfTransporte" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Información sobre el transporte" textFill="WHITE">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Button>
-      <Button fx:id="buttonDevoluciones" layoutX="775.0" layoutY="189.0" mnemonicParsing="false" onAction="#ButtonDevoluciones" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Devoluciones" textFill="WHITE">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Button>
-      <Button fx:id="buttonRedactarProblema" layoutX="775.0" layoutY="434.0" mnemonicParsing="false" onAction="#ButtonRedactarProblema" prefHeight="198.0" prefWidth="532.0" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-background-color: #DACAFB;" styleClass="botonesAyuda" stylesheets="@style.css" text="Redacta tu problema" textFill="WHITE">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

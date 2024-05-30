@@ -142,11 +142,11 @@ public class CarroController implements Initializable {
     @javafx.fxml.FXML
     public void ondelButton(ActionEvent actionEvent) {
         mostrar();
-        Integer id = Integer.valueOf(idpid.getText());
+        Integer ide = Integer.valueOf(idpid.getText());
         boolean continua = false;
         int i = 0;
         do {
-            if (productoscarroid.get(i).getId() == id){
+            if (productoscarroid.get(i).getId() == ide){
                 productoscarroid.remove(i);
                 continua = true;
             }

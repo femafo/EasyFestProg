@@ -44,6 +44,7 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     private Label preapellidosid;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         /*

@@ -17,43 +17,43 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="23.0" layoutY="119.0" text="Nombre:" textFill="WHITE">
+            <Label layoutX="22.0" layoutY="116.0" text="Nombre:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="23.0" layoutY="256.0" text="Correo:" textFill="WHITE">
+            <Label layoutX="29.0" layoutY="250.0" text="Correo:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="23.0" layoutY="324.0" text="Fecha de Nacimiento:" textFill="WHITE">
+            <Label layoutX="23.0" layoutY="317.0" text="Fecha de Nacimiento:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="24.0" layoutY="188.0" text="Apellidos:" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="185.0" text="Apellidos:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
             <Line endX="204.0" layoutX="224.0" layoutY="82.0" startX="-198.3999786376953" stroke="WHITE" strokeWidth="2.0" />
-            <Label fx:id="prefechanazid" layoutX="234.0" layoutY="324.0" text="Nombre:" textFill="WHITE">
+            <Label fx:id="prefechanazid" layoutX="235.0" layoutY="317.0" text="Nombre:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="precorreoid" layoutX="124.0" layoutY="256.0" text="Nombre:" textFill="WHITE">
+            <Label fx:id="precorreoid" layoutX="124.0" layoutY="250.0" text="Nombre:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="preapellidosid" layoutX="124.0" layoutY="188.0" text="Nombre:" textFill="WHITE">
+            <Label fx:id="preapellidosid" layoutX="124.0" layoutY="185.0" text="Nombre:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="prenombreid" layoutX="124.0" layoutY="119.0" text="Nombre:" textFill="WHITE">
+            <Label fx:id="prenombreid" layoutX="124.0" layoutY="116.0" text="Nombre:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -69,9 +69,9 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="713.0" layoutY="210.0" prefHeight="270.0" prefWidth="333.0" style="-fx-background-color: lightgrey;" styleClass="paneFotoPerfil">
+      <Pane layoutX="713.0" layoutY="210.0" prefHeight="270.0" prefWidth="288.0" style="-fx-background-color: lightgrey;" styleClass="paneFotoPerfil">
          <children>
-            <ImageView fx:id="imageViewFoto" fitHeight="230.0" fitWidth="290.0" layoutX="22.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageViewFoto" fitHeight="230.0" fitWidth="240.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
          </children></Pane>
       <Button fx:id="buttonVolver" layoutX="42.0" layoutY="40.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="38.0" prefWidth="42.0" styleClass="buttonVolver" stylesheets="@style.css" text="&lt;" textFill="WHITE">
          <font>

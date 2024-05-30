@@ -144,6 +144,9 @@ public class CarroController implements Initializable {
      * Modelo de pedidos.
      */
     private PedidoModel pem = new PedidoModel();
+    int total = 0;
+    @javafx.fxml.FXML
+    private Label totalid;
 
     /**
      * Establece los datos del producto seleccionado.
@@ -167,6 +170,7 @@ public class CarroController implements Initializable {
      * Muestra la lista de productos en el carrito.
      */
     public void mostrar(){
+        total = 0;
         this.productoscarroid = mp.getIds();
         int column = 0;
         int row = 1;
@@ -183,6 +187,7 @@ public class CarroController implements Initializable {
         }
         try {
             for (int i = 0; i < listaall.size(); i++) {
+                total = (int) (total + listaall.get(i).getPrecio());
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("carroitems.fxml"));
 
@@ -208,6 +213,7 @@ public class CarroController implements Initializable {
 
                 GridPane.setMargin(pane, new Insets(10));
             }
+            this.totalid.setText(total + "€");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -219,11 +225,12 @@ public class CarroController implements Initializable {
      */
     @javafx.fxml.FXML
     public void ondelButton(ActionEvent actionEvent) {
-        Integer id = Integer.valueOf(idpid.getText());
+        mostrar();
+        Integer ide = Integer.valueOf(idpid.getText());
         boolean continua = false;
         int i = 0;
         do {
-            if (productoscarroid.get(i).getId() == id){
+            if (productoscarroid.get(i).getId() == ide){
                 productoscarroid.remove(i);
                 continua = true;
             }
@@ -267,8 +274,8 @@ public class CarroController implements Initializable {
     @javafx.fxml.FXML
     public void onAddtarjeta(ActionEvent actionEvent) {
         try {
-            AnchorPane addtarjeta = FXMLLoader.load(getClass().getResource("addtarjeta.fxml"));
-            this.carroid.getChildren().setAll(addtarjeta);
+            AnchorPane addtarjet = FXMLLoader.load(getClass().getResource("addtarjeta.fxml"));
+            this.carroid.getChildren().setAll(addtarjet);
         } catch (IOException e) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
         }

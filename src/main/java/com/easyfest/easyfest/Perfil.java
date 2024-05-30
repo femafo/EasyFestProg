@@ -56,9 +56,8 @@ public class Perfil implements Initializable {
         /*
         anyadirDatos();
          */
-        String correouser = lg.getCorreom();
-        int idu = um.getIdUser(correouser);
-        String imguser = um.getImgUser(idu);
+        String correouser = um.getCorreoUser(lg.getIdUser());
+        String imguser = um.getImgUser(lg.getIdUser());
 
         String imgPath = "/img/" + imguser;
 

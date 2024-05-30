@@ -174,7 +174,7 @@ public class PagoController implements Initializable {
      */
     public void mostrar(){
         String correouser = lg.getCorreom();
-        int idu = um.getIdUser(correouser);
+        int idu = lg.getIdUser();
         this.productohistorialid = pem.getPedidosbyId(idu);
         int column = 0;
         int row = 1;

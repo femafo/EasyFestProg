@@ -29,7 +29,7 @@ public class UsuariosModel extends DBUtil {
      */
     public void anadirUsurios(String nombre, String apellidos, String dni, String correo, String contrasena, LocalDate fecha_nacimiento) {
         try {
-            PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.usuario (fecha_nacimiento, nombre, apellidos, dni, correo, contrasenya) VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.usuario (fecha_nacimiento, nombre, apellidos, dni, correo, contrasenya, imagen) VALUES (?, ?, ?, ?, ?, ?, \"logoEasyFest (1).png\")");
             ps.setDate(1, Date.valueOf(fecha_nacimiento));
             ps.setString(2, nombre);
             ps.setString(3, apellidos);
@@ -345,4 +345,23 @@ public class UsuariosModel extends DBUtil {
             e.printStackTrace();
         }
     }
+    public String getCorreoUser(int id) {
+        String nombre = null;
+        String query = "SELECT correo FROM easyfest.usuario WHERE id_usuario = ?";
+
+        try (PreparedStatement ps = this.getConexion().prepareStatement(query)) {
+            ps.setInt(1, id);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    nombre = rs.getString("correo");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return nombre;
+    }
+
 }

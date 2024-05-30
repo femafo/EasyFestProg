@@ -1,4 +1,4 @@
-package com.easyfest.easyfest;/*@author:Dilshan Rajika Withanachchi*/
+package com.easyfest.easyfest;
 
 public class Customer {
     private String id;
@@ -6,9 +6,6 @@ public class Customer {
     private String dob;
     private String address;
     private String city;
-
-    //create Constructor full args and no args press Alt+Insert
-
 
     public Customer(String id, String name, String dob, String address, String city) {
         this.id = id;
@@ -60,6 +57,6 @@ public class Customer {
     public void setCity(String city) {
         this.city = city;
     }
-    //create Encapsulate bean using this attribute press Ctrl+Shift+Alt+t
+
 
 }

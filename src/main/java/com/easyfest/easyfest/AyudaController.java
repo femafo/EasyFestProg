@@ -132,6 +132,7 @@ public class AyudaController {
     @FXML
     private void ButtonAyudaPedidos() {
         mostrarPane("Cuando se realiza el pago, llega de forma automática a tu correo indicado en tu perfil tanto las entradas como la reserva del hotel (Si es que usted ha reservado). En caso de fallo contacte con el servicio de ayuda.", false);
+
     }
 
     @FXML

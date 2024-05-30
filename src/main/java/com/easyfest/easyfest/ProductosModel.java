@@ -134,7 +134,7 @@ public class ProductosModel extends DBUtil {
      */
     public void anadirProducto(String nombre, String descripcion, int precio, LocalDate fecha_inicio, LocalDate fecha_fin, int id_admin) {
         try {
-            PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.producto (nombre, descripcion, precio, fecha_inicio, fecha_fin, id_admin) VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = this.getConexion().prepareStatement("INSERT INTO easyfest.producto (nombre, descripcion, precio, fecha_inicio, fecha_fin, id_admin, imgpr) VALUES (?, ?, ?, ?, ?, ?, \"logoEasyFest (1).png\")");
             ps.setString(1, nombre);
             ps.setString(2, descripcion);
             ps.setInt(3, precio);

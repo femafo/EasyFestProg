@@ -17,41 +17,92 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
+/**
+ * Clase que maneja la edición del perfil de usuario en la aplicación EasyFest.
+ */
 public class PerfilEdit implements Initializable {
+
     @javafx.fxml.FXML
     private DatePicker dateFechaUsuario;
+    /**
+     * Botón para volver al perfil del usuario.
+     */
     @javafx.fxml.FXML
     private Button buttonVolver;
     @javafx.fxml.FXML
     private TextField textFieldCorreoUser;
+    /**
+     * TextField para ingresar el correo electrónico del usuario.
+     */
     @javafx.fxml.FXML
     private ImageView imageViewFoto;
+    /**
+     * ImageView para mostrar la foto del usuario.
+     */
     @javafx.fxml.FXML
     private Button buttonActualizarPerfil;
+    /**
+     * Botón para actualizar los cambios en el perfil del usuario.
+     */
     @javafx.fxml.FXML
     private Button buttonCambiarFoto;
+    /**
+     * Botón para cambiar la foto del usuario.
+     */
     @javafx.fxml.FXML
     private TextField textFieldNombreUser;
+    /**
+     * AnchorPane que contiene el contenido de la edición del perfil.
+     */
     @javafx.fxml.FXML
     private AnchorPane contenedoreditId;
+    /**
+     * TextField para ingresar los apellidos del usuario.
+     */
     @javafx.fxml.FXML
     private TextField textFieldNomUser;
+    /**
+     * Pane que contiene las opciones para seleccionar una imagen para el usuario.
+     */
     @javafx.fxml.FXML
     private Pane selectimageid;
+    /**
+     * Instancia de la clase UsuariosModel para interactuar con la base de datos de usuarios.
+     */
 
     private UsuariosModel um = new UsuariosModel();
+    /**
+     * Instancia de la clase Login para obtener la información del usuario actual.
+     */
     private Login lg = new Login();
+    /**
+     * Instancia de la clase Menuprincipal para refrescar el menú principal después de actualizar el perfil.
+     */
     private Menuprincipal mn;
-
+    /**
+     * Método que se llama cuando se presiona el botón "Volver".
+     *
+     * @param actionEvent evento de acción
+     */
     @javafx.fxml.FXML
     public void onVolver(ActionEvent actionEvent) {
         loadFXMLToAnchorPane("perfil.fxml", contenedoreditId);
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Subir imagen".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onSubirImagenbutton(ActionEvent actionEvent) {
         selectimageid.setVisible(true);
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Actualizar cambios".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onActualizarCambios(ActionEvent actionEvent) {
@@ -65,51 +116,100 @@ public class PerfilEdit implements Initializable {
 
         showAlert("Cambios realizados", "Cambios realizados correctamente", Alert.AlertType.INFORMATION);
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Avión".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onPlanebutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("avion1.png");
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Alerta".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onAlertbutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("signo-de-exclamacion.png");
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Sziget".
+     **
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onSzigetbutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("arcoiris.png");
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Tomorrowland".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onTomorrowbutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("mariposa.png");
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Rock in Rio".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onRockriobutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("guitarra-electrica.png");
     }
-
+    /**
+     * Método que se llama cuando se presiona el botón "Glastonbury".
+     *
+     * @param actionEvent evento de acción
+     */
     @javafx.fxml.FXML
     public void onGlastonburybutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("catrina.png");
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Fuji Rock".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onFujibutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("flor.png");
     }
-
+    /**
+     * Método que se llama cuando se presiona el botón "Hotel".
+     *
+     * @param actionEvent evento de acción
+     */
     @javafx.fxml.FXML
     public void onHotelbutton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("hotel1.png");
     }
+    /**
+     * Método que se llama cuando se presiona el botón "Coachella".
+     *
+     * @param actionEvent evento de acción
+     */
 
     @javafx.fxml.FXML
     public void onCoachellaButton(ActionEvent actionEvent) {
         updateUserImageAndRefresh("rueda-del-cielo.png");
     }
+    /**
+     * Método que se ejecuta al inicializar el controlador.
+     *
+     * @param url            URL de la ubicación de los recursos
+     * @param resourceBundle bundle de recursos
+     */
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -118,6 +218,12 @@ public class PerfilEdit implements Initializable {
         String imguser = um.getImgUser(idu);
         loadImageToImageView("/img/" + imguser, imageViewFoto);
     }
+    /**
+     * Método que carga un FXML en un AnchorPane.
+     *
+     * @param fxmlFile       archivo FXML a cargar
+     * @param anchorPane     AnchorPane donde cargar el FXML
+     */
 
     private void loadFXMLToAnchorPane(String fxmlFile, AnchorPane anchorPane) {
         try {
@@ -127,6 +233,12 @@ public class PerfilEdit implements Initializable {
             throw new RuntimeException(e);
         }
     }
+    /**
+     * Método que carga una imagen en un ImageView.
+     *
+     * @param imgPath        ruta de la imagen
+     * @param imageview      ImageView donde cargar la imagen
+     */
 
     private void loadImageToImageView(String imgPath, ImageView imageview) {
         try {
@@ -140,6 +252,11 @@ public class PerfilEdit implements Initializable {
             System.out.println("Image not found or failed to load: " + imgPath);
         }
     }
+    /**
+     * Método que actualiza la imagen de usuario y refresca el menú principal.
+     *
+     * @param imgFileName nombre del archivo de imagen
+     */
 
     private void updateUserImageAndRefresh(String imgFileName) {
         selectimageid.setVisible(false);
@@ -149,6 +266,9 @@ public class PerfilEdit implements Initializable {
         refreshMenuPrincipal();
         loadFXMLToAnchorPane("perfiledit.fxml", contenedoreditId);
     }
+    /**
+     * Método que refresca el menú principal.
+     */
 
     private void refreshMenuPrincipal() {
         try {
@@ -161,6 +281,13 @@ public class PerfilEdit implements Initializable {
             throw new RuntimeException(e);
         }
     }
+    /**
+     * Método que muestra una alerta.
+     *
+     * @param header       encabezado de la alerta
+     * @param content      contenido de la alerta
+     * @param alertType    tipo de alerta
+     */
 
     private void showAlert(String header, String content, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);

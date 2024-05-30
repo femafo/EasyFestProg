@@ -48,11 +48,6 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ajustesId" layoutX="-2.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajustesbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Ajustes">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
             <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" onAction="#ayudabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);" text="Ayuda">
                <font>
                   <Font size="14.0" />

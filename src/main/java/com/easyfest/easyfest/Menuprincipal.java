@@ -20,36 +20,90 @@ import java.util.logging.Logger;
  * Esta clase te permite ir a otras paginas de la web siendo este el menu principal.
  */
 public class Menuprincipal {
+    /**
+     * Botón Ayuda.
+     */
     @FXML
     private Button ayudaId;
+    /**
+     * Botón Ajustes.
+     */
     @FXML
     private Button ajustesId;
+    /**
+     * ChoiceBox para seleccionar el usuario.
+     */
     @FXML
     private ChoiceBox<String> chbUsuario;
+    /**
+     * Botón Busqueda.
+     */
     @FXML
     private Button busquedaId;
+    /**
+     * Botón Inicio.
+     */
     @FXML
     private Button inicioId;
+
+    /**
+     * Botón Pagos.
+     */
     @FXML
     private Button pagosId;
+    /**
+     * Botón Sobre Nosotros.
+     */
     @FXML
     private Button sobreNosotrosId;
+    /**
+     * AnchorPane contenedor.
+     */
     @FXML
     private AnchorPane contenedorId;
+    /**
+     * Opciones del usuario.
+     */
     private String[] opcusuario = {"Perfil", "Cerrar Sesión"};
+    /**
+     * AnchorPane menú principal.
+     */
     @FXML
     private AnchorPane menuprincipalid;
+    /**
+     * Botón Carrito.
+     */
     @FXML
     private Button carritoId;
+    /**
+     * Controlador de menú productos.
+     */
     private MenuproductosController mp = new MenuproductosController();
+    /**
+     * Indica si el usuario es administrador.
+     */
     public static int admin;
+    /**
+     * Controlador de login.
+     */
     private Login lg = new Login();
+    /**
+     * Imagen de usuario.
+     */
     @FXML
     private ImageView imguserid;
+    /**
+     * Modelo de usuarios.
+     */
     private UsuariosModel um = new UsuariosModel();
+    /**
+     * Etiqueta de usuario.
+     */
     @FXML
     private Label usuarioid;
-
+    /**
+     * Inicializa el menú principal.
+     */
     @FXML
     public void initialize() {
         admin = lg.getAdmin();
@@ -91,7 +145,11 @@ public class Menuprincipal {
         usuarioid.setText(nombre);
         updateUserImage();
     }
-
+    /**
+     * Maneja la opción seleccionada en el ChoiceBox de usuario.
+     *
+     * @param event evento de selección
+     */
     public void opcionuser(ActionEvent event) {
         String selectedOption = chbUsuario.getValue();
         if ("Perfil".equals(selectedOption)) {
@@ -113,7 +171,9 @@ public class Menuprincipal {
         }
         chbUsuario.setValue(null);
     }
-
+    /**
+     * Aplica estilo a los botones.
+     */
     private void applyStyleToButtons() {
         inicioId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         busquedaId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
@@ -122,49 +182,77 @@ public class Menuprincipal {
         sobreNosotrosId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
         carritoId.setStyle("-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);");
     }
-
+    /**
+     * Maneja el evento de clic en el botón de pagos.
+     *
+     * @param actionEvent evento de clic
+     */
     @FXML
     public void pagosbutton(ActionEvent actionEvent) {
         applyStyleToButtons();
         pagosId.setStyle("-fx-background-color: #A8C6FA;");
         loadFXMLToContainer("pagos.fxml");
     }
-
+    /**
+     * Maneja el evento de clic en el botón de ayuda.
+     *
+     * @param actionEvent evento de clic
+     */
     @FXML
     public void ayudabutton(ActionEvent actionEvent) {
         applyStyleToButtons();
         ayudaId.setStyle("-fx-background-color: #A8C6FA;");
         loadFXMLToContainer("ayuda.fxml");
     }
-
+    /**
+     * Maneja el evento de clic en el botón de sobre nosotros.
+     *
+     * @param actionEvent evento de clic
+     */
     @FXML
     public void sobrenosotrosbutton(ActionEvent actionEvent) {
         applyStyleToButtons();
         sobreNosotrosId.setStyle("-fx-background-color: #A8C6FA;");
         loadFXMLToContainer("sobrenosotros.fxml");
     }
-
+    /**
+     * Maneja el evento de clic en el botón de busqueda.
+     *
+     * @param actionEvent evento de clic
+     */
     @FXML
     public void busquedabutton(ActionEvent actionEvent) {
         applyStyleToButtons();
         busquedaId.setStyle("-fx-background-color: #A8C6FA;");
         loadFXMLToContainer("adminmenu.fxml");
     }
-
+    /**
+     * Maneja el evento de clic en el botón de inicio.
+     *
+     * @param actionEvent evento de clic
+     */
     @FXML
     public void iniciobutton(ActionEvent actionEvent) {
         applyStyleToButtons();
         inicioId.setStyle("-fx-background-color: #A8C6FA;");
         loadFXMLToContainer("menuproductos.fxml");
     }
-
+    /**
+     * Maneja el evento de clic en el botón de carrito.
+     *
+     * @param actionEvent evento de clic
+     */
     @FXML
     public void carritobutton(ActionEvent actionEvent) {
         applyStyleToButtons();
         carritoId.setStyle("-fx-background-color: #A8C6FA;");
         loadFXMLToContainer("carro.fxml");
     }
-
+    /**
+     * Carga un FXML en el contenedor.
+     *
+     * @param fxmlFile nombre del archivo FXML
+     */
     private void loadFXMLToContainer(String fxmlFile) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource(fxmlFile));
@@ -172,10 +260,15 @@ public class Menuprincipal {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    } /**
+     * Refresca el menú principal.
+     */
     public void refrescarmenuprin() {
         // Refresh logic for the menu principal
     }
+    /**
+     * Actualiza la imagen de usuario.
+     */
 
     public void updateUserImage() {
         String correouser = lg.getCorreom();
@@ -198,7 +291,9 @@ public class Menuprincipal {
             imguserid.setImage(image);
         }
     }
-
+    /**
+     * Constructor de la clase.
+     */
     public Menuprincipal() {
     }
 }

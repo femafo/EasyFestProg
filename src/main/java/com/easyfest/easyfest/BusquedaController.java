@@ -13,49 +13,77 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.function.Predicate;
 
+/**
+ * Controlador para la funcionalidad de búsqueda.
+ *
+ * @author  fermin
+ */
 public class BusquedaController {
+    /**
+     * Vista de tabla para mostrar los datos de los clientes.
+     */
     @javafx.fxml.FXML
     public TableView<Customer> tblCustomer;
+    /**
+     * Columna de tabla para el ID del cliente.
+     */
     @javafx.fxml.FXML
     public TableColumn colCustID;
+    /**
+     * Columna de tabla para la fecha de nacimiento del cliente.
+     */
     @javafx.fxml.FXML
     public TableColumn colDOB;
+    /**
+     * Columna de tabla para la dirección del cliente.
+     */
     @javafx.fxml.FXML
     public TableColumn colAddress;
+    /**
+     * Columna de tabla para la ciudad del cliente.
+     */
     @javafx.fxml.FXML
     public TableColumn colCity;
+    /**
+     * Columna de tabla para el nombre del cliente.
+     */
     @javafx.fxml.FXML
     public TableColumn colCustName;
+    /**
+     * Campo de texto para buscar clientes.
+     */
     @javafx.fxml.FXML
     public TextField txtSearchBar;
-    //now we should create observerable array list
+    /**
+     * Lista observable de clientes.
+     */
     final ObservableList<Customer> custList= FXCollections.observableArrayList();
+    /**
+     * Botón para seleccionar un cliente.
+     */
     @javafx.fxml.FXML
     private Button selectbuttonid;
-
+    /**
+     * Inicializa el controlador.
+     */
     public  void initialize(){
-        //Initialize column like this
+
         setCustomer();
         colCustID.setCellValueFactory(new PropertyValueFactory<>("id"));
         colCustName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
-
-        //now we should create a model Customer ok
-        //now we should add sample Data to custList
-        //i am create setCustomer() method like this
-        //ok we should add customers to our table like this
         tblCustomer.setItems(custList);//ok done
-        //ok we can create filter search
-        //create searchFilter method
         searchFilter();
 
 
 
 
     }
-
+    /**
+     * Establece el filtro de búsqueda.
+     */
     private void searchFilter() {
         FilteredList<Customer> filterData= new FilteredList<>(custList,e->true);
         txtSearchBar.setOnKeyReleased(e->{
@@ -86,14 +114,14 @@ public class BusquedaController {
             final SortedList<Customer> customers = new SortedList<>(filterData);
             customers.comparatorProperty().bind(tblCustomer.comparatorProperty());
             tblCustomer.setItems(customers);
-            //ok let's check it
+
         });
 
     }
-
+    /**
+     * Establece los datos de los clientes.
+     */
     private void setCustomer() {
-        //now we can add some data to table like this
-        //i am created previously some example data  so i will add like this
 
         custList.add(new Customer ("C001","Danapala","1981-2-6","No.20 Walana","Panadura"));
         custList.add(new Customer ("C002","Gunapala","1982-8-12","No 200, Thalpitiya","Wadduwa"));
@@ -111,7 +139,11 @@ public class BusquedaController {
         //ok now we can view table like this
     }
 
-
+    /**
+     * Maneja la acción del botón de selección.
+     *
+     * @param actionEvent el evento de acción
+     */
     @javafx.fxml.FXML
     public void onselectbutton(ActionEvent actionEvent) {
         String hola = tblCustomer.getSelectionModel().toString();

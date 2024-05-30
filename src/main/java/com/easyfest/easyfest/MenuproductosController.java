@@ -27,55 +27,136 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
-
+/**
+ * Controlador de la pantalla de menú de productos.
+ *
+ * @author fermin
+ */
 public class MenuproductosController implements Initializable {
+    /**
+     * HBox que contiene la información del producto elegido.
+     */
     @javafx.fxml.FXML
     private HBox productoelegidoid;
+    /**
+     * Etiqueta que muestra el precio del producto elegido.
+     */
     @javafx.fxml.FXML
     private Label preciopid;
+
+    /**
+     * Imagen del producto elegido.
+     */
     @javafx.fxml.FXML
     private ImageView imgpid;
+    /**
+     * GridPane que contiene los productos.
+     */
     @javafx.fxml.FXML
     private GridPane grid;
+    /**
+     * ScrollPane que contiene el GridPane.
+     */
     @javafx.fxml.FXML
     private ScrollPane scroll;
+    /**
+     * Modelo de productos.
+     */
     public ProductosModel pm = new ProductosModel();
-
+    /**
+     * Lista de productos de prueba.
+     */
     private List<Productos>  listaprueba = new ArrayList<Productos>();
-
+    /**
+     * Interfaz para manejar el clic en un producto.
+     */
     private MiLista miLista;
+    /**
+     * Opción actual (0: mostrar todos los productos, 5: mostrar productos filtrados).
+     */
     public int opc;
+    /**
+     * Campo de texto para buscar productos.
+     */
     @javafx.fxml.FXML
     private TextField textsearchid;
+    /**
+     * RadioButton para ordenar por precio ascendente.
+     */
     @javafx.fxml.FXML
     private RadioButton ascid;
+    /**
+     * Spinner para seleccionar el precio máximo.
+     */
     @javafx.fxml.FXML
     private Spinner preciomaxid;
+    /**
+     * RadioButton para ordenar por precio descendente.
+     */
     @javafx.fxml.FXML
     private RadioButton descid;
+    /**
+     * Spinner para seleccionar el precio mínimo.
+     */
     @javafx.fxml.FXML
     private Spinner preciominid;
+    /**
+     * Grupo de botones para seleccionar la ordenación por fecha.
+     */
     @javafx.fxml.FXML
     private ToggleGroup fecha;
+    /**
+     * Botón para reiniciar la búsqueda.
+     */
     @javafx.fxml.FXML
     private Button reinbuttonid;
+    /**
+     * Botón para aplicar los filtros.
+     */
     @javafx.fxml.FXML
     private Button aplbuttonid;
+
+    /**
+     * Pane que contiene los elementos de la pantalla.
+     */
     @javafx.fxml.FXML
     private Pane paneid;
+    /**
+     * Etiqueta que muestra el ID del producto elegido.
+     */
     @javafx.fxml.FXML
     private Label idpid;
+    /**
+     * Lista de productos agregados al carrito.
+     */
 
     public static ArrayList<Productos> productoscarroid = new ArrayList<Productos>();
+    /**
+     * VBox que contiene los elementos de la pantalla.
+     */
     @javafx.fxml.FXML
     private VBox vboxid;
+    /**
+     * Spinner para seleccionar la cantidad de productos.
+     */
     @javafx.fxml.FXML
     private Spinner cantidadid;
+
+    /**
+     * Texto que muestra la descripción del producto elegido.
+     */
     @javafx.fxml.FXML
     private Text descripid;
+    /**
+     * Texto que muestra el nombre del producto elegido.
+     */
     @javafx.fxml.FXML
     private Text nombrepid;
-
+    /**
+     * Establece el producto elegido.
+     *
+     * @param productos producto elegido
+     */
 
     private void setProductoelegido (Productos productos){
         nombrepid.setText(productos.getNombre());
@@ -102,7 +183,12 @@ public class MenuproductosController implements Initializable {
         }
 
     }
-
+    /**
+     * Inicializa la pantalla.
+     *
+     * @param url        URL de la pantalla
+     * @param resourceBundle recursos de la pantalla
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         opc = 0;
@@ -116,21 +202,14 @@ public class MenuproductosController implements Initializable {
         SpinnerValueFactory<Integer> cantidad =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 50, 1, 1);
         cantidadid.setValueFactory(cantidad);
-        /*
-        RangeSlider slider = new RangeSlider(0, 100, 10, 90);
-        slider.setShowTickLabels(true);
-        slider.setShowTickMarks(true);
-        slider.setMajorTickUnit(25);
-        slider.setBlockIncrement(10);
-        vboxid.setPadding(new Insets(75));
-        vboxid.setSpacing(150);
-        vboxid.getChildren().addAll(slider);
-
-         */
 
 
     }
-
+    /**
+     * Muestra los productos según la opción seleccionada.
+     *
+     * @param opc opción actual (0: mostrar todos los productos, 5: mostrar productos filtrados)
+     */
     public void mostrar (int opc){
         int column = 0;
         int row = 1;
@@ -142,6 +221,7 @@ public class MenuproductosController implements Initializable {
                 if (listaall.size() >0 ){
                     setProductoelegido(listaall.get(0));
                     miLista = new MiLista() {
+
                         @Override
                         public void onClickLista(Productos productos) {
                             setProductoelegido(productos);
@@ -237,20 +317,32 @@ public class MenuproductosController implements Initializable {
 
 
     }
-
+    /**
+     * Maneja el evento de clic en el botón de reiniciar.
+     *
+     * @param actionEvent evento de clic
+     */
     @javafx.fxml.FXML
     public void onReiniciar(ActionEvent actionEvent) {
         opc = 0;
         mostrar(opc);
     }
 
-
+    /**
+     * Maneja el evento de clic en el botón de aplicar.
+     *
+     * @param actionEvent evento de clic
+     */
     @javafx.fxml.FXML
     public void onApply(ActionEvent actionEvent) {
         opc = 5;
         mostrar(opc);
     }
-
+    /**
+     * Maneja el evento de clic en el botón de agregar al carrito.
+     *
+     * @param actionEvent evento de clic
+     */
     @javafx.fxml.FXML
     public void onaddButton(ActionEvent actionEvent) {
         for (int i = 1; i <= (int) cantidadid.getValue(); i++){
@@ -265,10 +357,17 @@ public class MenuproductosController implements Initializable {
         a.setContentText("Productos agregados al carrito correctamente");
         a.showAndWait();
     }
+    /**
+     * Devuelve la lista de productos agregados al carrito.
+     *
+     */
     public static ArrayList<Productos> getIds(){
         return productoscarroid;
     }
-
+    /**
+     * los productos que hay en el menu.
+     *
+     */
     public MenuproductosController() {
     }
 }

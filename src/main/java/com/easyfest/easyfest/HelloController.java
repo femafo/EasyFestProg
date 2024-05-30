@@ -19,12 +19,25 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ * Controlador para la pantalla de inicio.
+ *
+ * @author fermin
+ */
 public class HelloController implements Initializable {
-
+    /**
+     * VBox que contiene los elementos de la pantalla de inicio.
+     */
     @FXML
     private VBox vboxid;
-
+    /**
+     * Inicializa el controlador.
+     *
+     * Carga la pantalla de inicio desde el archivo FXML "login.fxml" y la agrega al VBox.
+     *
+     * @param url la ubicación del recurso FXML
+     * @param resourceBundle el bundle de recursos para la internacionalización
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {

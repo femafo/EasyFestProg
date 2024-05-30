@@ -1,35 +1,60 @@
+/**
+ * Clase AddtarjetaController que controla la interfaz gráfica de usuario para añadir una nueva tarjeta.
+ */
 package com.easyfest.easyfest;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.IOException;
 import java.time.LocalDate;
 
+/**
+ * Controlador para la vista de añadir una nueva tarjeta.
+ * esta clase sirve para insertar tarjetas
+ */
 public class AddtarjetaController {
-    @javafx.fxml.FXML
+
+    @FXML
     private AnchorPane addtarjetaid;
-    @javafx.fxml.FXML
+    @FXML
     private TextField cvvid;
-    @javafx.fxml.FXML
+    @FXML
     private TextField titularid;
-    @javafx.fxml.FXML
+    @FXML
     private Button backbutton;
-    @javafx.fxml.FXML
+    @FXML
     private DatePicker dateid;
-    @javafx.fxml.FXML
+    @FXML
     private TextField numeroid;
-    @javafx.fxml.FXML
+    @FXML
     private Button anadirbutton;
+
+    /**
+     * Instancia de la clase TarjetasModel para interactuar con el modelo de tarjetas.
+     */
     TarjetasModel tm = new TarjetasModel();
+
+    /**
+     * Instancia de la clase Login para obtener el correo electrónico del usuario actual.
+     */
     Login lg = new Login();
+
+    /**
+     * Instancia de la clase UsuariosModel para interactuar con el modelo de usuarios.
+     */
     UsuariosModel um = new UsuariosModel();
 
-    @javafx.fxml.FXML
+    /**
+     * Método que se ejecuta cuando se hace clic en el botón "Atrás".
+     *
+     * @param actionEvent evento de acción del botón "Atrás".
+     */
+    @FXML
     public void onback(ActionEvent actionEvent) {
         try {
             AnchorPane pagos = FXMLLoader.load(getClass().getResource("carro.fxml"));
@@ -39,7 +64,12 @@ public class AddtarjetaController {
         }
     }
 
-    @javafx.fxml.FXML
+    /**
+     * Método que se ejecuta cuando se hace clic en el botón "Añadir tarjeta".
+     *
+     * @param actionEvent evento de acción del botón "Añadir tarjeta".
+     */
+    @FXML
     public void onanadirtarjeta(ActionEvent actionEvent) {
 
         LocalDate fecha_nacimiento = dateid.getValue();

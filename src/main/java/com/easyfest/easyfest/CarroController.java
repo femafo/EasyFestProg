@@ -15,69 +15,160 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * Controlador de la vista del carrito de compras.
+ *
+ * @author fermin
+ */
 public class CarroController implements Initializable {
+    /**
+     * Vista del nombre del producto.
+     */
     @javafx.fxml.FXML
     private Label nombrepid;
+    /**
+     * Vista del producto seleccionado.
+     */
     @javafx.fxml.FXML
     private HBox productoelegidoid;
+    /**
+     * Vista del precio del producto.
+     */
     @javafx.fxml.FXML
     private Label preciopid;
+    /**
+     * Vista de la imagen del producto.
+     */
     @javafx.fxml.FXML
     private ImageView imgpid;
+    /**
+     * Grid donde se mostrarán los productos.
+     */
     @javafx.fxml.FXML
     private GridPane grid;
+
+    /**
+     * Scroll para el grid de productos.
+     */
     @javafx.fxml.FXML
     private ScrollPane scroll;
+    /**
+     * Modelo de productos.
+     */
     public ProductosModel pm = new ProductosModel();
-
+    /**
+     * Lista de productos seleccionados.
+     */
     private List<Productos>  listaprueba = new ArrayList<Productos>();
-
+    /**
+     * Referencia a la lista de productos.
+     */
     private MiListaC miLista;
+    /**
+     * ID del producto seleccionado.
+     */
     public int opc;
+
+    /**
+     * Vista del ID del producto.
+     */
     @javafx.fxml.FXML
     private Label idpid;
-
+    /**
+     * Lista de productos seleccionados.
+     */
     public static ArrayList<Productos> productoscarroid = new ArrayList<Productos>();
+    /**
+     * Controlador de la vista de productos.
+     */
     MenuproductosController mp = new MenuproductosController();
+    /**
+     * Botón de eliminar producto.
+     */
     @javafx.fxml.FXML
     private Button delbuttonid;
+    /**
+     * Botón de comprar productos.
+     */
     @javafx.fxml.FXML
     private Button comprarbuttonid;
+    /**
+     * Vista del carrito de compras.
+     */
     @javafx.fxml.FXML
     private AnchorPane carroid;
+    /**
+     * Vista de la compra.
+     */
     @javafx.fxml.FXML
     private Pane compraid;
+
+    /**
+     * ChoiceBox de tarjetas de crédito.
+     */
     @javafx.fxml.FXML
     private ChoiceBox tarjetauser;
+    /**
+     * Modelo de tarjetas de crédito.
+     */
     public TarjetasModel tm = new TarjetasModel();
+    /**
+     * Botón de añadir tarjeta.
+     */
     @javafx.fxml.FXML
     private Button addtarjetabuttonid;
+    /**
+     * Botón de cerrar la vista de compra.
+     */
     @javafx.fxml.FXML
     private Button closebuttonid;
+    /**
+     * Botón de pagar.
+     */
     @javafx.fxml.FXML
     private Button pagarbuttonid;
+
+    /**
+     * Indica si el panel de añadir tarjeta está activo.
+     */
     private boolean paneaddactivo = false;
+    /**
+     * Controlador de la vista de login.
+     */
     public Login lg = new Login();
+    /**
+     * Modelo de usuarios.
+     */
     private UsuariosModel um = new UsuariosModel();
+    /**
+     * Modelo de pedidos.
+     */
     private PedidoModel pem = new PedidoModel();
     int total = 0;
     @javafx.fxml.FXML
     private Label totalid;
 
-
+    /**
+     * Establece los datos del producto seleccionado.
+     *
+     * @param productos producto seleccionado
+     */
     private void setProductoelegido (Productos productos){
         nombrepid.setText(productos.getNombre());
         preciopid.setText(productos.getPrecio() + "€");
         idpid.setText(String.valueOf(productos.getId()));
 
     }
-
+    /**
+     * Inicializa la vista del carrito de compras.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
        mostrar();
     }
-
+    /**
+     * Muestra la lista de productos en el carrito.
+     */
     public void mostrar(){
         total = 0;
         this.productoscarroid = mp.getIds();
@@ -126,19 +217,12 @@ public class CarroController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        /*
-        RangeSlider slider = new RangeSlider(0, 100, 10, 90);
-        slider.setShowTickLabels(true);
-        slider.setShowTickMarks(true);
-        slider.setMajorTickUnit(25);
-        slider.setBlockIncrement(10);
-        vboxid.setPadding(new Insets(75));
-        vboxid.setSpacing(150);
-        vboxid.getChildren().addAll(slider);
-
-         */
     }
-
+    /**
+     * Elimina un producto del carrito.
+     *
+     * @param actionEvent evento de eliminar producto
+     */
     @javafx.fxml.FXML
     public void ondelButton(ActionEvent actionEvent) {
         mostrar();
@@ -154,10 +238,19 @@ public class CarroController implements Initializable {
         }while (i < productoscarroid.size() && continua == false);
         mostrar();
     }
+    /**
+     * Obtiene la lista final de productos en el carrito.
+     *
+     * @return lista de productos en el carrito
+     */
     public static ArrayList<Productos> getfinalProductos(){
         return productoscarroid;
     }
-
+    /**
+     * Inicia la compra de productos.
+     *
+     * @param actionEvent evento de comprar productos
+     */
     @javafx.fxml.FXML
     public void onComprarbutton(ActionEvent actionEvent) {
         String correouser = lg.getCorreom();
@@ -173,7 +266,11 @@ public class CarroController implements Initializable {
 
     public CarroController() {
     }
-
+    /**
+     * Agrega una nueva tarjeta de crédito.
+     *
+     * @param actionEvent evento de agregar tarjeta
+     */
     @javafx.fxml.FXML
     public void onAddtarjeta(ActionEvent actionEvent) {
         try {
@@ -184,11 +281,18 @@ public class CarroController implements Initializable {
         }
     }
 
+    /**
+     * pone un boton que cierra.
+     * @param actionEvent evento cerrar
+     */
     @javafx.fxml.FXML
     public void onClosebutton(ActionEvent actionEvent) {
         compraid.setVisible(false);
     }
-
+    /**
+     * pone un boton que sirve para pagar
+     * @param actionEvent evento para pagar
+     */
     @javafx.fxml.FXML
     public void onPagarbuttonid(ActionEvent actionEvent) {
         String tarjetaselected = null;

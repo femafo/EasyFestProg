@@ -17,21 +17,48 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+/**
+ * Controlador para la pantalla de ayuda.
+ *
+ * @author antonio
+ */
 public class AyudaController {
+    /**
+     * Pane principal de la pantalla de ayuda.
+     */
     @FXML
     private AnchorPane ayudaid;
+
+    /**
+     * Botón para mostrar ayuda sobre pedidos.
+     */
     @FXML
     private Button buttonAyudaPedidos;
+    /**
+     * Botón para mostrar ayuda sobre devoluciones.
+     */
     @FXML
     private Button buttonDevoluciones;
+    /**
+     * Botón para redactar un problema.
+     */
     @FXML
     private Button buttonRedactarProblema;
+    /**
+     * Botón para mostrar información sobre transporte.
+     */
     @FXML
     private Button buttonInfTransporte;
-
+    /**
+     * TextArea para escribir un problema.
+     */
     private TextArea textAreaProblema;
-
+    /**
+     * Muestra un pane con un texto y un botón de cerrar.
+     *
+     * @param texto el texto a mostrar
+     * @param incluirBotonEnviar si se debe incluir un botón de enviar
+     */
     private void mostrarPane(String texto, boolean incluirBotonEnviar) {
         // Crear un nuevo Pane con BorderPane para permitir mejor organización
         BorderPane borderPane = new BorderPane();
@@ -128,23 +155,32 @@ public class AyudaController {
         alert.setContentText("El mensaje se ha enviado correctamente.");
         alert.showAndWait();
     }
-
+    /**
+     * Maneja el evento de clic en el botón de ayuda sobre pedidos.
+     */
     @FXML
     private void ButtonAyudaPedidos() {
         mostrarPane("Cuando se realiza el pago, llega de forma automática a tu correo indicado en tu perfil tanto las entradas como la reserva del hotel (Si es que usted ha reservado). En caso de fallo contacte con el servicio de ayuda.", false);
 
     }
 
+    /**
+     * Maneja el evento de clic en el botón de ayuda sobre devoluciones.
+     */
     @FXML
     private void ButtonDevoluciones() {
         mostrarPane("La devolución se podrá realizar cuando queden menos de 48h para la actividad reservada, tanto para el festival como para el hotel (En caso de reserva). En caso de duda contacte con el servicio de ayuda.", false);
     }
-
+    /**
+     * Maneja el evento de clic en el botón de redactar un problema.
+     */
     @FXML
     private void ButtonRedactarProblema() {
         mostrarPane("Texto de ayuda para Redactar Problema", true);
     }
-
+    /**
+     * Maneja el evento de clic en el botón de información sobre transporte.
+     */
     @FXML
     private void ButtonInfTransporte() {
         mostrarPane("Cuando se realize la compra, en caso de que usted haya reservado alojamiento, se le enviará automáticamente las credenciales necesarias en forma de PDF a su correo electrónico indicado en la aplicación. En el correo se encontrará un código QR que escaneará el establecimiento con toda la información de su reserva. En caso de duda contacte con el servicio de ayuda.", false);

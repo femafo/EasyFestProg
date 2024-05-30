@@ -231,7 +231,7 @@
 -fx-background-radius: 30px;
 }
 
-
-
-
+.estiloResalto:hover{
+ -fx-cursor: hand;
+}
 

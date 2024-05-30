@@ -175,7 +175,7 @@ public class AdminmenuController implements Initializable {
         int res = pm.eliminarProducto(elproducto);
         if (res >= 1){
             Alert a = new Alert(Alert.AlertType.INFORMATION);
-            a.setHeaderText("Producto Eliminado");
+            a.setHeaderText("Producto  Eliminado");
             a.setContentText("El producto ha sido eliminado correctamente.");
             a.showAndWait();
         }else{

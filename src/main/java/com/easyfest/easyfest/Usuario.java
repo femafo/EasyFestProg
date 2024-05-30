@@ -20,7 +20,7 @@ public class Usuario {
     private Image imagen;
 
     /**
-     * Constructor completo de la clase Usuario.
+     * Constructor completo de la clase Usuario .
      *
      * @param id               El ID del usuario.
      * @param fecha_nacimiento La fecha de nacimiento del usuario.

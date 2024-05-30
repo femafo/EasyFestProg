@@ -64,6 +64,10 @@ public class AdminmenuController implements Initializable {
         String correouser = lg.getCorreom();
         int idu = um.getIdUser(correouser);
         pm.anadirProducto(nombre, descripcion, precio, fecha_ini, fecha_fin, idu);
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setHeaderText("Producto Agregado");
+        a.setContentText("Producto agregado correctamente");
+        a.showAndWait();
     }
 
     @javafx.fxml.FXML

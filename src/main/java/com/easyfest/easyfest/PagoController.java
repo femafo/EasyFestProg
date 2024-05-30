@@ -239,7 +239,7 @@ public class PagoController implements Initializable {
         mostrar();
     }
     /**
-     * Obtiene la lista final de productos.
+     * Obtiene la lista final  de productos.
      *
      * @return lista final de productos
      */

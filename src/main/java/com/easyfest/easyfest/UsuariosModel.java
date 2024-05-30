@@ -95,7 +95,7 @@ public class UsuariosModel extends DBUtil {
     }
 
     public Usuario buscarUsuariolog(String correo) {
-        Usuario u1 = null;
+        Usuario u2 = null;
         try {
             PreparedStatement ps = this.getConexion().prepareStatement("SELECT * FROM easyfest.usuario WHERE correo LIKE ?");
             ps.setString(1, correo);
@@ -112,14 +112,14 @@ public class UsuariosModel extends DBUtil {
                 String contrasenya = rs.getString("contrasenya");
                 boolean esAdmin = rs.getBoolean("esAdmin");
 
-                u1 = new Usuario(idUsuario, fechaNacimiento, nombre, apellidos, dni, correoUsuario, contrasenya, esAdmin);
+                u2 = new Usuario(idUsuario, fechaNacimiento, nombre, apellidos, dni, correoUsuario, contrasenya, esAdmin);
             }
             rs.close();
             ps.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return u1;
+        return u2;
     }
 
     public void anyadirImagen(String correo, File imagen) {

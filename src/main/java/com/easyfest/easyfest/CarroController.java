@@ -274,8 +274,8 @@ public class CarroController implements Initializable {
     @javafx.fxml.FXML
     public void onAddtarjeta(ActionEvent actionEvent) {
         try {
-            AnchorPane addtarjeta = FXMLLoader.load(getClass().getResource("addtarjeta.fxml"));
-            this.carroid.getChildren().setAll(addtarjeta);
+            AnchorPane addtarjet = FXMLLoader.load(getClass().getResource("addtarjeta.fxml"));
+            this.carroid.getChildren().setAll(addtarjet);
         } catch (IOException e) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
         }

@@ -12,9 +12,9 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 /**
- *Este es un  Controlador para la vista de registro.
+ * Controlador para la vista de registro.
  *
- * Esta clase Crea y guarda nuevos usuarios.
+ * Esta clase maneja la lógica relacionada con la vista de registro de nuevos usuarios.
  */
 public class Registro {
     @javafx.fxml.FXML
@@ -48,7 +48,8 @@ public class Registro {
     }
 
     /**
-     * Método para manejar el evento de registro.
+     * Maneja el evento de registro.
+     *
      * @param actionEvent El evento de acción generado por el botón de registro.
      */
     @javafx.fxml.FXML
@@ -77,6 +78,11 @@ public class Registro {
         }
     }
 
+    /**
+     * Maneja el evento de retroceso.
+     *
+     * @param actionEvent El evento de acción generado por el botón de retroceso.
+     */
     @javafx.fxml.FXML
     public void onbackbutton(ActionEvent actionEvent) {
         try {

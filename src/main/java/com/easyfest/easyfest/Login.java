@@ -45,6 +45,7 @@ public class Login implements Initializable {
     public static String contrasenar = null;
     public static String correor = null;
     public static boolean remember = false;
+    public static int iduser = 0;
 
     /**
      * Método para manejar el evento de inicio de sesión.
@@ -64,6 +65,8 @@ public class Login implements Initializable {
             this.contrasenar = null;
             this.remember = false;
         }
+        System.out.println(correo);
+        iduser = um.getIdUser(correo);
 /*
         try {
             AnchorPane login = FXMLLoader.load(getClass().getResource("menuprincipal.fxml"));
@@ -195,6 +198,10 @@ public class Login implements Initializable {
 
     public static boolean getRemember(){
         return remember;
+    }
+
+    public static int getIdUser(){
+        return iduser;
     }
 
     public Login() {

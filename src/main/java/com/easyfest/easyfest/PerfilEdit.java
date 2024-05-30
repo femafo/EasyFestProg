@@ -27,8 +27,6 @@ public class PerfilEdit implements Initializable {
     @javafx.fxml.FXML
     private ImageView imageViewFoto;
     @javafx.fxml.FXML
-    private Button buttonActualizarPerfil;
-    @javafx.fxml.FXML
     private Button buttonCambiarFoto;
     @javafx.fxml.FXML
     private TextField textFieldNombreUser;
@@ -42,6 +40,8 @@ public class PerfilEdit implements Initializable {
     private UsuariosModel um = new UsuariosModel();
     private Login lg = new Login();
     private Menuprincipal mn;
+    @javafx.fxml.FXML
+    private Button buttonAcutalizarPerfil;
 
     @javafx.fxml.FXML
     public void onVolver(ActionEvent actionEvent) {
@@ -56,7 +56,9 @@ public class PerfilEdit implements Initializable {
     @javafx.fxml.FXML
     public void onActualizarCambios(ActionEvent actionEvent) {
         String correouser = lg.getCorreom();
+        System.out.println(correouser);
         int idu = um.getIdUser(correouser);
+        System.out.println(idu);
         LocalDate fechanaz = dateFechaUsuario.getValue();
         String nombre = textFieldNombreUser.getText();
         String apellidos = textFieldNomUser.getText();

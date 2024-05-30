@@ -61,6 +61,9 @@ public class CarroController implements Initializable {
     public Login lg = new Login();
     private UsuariosModel um = new UsuariosModel();
     private PedidoModel pem = new PedidoModel();
+    int total = 0;
+    @javafx.fxml.FXML
+    private Label totalid;
 
 
     private void setProductoelegido (Productos productos){
@@ -76,6 +79,7 @@ public class CarroController implements Initializable {
     }
 
     public void mostrar(){
+        total = 0;
         this.productoscarroid = mp.getIds();
         int column = 0;
         int row = 1;
@@ -92,6 +96,7 @@ public class CarroController implements Initializable {
         }
         try {
             for (int i = 0; i < listaall.size(); i++) {
+                total = (int) (total + listaall.get(i).getPrecio());
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("carroitems.fxml"));
 
@@ -117,6 +122,7 @@ public class CarroController implements Initializable {
 
                 GridPane.setMargin(pane, new Insets(10));
             }
+            this.totalid.setText(total + "€");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -135,6 +141,7 @@ public class CarroController implements Initializable {
 
     @javafx.fxml.FXML
     public void ondelButton(ActionEvent actionEvent) {
+        mostrar();
         Integer id = Integer.valueOf(idpid.getText());
         boolean continua = false;
         int i = 0;

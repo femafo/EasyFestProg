@@ -46,7 +46,9 @@
                      <children>
                         <Pane prefHeight="144.0" prefWidth="200.0" style="-fx-background-color: black;" stylesheets="@style.css">
                            <children>
-                              <Button fx:id="comprarbuttonid" alignment="TOP_CENTER" layoutX="62.0" layoutY="33.0" mnemonicParsing="false" onAction="#onComprarbutton" prefHeight="34.0" prefWidth="77.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Comprar" textFill="WHITE" />
+                              <Button fx:id="comprarbuttonid" alignment="TOP_CENTER" layoutX="62.0" layoutY="52.0" mnemonicParsing="false" onAction="#onComprarbutton" prefHeight="34.0" prefWidth="77.0" styleClass="botonEstaticaMenuProductos" stylesheets="@style.css" text="Comprar" textFill="WHITE" />
+                              <Label layoutX="38.0" layoutY="15.0" styleClass="labelsBarra" text="Total:" textFill="#a8c6fa" />
+                              <Label fx:id="totalid" layoutX="92.0" layoutY="15.0" prefHeight="27.0" prefWidth="95.0" styleClass="labelsBarra" text="Label" textFill="#a8c6fa" />
                            </children>
                         </Pane>
                      </children>

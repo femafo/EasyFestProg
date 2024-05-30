@@ -15,7 +15,7 @@ public class Productos {
     private String img; // Ruta de la imagen asociada al producto.
 
     /**
-     * Obtiene el identificador del producto.
+     *  Obtiene el identificador del producto.
      * @return El identificador del producto.
      */
     public int getId() {

@@ -57,12 +57,12 @@ public class AyudaController {
      * Muestra un pane con un texto y un botón de cerrar.
      *
      * @param texto el texto a mostrar
-     * @param incluirBotonEnviar si se debe incluir un botón de enviar
+     * @param incluirBotonEnviar si se debe incluir un botón de enviar.
      */
     private void mostrarPane(String texto, boolean incluirBotonEnviar) {
         // Crear un nuevo Pane con BorderPane para permitir mejor organización
         BorderPane borderPane = new BorderPane();
-        borderPane.setStyle("-fx-background-color:   linear-gradient(to right, #FFB6C1, #FFCC99); -fx-background-radius: 30px;");
+        borderPane.setStyle("-fx-background-color: linear-gradient(to right, #FFB6C1, #FFCC99); -fx-background-radius: 30px;");
         borderPane.setPrefSize(600, 400);
 
         // Crear una VBox para el texto y centrarlo
@@ -76,12 +76,14 @@ public class AyudaController {
         label.setMaxWidth(Double.MAX_VALUE);
         label.setMaxHeight(Double.MAX_VALUE);
         label.setAlignment(Pos.CENTER);
+        label.setStyle("-fx-font-size: 18px;"); // Aumentar tamaño del texto
         vbox.getChildren().add(label);
 
         if (incluirBotonEnviar) {
             textAreaProblema = new TextArea();
             textAreaProblema.setPromptText("Escribe tu problema aquí...");
             textAreaProblema.setWrapText(true);
+            textAreaProblema.setStyle("-fx-font-size: 16px;"); // Aumentar tamaño del texto del TextArea
             vbox.getChildren().add(textAreaProblema);
         }
 
@@ -91,18 +93,21 @@ public class AyudaController {
         // Crear y añadir el botón de cerrar
         Button closeButton = new Button("Cerrar");
         closeButton.setOnAction(e -> ((Pane)borderPane.getParent()).getChildren().remove(borderPane));
-        closeButton.setLayoutX(5);
-        closeButton.setLayoutY(5);
-        StackPane topPane = new StackPane(closeButton);
-        StackPane.setAlignment(closeButton, Pos.TOP_LEFT);
+        closeButton.setStyle("-fx-background-radius: 40px;");
+        closeButton.setStyle("-fx-background-color: #DACAFB;");
+
+        // Posicionar el botón de cerrar en la parte superior izquierda del BorderPane
+        Pane topPane = new Pane(closeButton);
+        closeButton.setLayoutX(10); // Ajusta la posición según sea necesario
+        closeButton.setLayoutY(10); // Ajusta la posición según sea necesario
         borderPane.setTop(topPane);
-        closeButton.setStyle("-fx-background-radius: 30px;");
 
         if (incluirBotonEnviar) {
             // Crear botón de enviar y añadirlo a la parte inferior derecha del BorderPane
             Button sendButton = new Button("Enviar");
             sendButton.setOnAction(e -> enviarProblema());
-            sendButton.setStyle("-fx-background-radius: 30px;");
+            sendButton.setStyle("-fx-background-radius: 40px;");
+            sendButton.setStyle("-fx-background-color: #DACAFB;");
 
             // Crear un StackPane para alinear el botón en la parte inferior derecha
             StackPane stackPane = new StackPane(sendButton);
@@ -161,7 +166,6 @@ public class AyudaController {
     @FXML
     private void ButtonAyudaPedidos() {
         mostrarPane("Cuando se realiza el pago, llega de forma automática a tu correo indicado en tu perfil tanto las entradas como la reserva del hotel (Si es que usted ha reservado). En caso de fallo contacte con el servicio de ayuda.", false);
-
     }
 
     /**
@@ -186,3 +190,4 @@ public class AyudaController {
         mostrarPane("Cuando se realize la compra, en caso de que usted haya reservado alojamiento, se le enviará automáticamente las credenciales necesarias en forma de PDF a su correo electrónico indicado en la aplicación. En el correo se encontrará un código QR que escaneará el establecimiento con toda la información de su reserva. En caso de duda contacte con el servicio de ayuda.", false);
     }
 }
+

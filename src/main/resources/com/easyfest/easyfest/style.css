@@ -239,3 +239,8 @@
 -fx-font-size: 25px;
 }
 
+.negritamenu{
+-fx-font-weight: bold;
+-fx-font-size: 14px;
+}
+

@@ -30,7 +30,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="605.0" layoutY="27.0" style="-fx-font-weight: bold;" text="¡Que empieze la fiesta!">
+            <Label layoutX="674.0" layoutY="27.0" style="-fx-font-weight: bold;" text="¡Que empieze la fiesta!">
                <font>
                   <Font size="30.0" />
                </font>
@@ -39,7 +39,7 @@
       </Pane>
       <Pane prefHeight="782.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5);">
          <children>
-            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #A8C6FA; -fx-font-weight: bold;" styleClass="estiloResalto" stylesheets="@style.css" text="Comprar">
+            <Button fx:id="inicioId" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#iniciobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #A8C6FA;" styleClass="negritamenu" stylesheets="@style.css" text="Comprar">
                <font>
                   <Font size="14.0" />
                </font></Button>
@@ -48,27 +48,27 @@
                   <Font name="System Bold" size="18.0" />
                </font></Label>
             <Line endX="89.40000915527344" endY="93.19998168945312" layoutX="57.0" layoutY="318.0" startX="-49.0000114440918" startY="93.19998168945312" />
-            <Button fx:id="busquedaId" layoutY="361.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="estiloResalto" stylesheets="@style.css" text="Productos" visible="false">
+            <Button fx:id="busquedaId" layoutY="361.0" mnemonicParsing="false" onAction="#busquedabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="negritamenu" stylesheets="@style.css" text="Productos" visible="false">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="pagosId" layoutX="-2.0" layoutY="149.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="estiloResalto" stylesheets="@style.css" text="Mis pagos / Historial">
+            <Button fx:id="pagosId" layoutX="-2.0" layoutY="149.0" mnemonicParsing="false" onAction="#pagosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="negritamenu" stylesheets="@style.css" text="Mis pagos / Historial">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" onAction="#ayudabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="estiloResalto" stylesheets="@style.css" text="Ayuda">
+            <Button fx:id="ayudaId" layoutX="-2.0" layoutY="647.0" mnemonicParsing="false" onAction="#ayudabutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="negritamenu" stylesheets="@style.css" text="Ayuda">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="sobreNosotrosId" layoutX="-2.0" layoutY="693.0" mnemonicParsing="false" onAction="#sobrenosotrosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="estiloResalto" stylesheets="@style.css" text="Sobre nosotros">
+            <Button fx:id="sobreNosotrosId" layoutX="-2.0" layoutY="693.0" mnemonicParsing="false" onAction="#sobrenosotrosbutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="negritamenu" stylesheets="@style.css" text="Sobre nosotros">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="carritoId" layoutY="185.0" mnemonicParsing="false" onAction="#carritobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="estiloResalto" stylesheets="@style.css" text="Carrito">
+            <Button fx:id="carritoId" layoutY="185.0" mnemonicParsing="false" onAction="#carritobutton" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: linear-gradient(to right, #A8C6FA, #936EF5); -fx-font-weight: bold;" styleClass="negritamenu" stylesheets="@style.css" text="Carrito">
                <font>
                   <Font size="14.0" />
                </font>

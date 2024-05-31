@@ -93,8 +93,8 @@ public class AyudaController {
         // Crear y añadir el botón de cerrar
         Button closeButton = new Button("Cerrar");
         closeButton.setOnAction(e -> ((Pane)borderPane.getParent()).getChildren().remove(borderPane));
-        closeButton.setStyle("-fx-background-radius: 40px;");
-        closeButton.setStyle("-fx-background-color: #DACAFB;");
+        closeButton.setStyle("-fx-background-color: #DACAFB; -fx-background-radius: 30px; -fx-border-radius: 30px; -fx-font-size: 11px;");
+        closeButton.setPrefSize(60, 20); // Establecer tamaño adecuado para que sea redondo
 
         // Posicionar el botón de cerrar en la parte superior izquierda del BorderPane
         Pane topPane = new Pane(closeButton);
@@ -106,8 +106,8 @@ public class AyudaController {
             // Crear botón de enviar y añadirlo a la parte inferior derecha del BorderPane
             Button sendButton = new Button("Enviar");
             sendButton.setOnAction(e -> enviarProblema());
-            sendButton.setStyle("-fx-background-radius: 40px;");
-            sendButton.setStyle("-fx-background-color: #DACAFB;");
+            sendButton.setStyle("-fx-background-color: #DACAFB; -fx-background-radius: 30px; -fx-border-radius: 30px; -fx-font-size: 11px;");
+            sendButton.setPrefSize(60, 20); // Establecer tamaño adecuado para que sea redondo
 
             // Crear un StackPane para alinear el botón en la parte inferior derecha
             StackPane stackPane = new StackPane(sendButton);
@@ -190,4 +190,7 @@ public class AyudaController {
         mostrarPane("Cuando se realize la compra, en caso de que usted haya reservado alojamiento, se le enviará automáticamente las credenciales necesarias en forma de PDF a su correo electrónico indicado en la aplicación. En el correo se encontrará un código QR que escaneará el establecimiento con toda la información de su reserva. En caso de duda contacte con el servicio de ayuda.", false);
     }
 }
+
+
+
 

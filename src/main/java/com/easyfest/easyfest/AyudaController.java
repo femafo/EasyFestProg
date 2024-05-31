@@ -93,7 +93,8 @@ public class AyudaController {
         // Crear y añadir el botón de cerrar
         Button closeButton = new Button("Cerrar");
         closeButton.setOnAction(e -> ((Pane)borderPane.getParent()).getChildren().remove(borderPane));
-        closeButton.setStyle("-fx-background-radius: 30px;");
+        closeButton.setStyle("-fx-background-radius: 40px;");
+        closeButton.setStyle("-fx-background-color: #DACAFB;");
 
         // Posicionar el botón de cerrar en la parte superior izquierda del BorderPane
         Pane topPane = new Pane(closeButton);
@@ -105,7 +106,8 @@ public class AyudaController {
             // Crear botón de enviar y añadirlo a la parte inferior derecha del BorderPane
             Button sendButton = new Button("Enviar");
             sendButton.setOnAction(e -> enviarProblema());
-            sendButton.setStyle("-fx-background-radius: 30px;");
+            sendButton.setStyle("-fx-background-radius: 40px;");
+            sendButton.setStyle("-fx-background-color: #DACAFB;");
 
             // Crear un StackPane para alinear el botón en la parte inferior derecha
             StackPane stackPane = new StackPane(sendButton);

@@ -51,8 +51,7 @@ public class UsuariosModel extends DBUtil {
      * @param contrasena La contraseña del usuario.
      * @return true si las credenciales son correctas, false en caso contrario.
      */
-    public int loginusuario(String correo, String contrasena) {
-        int entra = 0;
+    public boolean loginusuario(String correo, String contrasena) {
         try (PreparedStatement ps = this.getConexion().prepareStatement(
                 "SELECT correo, contrasenya FROM easyfest.usuario WHERE correo = ? AND contrasenya = ?")) {
 
@@ -61,13 +60,13 @@ public class UsuariosModel extends DBUtil {
 
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    entra = 1;
+                    return true;
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return entra;
+        return false;
     }
 
     /**

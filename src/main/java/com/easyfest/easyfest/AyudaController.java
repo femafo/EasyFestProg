@@ -57,7 +57,7 @@ public class AyudaController {
      * Muestra un pane con un texto y un botón de cerrar.
      *
      * @param texto el texto a mostrar
-     * @param incluirBotonEnviar si se debe incluir un botón de enviar
+     * @param incluirBotonEnviar si se debe incluir un botón de enviar.
      */
     private void mostrarPane(String texto, boolean incluirBotonEnviar) {
         // Crear un nuevo Pane con BorderPane para permitir mejor organización

@@ -63,7 +63,7 @@
          <center>
             <HBox prefHeight="515.0" prefWidth="1166.0" style="-fx-border-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <ScrollPane fx:id="scroll" prefHeight="512.0" prefWidth="1169.0" style="-fx-background-color: transparent;">
+                  <ScrollPane fx:id="scroll" prefHeight="500.0" prefWidth="1165.0" style="-fx-background-color: transparent;">
                      <content>
                         <GridPane fx:id="grid" prefHeight="0.0" prefWidth="37.0">
                            <rowConstraints>

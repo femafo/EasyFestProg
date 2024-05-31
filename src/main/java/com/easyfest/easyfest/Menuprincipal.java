@@ -26,11 +26,6 @@ public class Menuprincipal {
     @FXML
     private Button ayudaId;
     /**
-     * Botón Ajustes.
-     */
-    @FXML
-    private Button ajustesId;
-    /**
      * ChoiceBox para seleccionar el usuario.
      */
     @FXML

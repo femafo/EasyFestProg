@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane onMousePressed="#click" prefHeight="246.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyfest.easyfest.ItemsController">
    <children>
@@ -14,14 +15,9 @@
          <children>
             <HBox prefHeight="55.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="nombreid" prefHeight="38.0" prefWidth="166.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Medusa" textFill="#444444">
+                  <Label fx:id="nombreid" alignment="CENTER" prefHeight="38.0" prefWidth="188.0" styleClass="labelsBlancos" stylesheets="@style.css" text="Medusa" textFill="#444444">
                      <HBox.margin>
                         <Insets left="5.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label fx:id="precioid" prefHeight="38.0" prefWidth="96.0" styleClass="labelsBlancos" stylesheets="@style.css" text="200" textFill="#444444">
-                     <HBox.margin>
-                        <Insets />
                      </HBox.margin>
                   </Label>
                </children>
@@ -31,6 +27,15 @@
                   <Image url="@../../../img/rockrio.png" />
                </image>
             </ImageView>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="precioid" alignment="BOTTOM_CENTER" prefHeight="68.0" prefWidth="139.0" styleClass="labelsItems" stylesheets="@style.css" text="200" textFill="#444444">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

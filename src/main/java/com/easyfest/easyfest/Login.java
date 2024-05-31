@@ -77,8 +77,8 @@ public class Login implements Initializable {
 
  */
 
-        boolean entra = um.loginusuario(correo, contrasena);
-        if (entra == true) {
+        int entra = um.loginusuario(correo, contrasena);
+        if (entra == 1) {
 
             this.admin = um.usuarioadmin(correo,contrasena);
             try {

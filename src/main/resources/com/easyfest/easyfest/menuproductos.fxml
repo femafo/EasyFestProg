@@ -33,10 +33,10 @@
                   <HBox fx:id="productoelegidoid" alignment="CENTER" prefHeight="100.0" prefWidth="1382.0" styleClass="barraEstaticaMenuProductos" stylesheets="@style.css">
                      <children>
                         <Label fx:id="idpid" text="1" visible="false" />
-                        <Text fx:id="nombrepid" fill="#444444" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelsBarra" text="Text" wrappingWidth="266.0304718017578" />
+                        <Text fx:id="nombrepid" fill="#444444" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelsBarra" text="None" wrappingWidth="266.0304718017578" />
                         <Label prefHeight="18.0" prefWidth="69.0" />
-                        <Text fx:id="descripid" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="297.3368134498596" />
-                        <Label fx:id="preciopid" alignment="CENTER" prefHeight="27.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="200€" textFill="#444444" />
+                        <Text fx:id="descripid" strokeType="OUTSIDE" strokeWidth="0.0" text="None" wrappingWidth="297.3368134498596" />
+                        <Label fx:id="preciopid" alignment="CENTER" prefHeight="27.0" prefWidth="105.0" styleClass="labelsBarra" stylesheets="@style.css" text="None" textFill="#444444" />
                         <Label prefHeight="18.0" prefWidth="66.0" />
                         <ImageView fx:id="imgpid" fitHeight="87.0" fitWidth="237.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" />
                         <Label prefHeight="18.0" prefWidth="66.0" />
@@ -100,7 +100,7 @@
          <center>
             <HBox prefHeight="100.0" prefWidth="1387.0" BorderPane.alignment="CENTER">
                <children>
-                  <ScrollPane fx:id="scroll" prefHeight="423.0" prefWidth="1379.0">
+                  <ScrollPane fx:id="scroll" prefHeight="410.0" prefWidth="1175.0">
                      <content>
                         <GridPane fx:id="grid" prefHeight="0.0" prefWidth="37.0">
                            <rowConstraints>
@@ -109,18 +109,15 @@
                         </GridPane>
                      </content>
                      <HBox.margin>
-                        <Insets />
+                        <Insets bottom="20.0" left="100.0" right="100.0" />
                      </HBox.margin>
                   </ScrollPane>
                </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" />
+               </BorderPane.margin>
             </HBox>
          </center>
-         <left>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-         </left>
-         <right>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-         </right>
       </BorderPane>
    </children>
 </AnchorPane>

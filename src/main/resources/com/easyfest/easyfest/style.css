@@ -234,4 +234,8 @@
 .estiloResalto:hover{
  -fx-cursor: hand;
 }
+.labelsItems{
+-fx-font-weight: bold;
+-fx-font-size: 25px;
+}
 

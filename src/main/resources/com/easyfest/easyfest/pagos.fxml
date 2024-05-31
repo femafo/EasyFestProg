@@ -61,9 +61,9 @@
                </children></HBox>
          </top>
          <center>
-            <HBox prefHeight="100.0" prefWidth="1387.0" style="-fx-border-color: white;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="515.0" prefWidth="1166.0" style="-fx-border-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <ScrollPane fx:id="scroll" prefHeight="530.0" prefWidth="974.0" style="-fx-background-color: transparent;">
+                  <ScrollPane fx:id="scroll" prefHeight="512.0" prefWidth="1169.0" style="-fx-background-color: transparent;">
                      <content>
                         <GridPane fx:id="grid" prefHeight="0.0" prefWidth="37.0">
                            <rowConstraints>
@@ -76,13 +76,16 @@
                      </HBox.margin>
                   </ScrollPane>
                </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" />
+               </BorderPane.margin>
             </HBox>
          </center>
          <left>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+            <ImageView fitHeight="150.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
          </left>
          <right>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+            <ImageView fitHeight="150.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
          </right>
       </BorderPane>
       <Pane fx:id="compraid" layoutX="199.0" layoutY="57.0" prefHeight="575.0" prefWidth="980.0" style="-fx-background-color: purple;" visible="false">

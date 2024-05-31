@@ -239,7 +239,7 @@ public class MenuproductosController implements Initializable {
                         ItemsController itemsController = fxmlLoader.getController();
                         itemsController.setData(listaall.get(i), miLista);
 
-                        if (column == 4){
+                        if (column == 5){
                             column = 0;
                             row++;
                         }
@@ -293,7 +293,7 @@ public class MenuproductosController implements Initializable {
                         ItemsController itemsController = fxmlLoader.getController();
                         itemsController.setData(listaf.get(i), miLista);
 
-                        if (column == 4){
+                        if (column == 5){
                             column = 0;
                             row++;
                         }

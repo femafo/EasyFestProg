@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -148,6 +149,9 @@ public class CarroController implements Initializable {
     @javafx.fxml.FXML
     private Label totalid;
 
+    List<Productos>  listaall =new ArrayList<>();
+
+
     /**
      * Establece los datos del producto seleccionado.
      *
@@ -175,7 +179,7 @@ public class CarroController implements Initializable {
         int column = 0;
         int row = 1;
         grid.getChildren().clear();
-        List<Productos>  listaall = productoscarroid;
+        listaall = productoscarroid;
         if (listaall.size() >0 ){
             setProductoelegido(listaall.get(0));
             miLista = new MiListaC() {
@@ -225,17 +229,14 @@ public class CarroController implements Initializable {
      */
     @javafx.fxml.FXML
     public void ondelButton(ActionEvent actionEvent) {
-        mostrar();
         Integer ide = Integer.valueOf(idpid.getText());
         boolean continua = false;
-        int i = 0;
-        do {
-            if (productoscarroid.get(i).getId() == ide){
-                productoscarroid.remove(i);
-                continua = true;
-            }
-            i++;
-        }while (i < productoscarroid.size() && continua == false);
+        for (int i = 0; i<= productoscarroid.size(); i++) {
+                if (productoscarroid.get(i).getId() == ide) {
+                    productoscarroid.remove(i);
+                    i = 100000000;
+                }
+        }
         mostrar();
     }
     /**
@@ -294,7 +295,7 @@ public class CarroController implements Initializable {
      * @param actionEvent evento para pagar
      */
     @javafx.fxml.FXML
-    public void onPagarbuttonid(ActionEvent actionEvent) {
+    public void onPagarbuttonid(ActionEvent actionEvent){
         String tarjetaselected = null;
         for (Productos p : productoscarroid) {
             tarjetaselected = String.valueOf(tarjetauser.getValue());
@@ -315,6 +316,9 @@ public class CarroController implements Initializable {
             a.setHeaderText("Productos comprados");
             a.setContentText("Productos comprados correctamente");
             a.showAndWait();
+            listaall.clear();
+            grid.getChildren().clear();
         }
+
     }
 }
